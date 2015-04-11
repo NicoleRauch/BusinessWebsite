@@ -1,9 +1,6 @@
-HTML/.idea
-HTML/bower_components
-HTML/node_modules
-HTML/css
-HTML/fonts
-HTML/js
+setup/.idea
+setup/bower_components
+setup/node_modules
 jekyll/css
 jekyll/fonts
 jekyll/js
