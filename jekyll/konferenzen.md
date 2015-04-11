@@ -2,12 +2,6 @@
 layout: default
 ---
 
-<div class="page-header">
-    <h1>Nicole Rauch
-        <small id="tagline">Softwareentwicklung und Entwicklungscoaching</small>
-    </h1>
-</div>
-
 ### Kommende Konferenzen
 
 * Mathema Campus, Erlangen, 24.4.2015:<br>
