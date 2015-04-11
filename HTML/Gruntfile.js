@@ -35,25 +35,25 @@ module.exports = function (grunt) {
     copy: {
       bootstrapFONTS: {
         src: 'bower_components/bootstrap/dist/fonts/*',
-        dest: 'fonts',
+        dest: '../jekyll/fonts',
         expand: true,
         flatten: true
       },
       bootstrapCSS: {
         src: 'bower_components/bootstrap/dist/css/bootstrap.min.css',
-        dest: 'css',
+        dest: '../jekyll/css',
         expand: true,
         flatten: true
       },
       bootstrapJS: {
         src: 'bower_components/bootstrap/dist/js/bootstrap.min.js',
-        dest: 'js',
+        dest: '../jekyll/js',
         expand: true,
         flatten: true
       },
       fontawesomeFONTS: {
         src: 'bower_components/font-awesome/fonts/*',
-        dest: 'fonts',
+        dest: '../jekyll/fonts',
         expand: true,
         flatten: true
       }
