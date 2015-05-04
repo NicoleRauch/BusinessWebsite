@@ -4,10 +4,6 @@ layout: default
 
 ### Kommende Konferenzen
 
-* Mathema Campus, Erlangen, 24.4.2015:<br>
-  [Sportlich, sportlich - Specification by Example mit Fitnesse](http://www.mathema.de/veranstaltungen/mathema-campus/programm#B3)<br>
-  <small>Vortrag</small>
-
 * Entwicklertag, Karlsruhe, 21.5.2015:<br>
   [Jetzt funkt's! Funktionale Programmierung für Anfänger](https://entwicklertag.de/karlsruhe/2015/jetzt-funkts-funktionale)<br>
   <small>Vortrag</small>
@@ -22,6 +18,10 @@ layout: default
 
 
 ### Vergangene Konferenzen
+
+* Mathema Campus, Erlangen, 24.4.2015:<br>
+  [Sportlich, sportlich - Specification by Example mit Fitnesse](http://www.mathema.de/veranstaltungen/mathema-campus/programm#B3)<br>
+  <small>Vortrag</small>
 
 * SPA Conference, London, 2.7.2014:<br>
   [Advanced Testing Techniques for Node.js](http://www.spaconference.org/spa2014/sessions/session571.html)<br>
@@ -49,7 +49,7 @@ layout: default
 
 * XP-Days, Karlsruhe, 15.11.2013:<br>
   [Craftsman Swap](http://www.xpdays.de/2013/sessions/073-craftsman-swap.html)<br>
-  <small>Vortrag mit Diskussion</small>
+  <small>Vortrag / Diskussion</small>
 
 * XP-Days, Karlsruhe, 14.11.2013:<br>
   [OO-Design-Workshop: Restrukturierung von Code "From Push To Pull"](http://www.xpdays.de/2013/sessions/078-oo-design-workshop-restrukturierung-von-code-from-push-to-pull.html)<br>
@@ -93,7 +93,7 @@ layout: default
 
 * Deutsche Scrum Treffen, Stuttgart, 12.7.2011:<br>
   Scrum Smells<br>
-  <small>Vortrag mit Diskussion</small>
+  <small>Vortrag / Diskussion</small>
 
 * XP-Days Germany, Hamburg, 26.11.2010:<br>
   [Unit Tests als Spezifikation?](http://www.xpdays.de/twiki/bin/view/XPDays2010/UnitTestsAlsSpezifikation)<br>
