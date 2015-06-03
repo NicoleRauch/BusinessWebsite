@@ -4,14 +4,6 @@ layout: default
 
 ### Kommende Konferenzen
 
-* Entwicklertag, Karlsruhe, 21.5.2015:<br>
-  [Jetzt funkt's! Funktionale Programmierung für Anfänger](https://entwicklertag.de/karlsruhe/2015/jetzt-funkts-funktionale)<br>
-  <small>Vortrag</small>
-
-* Joy of Coding, Rotterdam, Niederlande, 29.5.2015:<br>
-  [Functional Programming for Beginners](http://joyofcoding.org/#functional-programming-for-beginners)<br>
-  <small>Vortrag</small>
-
 * Java Forum, Stuttgart, 9.7.2015:<br>
   [Funktioniert's? - Funktionale Programmierung mit Java 8](http://www.java-forum-stuttgart.de/de/Programm.html)<br>
   <small>Vortrag</small>
@@ -22,6 +14,14 @@ layout: default
 
 
 ### Vergangene Konferenzen
+
+* Joy of Coding, Rotterdam, Niederlande, 29.5.2015:<br>
+  [Functional Programming for Beginners](http://joyofcoding.org/#functional-programming-for-beginners)<br>
+  <small>Vortrag</small>
+
+* Entwicklertag, Karlsruhe, 21.5.2015:<br>
+  [Jetzt funkt's! Funktionale Programmierung für Anfänger](https://entwicklertag.de/karlsruhe/2015/jetzt-funkts-funktionale)<br>
+  <small>Vortrag</small>
 
 * Mathema Campus, Erlangen, 24.4.2015:<br>
   [Sportlich, sportlich - Specification by Example mit Fitnesse](http://www.mathema.de/veranstaltungen/mathema-campus/programm#B3)<br>
