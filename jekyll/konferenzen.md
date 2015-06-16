@@ -8,6 +8,10 @@ layout: default
   [Funktioniert's? - Funktionale Programmierung mit Java 8](http://www.java-forum-stuttgart.de/de/Programm.html)<br>
   <small>Vortrag</small>
 
+* Tools4AgileTeams, Wiesbaden, 18.9.2015:<br>
+  [Specification by Example](http://www.tools4agileteams.com/display/2015/Specification+by+Example)<br>
+  <small>Interaktiver Vortrag</small>
+  
 * Java Forum Nord, Hannover, 6.10.2015:<br>
   [Funktioniert's? - Funktionale Programmierung mit Java 8](http://http://javaforumnord.de/)<br>
   <small>Vortrag</small>
