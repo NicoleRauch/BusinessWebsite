@@ -2,11 +2,7 @@
 layout: default
 ---
 
-### Kommende Konferenzen
-
-* Java Forum, Stuttgart, 9.7.2015:<br>
-  [Funktioniert's? - Funktionale Programmierung mit Java 8](http://www.java-forum-stuttgart.de/de/Programm.html)<br>
-  <small>Vortrag</small>
+### Kommende Vorträge und Workshops
 
 * Tools4AgileTeams, Wiesbaden, 18.9.2015:<br>
   [Specification by Example](http://www.tools4agileteams.com/display/2015/Specification+by+Example)<br>
@@ -16,8 +12,20 @@ layout: default
   [Funktioniert's? - Funktionale Programmierung mit Java 8](http://http://javaforumnord.de/)<br>
   <small>Vortrag</small>
 
+* Digicomp, Zürich, 21.10.2015:<br>
+  [Referat: Einführung in die funktionale Programmierung](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/einfuehrung-in-die-funktionale-programmierung)<br>
+  <small>Vortrag</small>
 
-### Vergangene Konferenzen
+* Digicomp, Zürich, 19.11.2015:<br>
+  [Referat: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/specification-by-example-endlich-die-richtige-software-entwickeln)<br>
+  <small>Vortrag</small>
+
+
+### Vergangene Vorträge und Workshops
+
+* Java Forum, Stuttgart, 9.7.2015:<br>
+  [Funktioniert's? - Funktionale Programmierung mit Java 8](http://www.java-forum-stuttgart.de/de/Programm.html)<br>
+  <small>Vortrag</small>
 
 * Joy of Coding, Rotterdam, Niederlande, 29.5.2015:<br>
   [Functional Programming for Beginners](http://joyofcoding.org/#functional-programming-for-beginners)<br>
