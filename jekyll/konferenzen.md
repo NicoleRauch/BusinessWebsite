@@ -20,6 +20,9 @@ layout: default
   [Referat: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/specification-by-example-endlich-die-richtige-software-entwickeln)<br>
   <small>Vortrag</small>
 
+* Java User Group Karlsruhe, 25.11.2015:<br>
+  [Funktioniert's? - Funktionale Programmierung mit Java 8](http://jug-karlsruhe.mixxt.de/networks/events/show_event.104754)<br>
+  <small>Vortrag</small>
 
 ### Vergangene Vorträge und Workshops
 
