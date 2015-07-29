@@ -24,6 +24,14 @@ layout: default
   [Funktioniert's? - Funktionale Programmierung mit Java 8](http://jug-karlsruhe.mixxt.de/networks/events/show_event.104754)<br>
   <small>Vortrag</small>
 
+* XP-Days Karlsruhe, 26.11.2015:<br>
+  [Offshoring mal andersherum - Einsichten in das Leben eines Remote-Entwicklers](http://www.xpdays.de/2015/sessions/063-offshoring-mal-andersherum-einsichten-in-das-leben-eines-remote-entwicklers.html)<br>
+  <small>Pecha Kucha</small>
+
+* XP-Days Karlsruhe, 27.11.2015:<br>
+  [Design on Steroids](http://www.xpdays.de/2015/sessions/065-design-on-steroids.html)<br>
+  <small>Vortrag mit Michael Sperber</small>
+
 ### Vergangene Vorträge und Workshops
 
 * Java Forum, Stuttgart, 9.7.2015:<br>
