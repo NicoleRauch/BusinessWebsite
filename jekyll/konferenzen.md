@@ -4,10 +4,6 @@ layout: default
 
 ### Kommende Vorträge und Workshops
 
-* Tools4AgileTeams, Wiesbaden, 18.9.2015:<br>
-  [Specification by Example](http://www.tools4agileteams.com/display/2015/Specification+by+Example)<br>
-  <small>Interaktiver Vortrag</small>
-  
 * Java Forum Nord, Hannover, 6.10.2015:<br>
   [Funktioniert's? - Funktionale Programmierung mit Java 8](http://http://javaforumnord.de/)<br>
   <small>Vortrag</small>
@@ -52,6 +48,10 @@ layout: default
 
 ### Vergangene Vorträge und Workshops
 
+* Tools4AgileTeams, Wiesbaden, 18.9.2015:<br>
+  [Specification by Example](http://www.tools4agileteams.com/display/2015/Specification+by+Example)<br>
+  <small>Interaktiver Vortrag</small>
+
 * Java Forum, Stuttgart, 9.7.2015:<br>
   [Funktioniert's? - Funktionale Programmierung mit Java 8](http://www.java-forum-stuttgart.de/de/Programm.html)<br>
   <small>Vortrag</small>
@@ -74,6 +74,7 @@ layout: default
 
 * Entwicklertag, Karlsruhe, 22.5.2014:<br>
   [Einführung in Domain-Driven Design](https://entwicklertag.de/karlsruhe/2014/vortrag/einf-hrung-domain-driven-design)<br>
+  [(Video)](https://www.youtube.com/watch?v=1C9aQlz7N2I)<br>
   <small>Vortrag mit Jens Borrmann</small>
 
 * Mathema Campus, Erlangen, 20.4.2014:<br>
