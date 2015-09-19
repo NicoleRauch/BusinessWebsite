@@ -9,11 +9,11 @@ layout: default
   <small>Vortrag</small>
 
 * Digicomp, Zürich, 21.10.2015:<br>
-  [Referat: Einführung in die funktionale Programmierung](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/einfuehrung-in-die-funktionale-programmierung)<br>
+  [Referat: Einführung in die funktionale Programmierung](https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-die-funktionale-programmierung)<br>
   <small>Vortrag</small>
 
 * Digicomp, Zürich, 19.11.2015:<br>
-  [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/andere-programmiersprachen/einfuehrung-in-die-funktionale-programmierung)<br>
+  [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung)<br>
   <small>ganztägiger Workshop</small>
 
 * Digicomp, Zürich, 19.11.2015:<br>
@@ -33,16 +33,16 @@ layout: default
   <small>Vortrag mit Michael Sperber</small>
 
 * Digicomp, Zürich, 14.12.2015:<br>
-  [Kurs: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/software-design/specification-by-example)<br>
+  [Kurs: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example)<br>
   <small>ganztägiger Workshop</small>
 
 * Digicomp, Zürich / Bern / Basel, 3.3.2016 / 22.6.2016 / 5.9.2016 / 7.12.2016:<br>
-  [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/andere-programmiersprachen/einfuehrung-in-die-funktionale-programmierung)<br>
+  [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung)<br>
   <small>ganztägiger Workshop</small>
 
 
 * Digicomp, Zürich / Bern / Basel, 4.3.2016 / 23.6.2016 / 6.9.2016 / 8.12.2016:<br>
-  [Kurs: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/software-design/specification-by-example)<br>
+  [Kurs: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example)<br>
   <small>ganztägiger Workshop</small>
 
 
