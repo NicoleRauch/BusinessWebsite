@@ -4,9 +4,9 @@ layout: default
 
 ### Kommende Vorträge und Workshops
 
-* Java Forum Nord, Hannover, 6.10.2015:<br>
-  [Funktioniert's? - Funktionale Programmierung mit Java 8](http://http://javaforumnord.de/)<br>
-  <small>Vortrag</small>
+* London Software Craftsmanship Community, London, 14.10.2015:<br>
+  [Introduction to FP using Haskell](http://www.meetup.com/de/london-software-craftsmanship/events/225943156/?eventId=225943156&rv=co1&chapter_analytics_code=UA-19049790-1&rv=co1)<br>
+  <small>Workshop</small>
 
 * Digicomp, Zürich, 21.10.2015:<br>
   [Referat: Einführung in die funktionale Programmierung](https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-die-funktionale-programmierung)<br>
@@ -21,7 +21,7 @@ layout: default
   <small>Vortrag</small>
   
 * Agile Tour Vienna, Wien, 21.11.2015:<br>
-  [Specification by Example](http://www.agiletourvienna.at)<br>
+  [Specification by Example](http://www.agiletourvienna.at/Agenda/Rauch)<br>
   <small>Interaktiver Vortrag</small>
 
 * Java User Group Karlsruhe, 25.11.2015:<br>
@@ -52,6 +52,10 @@ layout: default
 
 ### Vergangene Vorträge und Workshops
 
+* Java Forum Nord, Hannover, 6.10.2015:<br>
+  [Funktioniert's? - Funktionale Programmierung mit Java 8](http://http://javaforumnord.de/)<br>
+  <small>Vortrag</small>
+
 * Tools4AgileTeams, Wiesbaden, 18.9.2015:<br>
   [Specification by Example](http://www.tools4agileteams.com/display/2015/Specification+by+Example)<br>
   <small>Interaktiver Vortrag</small>
@@ -75,6 +79,10 @@ layout: default
 * SPA Conference, London, 2.7.2014:<br>
   [Advanced Testing Techniques for Node.js](http://www.spaconference.org/spa2014/sessions/session571.html)<br>
   <small>halbtägiger Workshop mit Andreas Leidig</small>
+
+* London Software Craftsmanship Community, 26.6.2014:<br>
+  [Hands-on session: Refactoring Legacy Code](http://www.meetup.com/de/london-software-craftsmanship/events/190722572/)<br>
+  <small>Workshop</small>
 
 * Entwicklertag, Karlsruhe, 22.5.2014:<br>
   [Einführung in Domain-Driven Design](https://entwicklertag.de/karlsruhe/2014/vortrag/einf-hrung-domain-driven-design)<br>
