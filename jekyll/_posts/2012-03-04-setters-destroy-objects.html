@@ -1,0 +1,101 @@
+---
+layout: post
+author: Nicole Rauch
+# meta: 
+# title: 
+lang: en
+---
+
+... and I am not referring to dogs who are chewing on things ...
+
+<br/>
+<img title="Setters destroy objects (Copyright &quot;Jakes World&quot;)" src="/img/settermachenobjektekaputt1.jpg?w=150" alt="" width="150" height="103" />
+
+<p/>
+(<a title="Setter machen Objekte kaputt" href="/2011/11/16/setter-machen-objekte-kaputt" target="_blank">this article was originally published in German</a>)
+
+<h2>What Makes Setters Dangerous?</h2>
+A "classical" setter, i.e. a public method that directly sets an object's field to a value passed in from the outside, undermines an object's integrity.
+The object can no longer take care of its fields and determine autonomously which field has which contents. This can especially destroy implicit object invariants, leaving the object in an inconsistent state.
+<p/>
+Setters are often used for the initialization of an object. This bears several risks:
+<ul>
+  <li>It is unclear which setters need to be invoked, and it is easy to leave out the invocation of a required setter.</li>
+  <li>It is unclear whether there is a given order in which several subsequent setter invocations can / should / must happen.</li>
+  <li>The setters can be invoked again in the subsequent code, thus potentially damaging the object's internal data.</li>
+</ul>
+
+<h2>There is a Life Without Setters</h2>
+Setters are used to initialize an object and/or to change its state. There are better ways to achieve these goals:
+<h4>Initialize the Object at the Right Time</h4>
+The initialization of an object should happen at the same time as its creation, in the same step. This way, we are sure that each object is fully functional right from the start. If we use setters, the object creation is already completed, and the "initialization" through the setter happens too late.
+<p/>
+Instead of using setters for this initialization, we can use constructors that expect all of the required arguments to properly initialize the object. This way, the object can initialize itself, thus keeping its consistency.
+<p/>
+If there are several combinations of arguments which can be used to initialize the object, we can offer several constructors. It is recommended that these constructors invoke each other internally.
+<p/>
+<strong>Example:</strong> A vector in a two-dimensional coordinate system.
+
+<pre>
+public class Vector {
+
+  private final double x;
+  private final double y;
+
+  public Vector( double x, double y ){
+    this.x = x;
+    this.y = y;
+  }
+
+  public Vector( int x, int y ){
+    this( (double) x, y );
+  }
+
+  public Vector( Point2D p ){
+    this( p.getX(), p.getY() );
+  }
+}
+</pre>
+
+<h4>Consistent State Changes</h4>
+Using setters to change the state of an object can easily lead to inconsistencies. Instead, we can send a suitable message (including all required arguments) to the object. The object can change its state in the desired way without losing its consistency.
+<p/>
+<strong>Example:</strong> Scalar multiplication of a vector
+<pre>
+public void multiplyWith( double scalar ){
+  x = x * scalar;
+  y = y * scalar;
+}
+</pre>
+Both fields of the vector are changed through the method invocation. There is no inconsistent state.
+<p/>
+(Note: This code only works in combination with the first example when the fields are not declared final.)
+
+<h2>Immutable Objects</h2>
+Alternatively, we can implement an "immutable object" or "value object". In this case, instead of changing the state of some object, we create a new object that reflects the changed state.<br/>
+This approach is especially recommended for objects that are part of the internal state of a "surrounding" object, while the surrounding object at the same time allows the outside world to access these internal objects. Here it must be impossible to change the internal state of the surrounding object by directly modifying the internal objects from the outside. Therefore, the immutability of the internal objects is crucial.
+<p/>
+<strong>Example:</strong> Scalar multiplication of a vector yields another vector:
+<pre>
+public Vector multiplyWith( double scalar ){
+  return new Vector( x * scalar, y * scalar );
+}
+</pre>
+The new vector is a modified copy of the initial vector. Of course, it is fully initialized and filled with consistent values.
+
+<h2>Respect Your Objects!</h2>
+If we treat objects with respect and if we allow for their need for autonomy, they will hopefully respond by being robust and fault-tolerant.
+
+<h2>Comments</h2>
+
+5.3.2012 by <a href="http://davidtanzer.net">David Tanzer</a>
+<p/>
+Good article, I can not agree more! I currently have to work on a code base where (almost) all properties of objects are public, can be set and are observable (fire change events). It is not maintainable at all - there is no way to find out how states change in the program by reading the source code, you have to debug it to see which values are changed. If only the original authors had access to this article when they had started the project ;)
+
+<hr/>
+
+5.3.2012 by Hayati Ayguen
+<p/>
+I absolutely agree, especially for IDE generated setters, which just set one single member variable.
+<p/>
+This kind of setters nearly always destroy the object: no object stays consistent when setting any content. For usual at least some range check or even adjusting other member variables is necessary.
