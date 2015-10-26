@@ -88,14 +88,21 @@ If we treat objects with respect and if we allow for their need for autonomy, th
 
 <h2>Comments</h2>
 
-5.3.2012 by <a href="http://davidtanzer.net">David Tanzer</a>
-<p/>
+<blockquote>
+<footer>
+  5.3.2012 by <a href="http://davidtanzer.net">David Tanzer</a>
+  </footer>
 Good article, I can not agree more! I currently have to work on a code base where (almost) all properties of objects are public, can be set and are observable (fire change events). It is not maintainable at all - there is no way to find out how states change in the program by reading the source code, you have to debug it to see which values are changed. If only the original authors had access to this article when they had started the project ;)
+</blockquote>
 
 <hr/>
 
-5.3.2012 by Hayati Ayguen
-<p/>
-I absolutely agree, especially for IDE generated setters, which just set one single member variable.
+<blockquote>
+<footer>
+  5.3.2012 by Hayati Ayguen
+  </footer>
+
+  I absolutely agree, especially for IDE generated setters, which just set one single member variable.
 <p/>
 This kind of setters nearly always destroy the object: no object stays consistent when setting any content. For usual at least some range check or even adjusting other member variables is necessary.
+</blockquote>

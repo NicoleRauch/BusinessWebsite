@@ -107,8 +107,10 @@ Wenn wir Objekten mit etwas Respekt begegnen und ihr Bedürfnis nach Autonomie b
 
 <h2>Kommentare</h2>
 
-04.03.2012 von Johannes
-<p />
+<blockquote>
+  <footer>
+04.03.2012 von <a href="http://www.printhelloworld.de">Johannes</a>
+  </footer>
 Hey Nicole,
 <p />
 danke für deinen Artikel - Ich bin ein großer Fan von immutability und einer Art wohldefinierten "contract" unter dem Objekte garantiert funktionieren und freue mich über jeden Input in diese Richtung.
@@ -120,14 +122,16 @@ Ein paar Dinge möchte ich noch anmerken: Setter an- und für sich sind nichts i
 Grundsätzlich denke ich getter und setter sollten für optionale Attribute verwendet werden. Weil das manchmal gar nicht so einfach ist, und lange Argumentlisten in Sprachen wie Java absolut unleserlich sind, greife ich dann gerne auch gerne mal zum Builder Pattern, um die Regeln unter denen ein Funktionierendes Objekt produziert wird explizit zu machen. 
 <p />
 Eine Kleinigkeit noch: das Beispiel, zur Skalarmultiplikation eines Vektors ist nich thread safe - teilen sich mehrere Klassen den gleichen Vektor kann es doch vorkommen dass ein inkonsistenter interner Zustand ausgelesen wird - eine immutable copy wie du direkt danach vorschlägst hat diesen Fehler nicht - das würde ich unbedingt noch erwähnen.
+</blockquote>
 
-<p />
 <hr />
-<p />
 
+<blockquote>
+  <footer>
 23.01.2013 von TutNichtsZurSache
-<p />
-Offenbar haben Sie den Sinn von Setter-Methoden nicht begriffen. Der Grund, wieso man eine Methode verwendet, statt das betreffende Feld einfach public zu machen, ist ja gerade, dass eine Methode sicherstellen kann, dass Invarianten erhalten werden.
+  </footer>
+
+  Offenbar haben Sie den Sinn von Setter-Methoden nicht begriffen. Der Grund, wieso man eine Methode verwendet, statt das betreffende Feld einfach public zu machen, ist ja gerade, dass eine Methode sicherstellen kann, dass Invarianten erhalten werden.
 <p />
 Zudem wirkt sich eine Initialisierung mittels eines Konstruktors nachteilig auf die Lesbarkeit aus, da für den Leser nicht klar ist, welches Argument im Konstruktor welchem Feld entspricht:
 <pre>
@@ -137,6 +141,4 @@ Ist das nun Herr Gerhard oder Herr Walter? Mit Settern ist das eindeutig. Und in
 <pre>
 new Person { GivenName = "Walter", Surname = "Gerhard" }
 </pre>
-
-<p />
-
+</blockquote>
