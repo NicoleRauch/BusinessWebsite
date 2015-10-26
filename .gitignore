@@ -2,7 +2,6 @@ HTML
 setup/.idea
 setup/bower_components
 setup/node_modules
-jekyll/css
 jekyll/fonts
 jekyll/js
 jekyll-beispielfiles
