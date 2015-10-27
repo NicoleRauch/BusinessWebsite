@@ -117,6 +117,10 @@ layout: default
   [OO-Design-Workshop: Restrukturierung von Code "From Push To Pull"](http://www.xpdays.de/2013/sessions/078-oo-design-workshop-restrukturierung-von-code-from-push-to-pull.html)<br>
   <small>Workshop mit Andreas Leidig</small>
 
+* Softwerkskammer, Karlsruhe, 11.9.2013:<br>
+  [Workshop: Refactoring Legacy Code "From Push to Pull"](https://www.softwerkskammer.org/activities/ka-treffen-25)<br>
+  <small>Workshop mit Andreas Leidig</small>
+
 * Herbstcampus, Nürnberg, 5.9.2013:<br>
   [Craftsman Swaps - Software-Entwickler auf der Walz](http://www.herbstcampus.de/hc13/program/sessions.html#100004)<br>
   <small>Kurzvortrag</small>
