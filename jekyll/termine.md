@@ -9,10 +9,6 @@ layout: default
   <small>Coderetreat-Moderation</small>
 
 * Digicomp, Zürich, 19.11.2015:<br>
-  [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung)<br>
-  <small>ganztägiger Workshop</small>
-
-* Digicomp, Zürich, 19.11.2015:<br>
   [Referat: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/specification-by-example-endlich-die-richtige-software-entwickeln)<br>
   <small>Vortrag</small>
   
