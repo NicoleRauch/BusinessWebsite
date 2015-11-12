@@ -5,7 +5,7 @@ layout: default
 ### Kommende Vorträge und Workshops
 
 * London Software Craftsmanship Community, London, 14.11.2015:<br>
-  [Global Day of Coderetreat @ TIM Group](http://www.meetup.com/de/london-software-craftsmanship/events/226148908/?eventId=226148908&a=ea1_grp&rv=ea1&_af=event&_af_eid=226148908&chapter_analytics_code=UA-19049790-1&rv=ea1)<br>
+  [Global Day of Coderetreat @ TIM Group](http://www.meetup.com/de/london-software-craftsmanship/events/226148908/)<br>
   <small>Coderetreat-Moderation</small>
 
 * Digicomp, Zürich, 19.11.2015:<br>
