@@ -4,10 +4,6 @@ layout: default
 
 ### Kommende Vorträge und Workshops
 
-* London Software Craftsmanship Community, London, 14.11.2015:<br>
-  [Global Day of Coderetreat @ TIM Group](http://www.meetup.com/de/london-software-craftsmanship/events/226148908/)<br>
-  <small>Coderetreat-Moderation</small>
-
 * Digicomp, Zürich, 19.11.2015:<br>
   [Referat: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/specification-by-example-endlich-die-richtige-software-entwickeln)<br>
   <small>Vortrag</small>
@@ -43,6 +39,10 @@ layout: default
 
 
 ### Vergangene Vorträge und Workshops
+
+* London Software Craftsmanship Community, London, 14.11.2015:<br>
+  [Global Day of Coderetreat @ TIM Group](http://www.meetup.com/de/london-software-craftsmanship/events/226148908/)<br>
+  <small>Coderetreat-Moderation</small>
 
 * Digicomp, Zürich, 21.10.2015:<br>
   [Referat: Einführung in die funktionale Programmierung](https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-die-funktionale-programmierung)<br>
