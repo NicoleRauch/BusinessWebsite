@@ -4,42 +4,49 @@ layout: default
 
 ### Kommende Vorträge und Workshops
 
-* Digicomp, Zürich, 19.11.2015:<br>
-  [Referat: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/specification-by-example-endlich-die-richtige-software-entwickeln)<br>
-  <small>Vortrag</small>
-  
-* Agile Tour Vienna, Wien, 21.11.2015:<br>
-  [Specification by Example](http://www.agiletourvienna.at/Agenda/Rauch)<br>
+* BOB Konferenz, Berlin, 19.2.2016:<br>
+  Specification by Example<br>
   <small>Interaktiver Vortrag</small>
 
-* Java User Group Karlsruhe, 25.11.2015:<br>
-  [Funktioniert's? - Funktionale Programmierung mit Java 8](http://jug-karlsruhe.mixxt.de/networks/events/show_event.104754)<br>
-  <small>Vortrag</small>
-
-* XP-Days Karlsruhe, 26.11.2015:<br>
-  [Offshoring mal andersherum - Einsichten in das Leben eines Remote-Entwicklers](http://www.xpdays.de/2015/sessions/063-offshoring-mal-andersherum-einsichten-in-das-leben-eines-remote-entwicklers.html)<br>
-  <small>Pecha Kucha</small>
-
-* XP-Days Karlsruhe, 27.11.2015:<br>
-  [Design on Steroids](http://www.xpdays.de/2015/sessions/065-design-on-steroids.html)<br>
-  <small>Vortrag mit Michael Sperber</small>
-
-* Digicomp, Zürich, 14.12.2015:<br>
-  [Kurs: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example)<br>
-  <small>ganztägiger Workshop</small>
+* Digicomp, Zürich, 2.3.2016:<br>
+  [Referat: Domain-Driven Design ("DDD")]()<br>
+  <small>Vortrag mit Arif Chughtai</small>
 
 * Digicomp, Zürich / Bern / Basel, 3.3.2016 / 22.6.2016 / 5.9.2016 / 7.12.2016:<br>
   [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung)<br>
   <small>ganztägiger Workshop</small>
 
-
 * Digicomp, Zürich / Bern / Basel, 4.3.2016 / 23.6.2016 / 6.9.2016 / 8.12.2016:<br>
   [Kurs: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example)<br>
   <small>ganztägiger Workshop</small>
 
+* Digicomp, Zürich / Bern / Basel, 4.-5.4.2016 / 31.8.-1.9.2016 / 30.11.-1.12.2016:<br>
+  [Kurs: Domain-Driven Design ("DDD")](https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design)<br>
+  <small>zweitägiger Workshop</small>
+
 
 ### Vergangene Vorträge und Workshops
 
+* XP-Days Karlsruhe, 27.11.2015:<br>
+  [Design on Steroids](http://www.xpdays.de/2015/sessions/065-design-on-steroids.html)<br>
+  <small>Vortrag mit Michael Sperber</small>
+
+* XP-Days Karlsruhe, 26.11.2015:<br>
+  [Offshoring mal andersherum - Einsichten in das Leben eines Remote-Entwicklers](http://www.xpdays.de/2015/sessions/063-offshoring-mal-andersherum-einsichten-in-das-leben-eines-remote-entwicklers.html)<br>
+  <small>Pecha Kucha</small>
+
+* Java User Group Karlsruhe, 25.11.2015:<br>
+  [Funktioniert's? - Funktionale Programmierung mit Java 8](http://jug-karlsruhe.mixxt.de/networks/events/show_event.104754)<br>
+  <small>Vortrag</small>
+
+* Agile Tour Vienna, Wien, 21.11.2015:<br>
+  [Specification by Example](http://www.agiletourvienna.at/Agenda/Rauch)<br>
+  <small>Interaktiver Vortrag</small>
+
+* Digicomp, Zürich, 19.11.2015:<br>
+  [Referat: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/specification-by-example-endlich-die-richtige-software-entwickeln)<br>
+  <small>Vortrag</small>
+  
 * London Software Craftsmanship Community, London, 14.11.2015:<br>
   [Global Day of Coderetreat @ TIM Group](http://www.meetup.com/de/london-software-craftsmanship/events/226148908/)<br>
   <small>Coderetreat-Moderation</small>
