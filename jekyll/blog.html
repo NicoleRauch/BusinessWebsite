@@ -10,8 +10,9 @@ layout: default
 {% for post in site.posts %}
 {% if post.lang == "de" %}
 <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+{% if post.subtitle %}<h5><a href="{{ post.url }}">{{ post.subtitle }}</a></h5>{% endif %}
 {{ post.date | date: "%d.%m.%Y" }}<br/>
-  {{ post.excerpt }} 
+  {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
   <a href="{{ post.url }}"><small>(weiterlesen)</small></a>
 {% endif %}
 {% endfor %}
@@ -22,8 +23,9 @@ layout: default
 {% for post in site.posts %}
 {% if post.lang == "en" %}
 <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+{% if post.subtitle %}<h5><a href="{{ post.url }}">{{ post.subtitle }}</a></h5>{% endif %}
 {{ post.date | date: "%d.%m.%Y" }}<br/>
-  {{ post.excerpt }} 
+  {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
   <a href="{{ post.url }}"><small>(read more)</small></a>
 {% endif %}
 {% endfor %}
