@@ -6,20 +6,21 @@ title: Setter machen Objekte kaputt
 lang: de
 ---
 
-... und damit meine ich nicht etwa Hunde, die auf Gegenständen herumkauen ... 
+<p>... und damit meine ich nicht etwa Hunde, die auf Gegenständen herumkauen ...</p>
 
 <br/>
-<img src="/img/settermachenobjektekaputt1.jpg?w=150" alt="" title="Setter machen Objekte kaputt (Copyright &quot;Jakes World&quot;)" /> 
-&nbsp; <p />
+<p><img src="/img/settermachenobjektekaputt1.jpg?w=150" alt="" title="Setter machen Objekte kaputt (Copyright &quot;Jakes World&quot;)" /> 
+  &nbsp;</p>
 
 <br style="clear:both;">
 
 <h2>Was ist so gefährlich an Settern?</h2>
 
-Ein "klassischer" Setter, also eine öffentliche Methode, die direkt ein bestimmtes Attribut eines Objekts auf einen von außen übergebenen Wert setzt, untergräbt die Integrität dieses Objekts.
-Das Objekt kann nicht mehr selbständig dafür Sorge tragen, welches seiner Attribute welchen Inhalt hat. Damit können insbesondere implizite Invarianten des Objekts zerstört werden, so dass das Objekt inkonsistent wird.
-<p />
-Oft werden Setter auch verwendet, um Objekte zu initialisieren. Dies birgt gleich mehrere Gefahren:
+<p>Ein "klassischer" Setter, also eine öffentliche Methode, die direkt ein bestimmtes Attribut eines Objekts auf einen von außen übergebenen Wert setzt, untergräbt die Integrität dieses Objekts.
+Das Objekt kann nicht mehr selbständig dafür Sorge tragen, welches seiner Attribute welchen Inhalt hat. Damit können insbesondere implizite Invarianten des Objekts zerstört werden, so dass das Objekt inkonsistent wird.</p>
+
+<p>Oft werden Setter auch verwendet, um Objekte zu initialisieren. Dies birgt gleich mehrere Gefahren:</p>
+
 <ul>
   <li>Es ist nicht klar, welche Setter aufgerufen werden müssen, und leicht wird ein Aufruf vergessen.</li>
   <li>Es ist nicht klar, ob es eine bestimmte Reihenfolge gibt, in der mehrere Setter nacheinander aufgerufen werden sollen / dürfen / müssen.</li> 
@@ -28,17 +29,17 @@ Oft werden Setter auch verwendet, um Objekte zu initialisieren. Dies birgt gleic
 
 <h2>Ein Leben ohne Setter</h2>
 
-Setter werden dafür verwendet, um ein Objekt zu initialisieren und/oder seinen Zustand später von außen zu verändern. Allerdings gibt es bessere Alternativen, um diese Ziele zu erreichen:
+<p>Setter werden dafür verwendet, um ein Objekt zu initialisieren und/oder seinen Zustand später von außen zu verändern. Allerdings gibt es bessere Alternativen, um diese Ziele zu erreichen:</p>
 
 <h4>Initialisierung zur rechten Zeit</h4>
 
-Die Initialisierung eines Objekts sollte in einem Schritt mit seiner Erzeugung erfolgen, um sicherzustellen, dass jedes Objekt von Anfang an voll funktionsfähig ist. Werden Setter verwendet, ist die Erzeugung des Objekts bereits abgeschlossen, die "Initialisierung" kommt also zu spät.
-<p />
-Statt Setter zur Initialisierung zu verwenden, kann ein Konstruktor angeboten werden, der die erforderlichen Argumente zur Initialisierung des Objekts erwartet. So kann das Objekt sich selbst initialisieren und damit seine Konsistenz wahren.
-<p />
-Falls es mehrere mögliche Argumentsätze zur Initialisierung gibt, können auch mehrere Konstruktoren implementiert werden. Diese sollten sich intern nach Möglichkeit gegenseitig aufrufen.
-<p />
-<strong>Beispiel:</strong> Ein Vektor in einem zweidimensionalen Koordinatensystem.
+<p>Die Initialisierung eines Objekts sollte in einem Schritt mit seiner Erzeugung erfolgen, um sicherzustellen, dass jedes Objekt von Anfang an voll funktionsfähig ist. Werden Setter verwendet, ist die Erzeugung des Objekts bereits abgeschlossen, die "Initialisierung" kommt also zu spät.</p>
+
+<p>Statt Setter zur Initialisierung zu verwenden, kann ein Konstruktor angeboten werden, der die erforderlichen Argumente zur Initialisierung des Objekts erwartet. So kann das Objekt sich selbst initialisieren und damit seine Konsistenz wahren.</p>
+
+<p>Falls es mehrere mögliche Argumentsätze zur Initialisierung gibt, können auch mehrere Konstruktoren implementiert werden. Diese sollten sich intern nach Möglichkeit gegenseitig aufrufen.</p>
+
+<p><strong>Beispiel:</strong> Ein Vektor in einem zweidimensionalen Koordinatensystem.</p>
 
 <pre>
 public class Vektor {
@@ -64,11 +65,9 @@ public class Vektor {
 
 <h4>Zustandsänderung konsistent gemacht</h4>
 
-Werden Setter verwendet, um den Zustand eines Objekts zu verändern, können leicht Inkonsistenzen entstehen. Hier kann dem Objekt stattdessen eine geeignete Nachricht geschickt werden, die mit genügend Argumenten versehen ist, so dass das Objekt seinen Zustand in der gewünschten Weise verändern kann, ohne dabei seine Konsistenz zu verlieren.
+<p>Werden Setter verwendet, um den Zustand eines Objekts zu verändern, können leicht Inkonsistenzen entstehen. Hier kann dem Objekt stattdessen eine geeignete Nachricht geschickt werden, die mit genügend Argumenten versehen ist, so dass das Objekt seinen Zustand in der gewünschten Weise verändern kann, ohne dabei seine Konsistenz zu verlieren.</p>
 
-<p />
-
-<strong>Beispiel:</strong> Skalarmultiplikation eines Vektors
+<p><strong>Beispiel:</strong> Skalarmultiplikation eines Vektors</p>
 
 <pre>
 public void multipliziereMit( double skalar ){
@@ -77,19 +76,15 @@ public void multipliziereMit( double skalar ){
 }
 </pre>
 
-Beide Attribute des Vektors werden durch einen Methodenaufruf verändert. Es gibt keinen inkonsistenten Zustand.
+<p>Beide Attribute des Vektors werden durch einen Methodenaufruf verändert. Es gibt keinen inkonsistenten Zustand.</p>
 
-<p />
-
-(Anmerkung: Dieser Code funktioniert im Zusammenhang mit dem ersten Beispiel natürlich nur dann, wenn die beiden Attribute nicht als final deklariert werden.)
+<p>(Anmerkung: Dieser Code funktioniert im Zusammenhang mit dem ersten Beispiel natürlich nur dann, wenn die beiden Attribute nicht als final deklariert werden.)</p>
 
 <h2>Unveränderliche Objekte</h2>
 
-Alternativ kann ein Objekt auch als Immutable (= unveränderlich) bzw. "Value Object" implementiert werden. In diesem Fall erzeugt jede Zustandsänderung ein neues Objekt mit der geänderten Information. Diese Vorgehensweise empfiehlt sich insbesondere für Objekte, die einerseits Teil des inneren Zustandes eines anderen Objekts sind, die andererseits aber von diesem Objekt über seine Schnittstelle herausgegeben werden. Hier darf es nicht möglich sein, von außen den inneren Zustand des herausgegebenen Objekts zu manipulieren, weswegen die Unveränderbarkeit eines solchen Objekts sehr wichtig ist.
+<p>Alternativ kann ein Objekt auch als Immutable (= unveränderlich) bzw. "Value Object" implementiert werden. In diesem Fall erzeugt jede Zustandsänderung ein neues Objekt mit der geänderten Information. Diese Vorgehensweise empfiehlt sich insbesondere für Objekte, die einerseits Teil des inneren Zustandes eines anderen Objekts sind, die andererseits aber von diesem Objekt über seine Schnittstelle herausgegeben werden. Hier darf es nicht möglich sein, von außen den inneren Zustand des herausgegebenen Objekts zu manipulieren, weswegen die Unveränderbarkeit eines solchen Objekts sehr wichtig ist.</p>
 
-<p />
-
-<strong>Beispiel:</strong> Skalarmultiplikation eines Vektors liefert einen neuen Vektor:
+<p><strong>Beispiel:</strong> Skalarmultiplikation eines Vektors liefert einen neuen Vektor:</p>
 
 <pre>
 public Vektor multipliziereMit( double skalar ){
@@ -97,11 +92,11 @@ public Vektor multipliziereMit( double skalar ){
 }
 </pre>
 
-Der neue Vektor ist ein modifiziertes Abbild des ursprünglichen Vektors, natürlich voll initialisiert und mit konsistenten Werten befüllt.
+<p>Der neue Vektor ist ein modifiziertes Abbild des ursprünglichen Vektors, natürlich voll initialisiert und mit konsistenten Werten befüllt.</p>
 
 <h2>Mehr Respekt gegenüber Objekten!</h2>
 
-Wenn wir Objekten mit etwas Respekt begegnen und ihr Bedürfnis nach Autonomie berücksichtigen, werden sie es uns hoffentlich durch Robustheit und Fehlertoleranz danken.
+<p>Wenn wir Objekten mit etwas Respekt begegnen und ihr Bedürfnis nach Autonomie berücksichtigen, werden sie es uns hoffentlich durch Robustheit und Fehlertoleranz danken.</p>
 
 <hr />
 
