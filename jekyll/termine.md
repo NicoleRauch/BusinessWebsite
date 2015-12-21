@@ -5,11 +5,11 @@ layout: default
 ### Kommende Vorträge und Workshops
 
 * BOB Konferenz, Berlin, 19.2.2016:<br>
-  Specification by Example<br>
+  [Specification by Example](http://bobkonf.de/2016/rauch.html)<br>
   <small>Interaktiver Vortrag</small>
 
 * Digicomp, Zürich, 2.3.2016:<br>
-  [Referat: Domain-Driven Design ("DDD")]()<br>
+  [Referat: Domain-Driven Design ("DDD")](https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen)<br>
   <small>Vortrag mit Arif Chughtai</small>
 
 * Digicomp, Zürich / Bern / Basel, 3.3.2016 / 22.6.2016 / 5.9.2016 / 7.12.2016:<br>
