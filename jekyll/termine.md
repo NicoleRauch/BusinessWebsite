@@ -29,12 +29,12 @@ layout: default
 
 * XP-Days Karlsruhe, 27.11.2015:<br>
   [Design on Steroids](http://www.xpdays.de/2015/sessions/065-design-on-steroids.html)<br>
-  [(Video)](https://www.youtube.com/watch?v=Iut3CprhlEA&feature=em-share_video_user)
+  [(Video)](https://www.youtube.com/watch?v=Iut3CprhlEA&feature=em-share_video_user)<br>
   <small>Vortrag mit Michael Sperber</small>
 
 * XP-Days Karlsruhe, 26.11.2015:<br>
   [Offshoring mal andersherum - Einsichten in das Leben eines Remote-Entwicklers](http://www.xpdays.de/2015/sessions/063-offshoring-mal-andersherum-einsichten-in-das-leben-eines-remote-entwicklers.html)<br>
-  [(Video)](https://www.youtube.com/watch?v=DnyV-5edV6k&feature=youtu.be)
+  [(Video)](https://www.youtube.com/watch?v=DnyV-5edV6k&feature=youtu.be)<br>
   <small>Pecha Kucha</small>
 
 * Java User Group Karlsruhe, 25.11.2015:<br>
@@ -68,6 +68,7 @@ layout: default
 
 * Tools4AgileTeams, Wiesbaden, 18.9.2015:<br>
   [Specification by Example](http://www.tools4agileteams.com/display/2015/Specification+by+Example)<br>
+  [(Video)](https://www.youtube.com/watch?v=oJ_A6rlP3PU&feature=youtu.be)<br>
   <small>Interaktiver Vortrag</small>
 
 * Java Forum, Stuttgart, 9.7.2015:<br>
