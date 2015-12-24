@@ -304,7 +304,17 @@ describe("Username end2end test", function () {
 });
 </pre>
 
-All of the tests shown here run in 25 ms on my machine. Needless to say that I'm using this technique at work as well.
+## Recap
+
+By now, you have seen a number of different kinds of tests:
+
+* unit tests for the UI component (using a stub instead of the real AJAX module)
+* unit tests for the AJAX module (inspecting each AJAX request in isolation)
+* integration tests for UI component and multiple AJAX modules (using a fake server that stubs all responses)
+
+Together, they build a strong and fast test harness for the application.
+
+Speaking of fast: All of the tests shown here run in 25 ms on my machine. Needless to say that I'm using this technique at work as well.
 
 ## Code
 
