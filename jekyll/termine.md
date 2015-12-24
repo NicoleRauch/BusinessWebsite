@@ -12,7 +12,7 @@ layout: default
   [Referat: Domain-Driven Design ("DDD")](https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen)<br>
   <small>Vortrag mit Arif Chughtai</small>
 
-* Digicomp, Zürich / Bern / Basel, 3.3.2016 / 22.6.2016 / 5.9.2016 / 7.12.2016:<br>
+* Digicomp, Zürich / Bern / Basel, 3.3.2016 / 21.6.2016 / 5.9.2016 / 7.12.2016:<br>
   [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung)<br>
   <small>ganztägiger Workshop</small>
 
