@@ -112,8 +112,7 @@ module.exports = function (grunt) {
           report: 'min'
         },
         files: {
-          'public/stylesheets/screen.css': [
-            'build/stylesheets/less/bootstrap.less',
+          'jekyll/css/screen.css': [
             'node_modules/font-awesome/css/font-awesome.css',
             'build/stylesheets/less/custom.less'
           ]
