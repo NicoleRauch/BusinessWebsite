@@ -1,0 +1,8 @@
+# robots.txt for nicolerauch.de
+
+User-agent: *
+Disallow: /css
+Disallow: /fonts
+Disallow: /images
+Disallow: /img
+Disallow: /js
