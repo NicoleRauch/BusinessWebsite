@@ -1,0 +1,199 @@
+/* Custom styling for the Bootstrap website. 
+These styles do not ship with Bootstrap. 
+
+div[class="row"] {
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+div[class^="col-"] {
+    background-color: rgba(255, 0, 0, 0.2);
+} */
+
+/* Custom Code */
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 14pt;
+	font-weight: 400;
+	line-height: 16.8pt;
+	color: lighten(#000, 20%)
+}
+
+.viewport {
+	min-height: 97%;
+}
+
+.container-fluid {
+	background-color: #F6F2EE;
+	margin: 15px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 23pt;
+	color: lighten(#000, 10%);
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 16pt;
+	color: lighten(#000, 30%);
+}
+
+span {
+	padding-right: 5px;
+}
+
+#banner {
+	padding-top: 10%;
+	padding-bottom: 20px;
+}
+
+footer {
+	text-align: center;
+	font-weight: 100;
+	color: #999;
+	margin-top: 100px;
+	> ul li {
+		display: inline;
+	}
+}
+
+.navbar {
+	border: 0px;
+	text-transform: uppercase;
+	font-size: 11.27pt;
+}
+
+
+.navbar-default .navbar-nav { 
+	width: 100%;
+	text-align: center;
+	> li {
+		display: inline-block;
+		float: none;
+		> a {
+		  padding-left: 20px;
+		  padding-right: 20px;
+		}
+	}
+}
+
+@media(max-width: @screen-xs-max) {
+	.navbar-default .navbar-nav { 
+		> li {
+			display: block;
+			float: none;
+		}
+	}
+}
+
+@media(max-width: @screen-sm-max) {
+	.impressum {
+		text-align: center;
+		> img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+ul {
+    list-style: none;
+    color: lighten(#000, 30%)
+}
+ 
+ul.slash li:before {
+    content: '// ';
+}
+
+ul.clean {
+	padding: 0;
+	margin: 0;
+}
+
+.inline ul li {
+	display: inline;
+}
+
+.profile {
+	margin-top: 20px;
+	padding: 0;
+}
+
+.separate {
+	margin-top: 5%;
+}
+
+.active {
+	> a:before {
+		font-weight: bold;
+		font-size: 23px;
+	    content: '{ ';
+	}
+	> a:after {
+		font-weight: bold;
+		font-size: 23px;
+		content: ' }';
+	}
+}
+.workshop {
+	> a {
+		text-decoration: none;
+	}
+	> a:hover {
+		text-decoration: underline;
+		color: lightgrey;
+	}
+	> div {
+		padding-left: 25px;
+		font-size: 16px;
+		font-weight: bold;
+		color: grey;
+	}
+}
+
+.italic {
+	font-style: italic;
+	font-weight: 300;
+	color: lighten(#000, 30%);
+}
+
+.big {
+	font-weight: 300;
+	font-size: 19pt;
+	line-height: 22.8pt;
+	color: lighten(#000, 30%);
+}
+
+.disclaimer {
+	margin-top: 20px;
+	font-size: 13px;
+	> a {
+		color: darkorange;
+	}
+}
+
+.impressum ul {
+	font-size: 23px;
+	line-height: 23pt;
+	> li:nth-child(1) {
+		font-weight: bold;
+		color: lighten(#000, 10%);
+	}
+	> li:nth-child(2) {
+		font-style: italic;
+	}
+	> li:nth-child(3) {
+		font-style: italic;
+	}
+	> li:nth-child(4) {
+		font-style: italic;
+	}
+}
+
