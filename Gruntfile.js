@@ -113,21 +113,9 @@ module.exports = function (grunt) {
         },
         files: {
           'public/stylesheets/screen.css': [
-            'node_modules/fullcalendar/dist/fullcalendar.css',
             'build/stylesheets/less/bootstrap.less',
-            'node_modules/bootstrap-datepicker/css/datepicker3.css',
-            'build/stylesheets/less/bootstrap-markdown-patched.less',
             'node_modules/font-awesome/css/font-awesome.css',
-            'node_modules/node-syntaxhighlighter/lib/styles/shCoreDefault.css',
-            'node_modules/drmonty-smartmenus/css/jquery.smartmenus.bootstrap.css',
-            'node_modules/datatables/media/css/jquery.dataTables.css',
-            'frontend/3rd_party_css/dataTables.bootstrap.css',
-            'frontend/3rd_party_css/dataTables.fontAwesome.css',
-            'node_modules/select2/dist/css/select2.css',
-            'node_modules/select2-bootstrap-css/select2-bootstrap.css',
-            'node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css',
-            'node_modules/guillotine/css/jquery.guillotine.css',
-            'build/stylesheets/less/agora.less'
+            'build/stylesheets/less/custom.less'
           ]
         }
       }
