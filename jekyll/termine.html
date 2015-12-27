@@ -28,8 +28,8 @@ layout: default
 
   {% for jahr in site.data.termine.vergangene %}
 
-    <a data-toggle="collapse" href="#year{{jahr.year}}" data-parent="#year"><h4>Im Jahr {{jahr.year}}</h4></a>
-    <div id="year{{jahr.year}}" class="collapse">
+  <a data-toggle="collapse" href="#year{{jahr.year}}" data-parent="#year"><h4>Im Jahr {{jahr.year}}</h4></a>
+  <div id="year{{jahr.year}}" class="collapse">
 
     <ul style="list-style-type: none;padding:0; margin:0;">
   {% for termin in jahr.entries %}
@@ -44,7 +44,9 @@ layout: default
   </li>
 {% endfor %}
   </ul>
+  </div>
+  
   {% endfor %}
   
-  </div>
+ 
 </div>  
