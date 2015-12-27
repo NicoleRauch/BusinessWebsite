@@ -39,12 +39,6 @@ module.exports = function (grunt) {
         expand: true,
         flatten: true
       },
-      bootstrapJS: {
-        src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        dest: 'jekyll/js',
-        expand: true,
-        flatten: true
-      },
       bootstrapLESS: {
         cwd: 'node_modules/bootstrap/less/',
         src: ['**', '!variables.less'],
@@ -65,6 +59,30 @@ module.exports = function (grunt) {
       fullpageCSS: {
         src: 'node_modules/fullpage.js/jquery.fullPage.css',
         dest: 'jekyll/css',
+        expand: true,
+        flatten: true
+      },
+      jqueryJS: {
+        src: 'node_modules/jquery/dist/jquery.min.js',
+        dest: 'jekyll/js',
+        expand: true,
+        flatten: true
+      },
+      bootstrapJS: {
+        src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        dest: 'jekyll/js',
+        expand: true,
+        flatten: true
+      },
+      jqueryEasingJS: {
+        src: 'node_modules/jquery.easing/jquery.easing.min.js',
+        dest: 'jekyll/js',
+        expand: true,
+        flatten: true
+      },
+      fullpageJS: {
+        src: 'node_modules/fullpage.js/jquery.fullPage.js',
+        dest: 'jekyll/js',
         expand: true,
         flatten: true
       }
