@@ -1,0 +1,253 @@
+[
+  {
+    "year": "2015",
+    "entries": [
+      {
+        "name": "XP-Days Karlsruhe, 27.11.2015",
+        "title": "Design on Steroids",
+        "url": "http://www.xpdays.de/2015/sessions/065-design-on-steroids.html",
+        "videoUrl": "https://www.youtube.com/watch?v=Iut3CprhlEA&feature=em-share_video_user",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
+        "name": "XP-Days Karlsruhe, 26.11.2015",
+        "title": "Offshoring mal andersherum - Einsichten in das Leben eines Remote-Entwicklers",
+        "url": "http://www.xpdays.de/2015/sessions/063-offshoring-mal-andersherum-einsichten-in-das-leben-eines-remote-entwicklers.html",
+        "videoUrl": "https://www.youtube.com/watch?v=DnyV-5edV6k&feature=youtu.be",
+        "kind": "Pecha Kucha"
+      },
+      {
+        "name": "Java User Group Karlsruhe, 25.11.2015",
+        "title": "Funktioniert's? - Funktionale Programmierung mit Java 8",
+        "url": "http://jug-karlsruhe.mixxt.de/networks/events/show_event.104754",
+        "videoUrl": "https://www.youtube.com/watch?v=dM_NUMEO69k&feature=youtu.be",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Agile Tour Vienna, Wien, 21.11.2015",
+        "title": "Specification by Example",
+        "url": "http://www.agiletourvienna.at/Agenda/Rauch",
+        "kind": "Interaktiver Vortrag"
+      },
+      {
+        "name": "Digicomp, Zürich, 19.11.2015",
+        "title": "Referat: Specification by Example - Endlich die richtige Software entwickeln!",
+        "url": "https://www.digicomp.ch/de/weiterbildung/softwareentwicklung/specification-by-example-endlich-die-richtige-software-entwickeln",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "London Software Craftsmanship Community, London, 14.11.2015",
+        "title": "Global Day of Coderetreat @ TIM Group",
+        "url": "http://www.meetup.com/de/london-software-craftsmanship/events/226148908/",
+        "kind": "Coderetreat-Moderation"
+      },
+      {
+        "name": "Digicomp, Zürich, 21.10.2015",
+        "title": "Referat: Einführung in die funktionale Programmierung",
+        "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-die-funktionale-programmierung",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "London Software Craftsmanship Community, London, 14.10.2015",
+        "title": "Introduction to Functional Programming using Haskell",
+        "url": "http://www.meetup.com/de/london-software-craftsmanship/events/225943156/?eventId=225943156&rv=co1&chapter_analytics_code=UA-19049790-1&rv=co1",
+        "kind": "Workshop"
+      },
+      {
+        "name": "Java Forum Nord, Hannover, 6.10.2015",
+        "title": "Funktioniert's? - Funktionale Programmierung mit Java 8",
+        "url": "http://http://javaforumnord.de/",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Tools4AgileTeams, Wiesbaden, 18.9.2015",
+        "title": "Specification by Example",
+        "url": "http://www.tools4agileteams.com/display/2015/Specification+by+Example",
+        "videoUrl": "https://www.youtube.com/watch?v=oJ_A6rlP3PU&feature=youtu.be",
+        "kind": "Interaktiver Vortrag"
+      },
+      {
+        "name": "Java Forum, Stuttgart, 9.7.2015",
+        "title": "Funktioniert's? - Funktionale Programmierung mit Java 8",
+        "url": "http://www.java-forum-stuttgart.de/de/Programm.html",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Joy of Coding, Rotterdam, Niederlande, 29.5.2015",
+        "title": "Functional Programming for Beginners",
+        "url": "http://joyofcoding.org/#functional-programming-for-beginners",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Entwicklertag, Karlsruhe, 21.5.2015",
+        "title": "Jetzt funkt's! Funktionale Programmierung für Anfänger",
+        "url": "https://entwicklertag.de/karlsruhe/2015/jetzt-funkts-funktionale",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 24.4.2015",
+        "title": "Sportlich, sportlich - Specification by Example mit Fitnesse",
+        "url": "http://www.mathema.de/veranstaltungen/mathema-campus/programm#B3",
+        "kind": "Vortrag"
+      }
+    ]
+  },
+  {
+    "year": "2014",
+    "entries": [
+      {
+        "name": "SPA Conference, London, 2.7.2014",
+        "title": "Advanced Testing Techniques for Node.js",
+        "url": "http://www.spaconference.org/spa2014/sessions/session571.html",
+        "kind": "halbtägiger Workshop mit Andreas Leidig"
+      },
+      {
+        "name": "London Software Craftsmanship Community, 26.6.2014",
+        "title": "Hands-on session: Refactoring Legacy Code",
+        "url": "http://www.meetup.com/de/london-software-craftsmanship/events/190722572/",
+        "kind": "Workshop"
+      },
+      {
+        "name": "Entwicklertag, Karlsruhe, 22.5.2014",
+        "title": "Einführung in Domain-Driven Design",
+        "url": "https://entwicklertag.de/karlsruhe/2014/vortrag/einf-hrung-domain-driven-design",
+        "videoUrl": "https://www.youtube.com/watch?v=1C9aQlz7N2I",
+        "kind": "Vortrag mit Jens Borrmann"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 20.4.2014",
+        "title": "Jetzt funkt's! - Funktionale Programmierung für Anfänger",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 19.4.2014",
+        "title": "Hobbythek - Open Source Softwareentwicklung mit JavaScript und node.js",
+        "kind": "ganztägiger Workshop mit Andreas Leidig"
+      },
+      {
+        "name": "Entwicklertag, Frankfurt, 19.2.2014",
+        "title": "Software Craftsman Swap - Ein Erfahrungsbericht",
+        "url": "https://entwicklertag.de/frankfurt/2014/session/software-craftsman-swap-ein-erfahrungsbericht",
+        "kind": "Vortrag mit Matthias Mayer"
+      }
+    ]
+  },
+  {
+    "year": "2013",
+    "entries": [
+      {
+        "name": "XP-Days, Karlsruhe, 15.11.2013",
+        "title": "„Javascript auf dem Server. Das geht ja gar nicht!“ - Durchleuchtung einer Open Source node.js Anwendung",
+        "url": "http://www.xpdays.de/2013/sessions/e01-javascript-auf-dem-server-das-geht-ja-gar-nicht-durchleuchtung-einer-open-source-nodejs-anwendung.html",
+        "kind": "Vortrag mit Andreas Leidig"
+      },
+      {
+        "name": "XP-Days, Karlsruhe, 15.11.2013",
+        "title": "Craftsman Swap",
+        "url": "http://www.xpdays.de/2013/sessions/073-craftsman-swap.html",
+        "kind": "Vortrag / Diskussion"
+      },
+      {
+        "name": "XP-Days, Karlsruhe, 14.11.2013",
+        "title": "OO-Design-Workshop: Restrukturierung von Code \"From Push To Pull\"",
+        "url": "http://www.xpdays.de/2013/sessions/078-oo-design-workshop-restrukturierung-von-code-from-push-to-pull.html",
+        "kind": "Workshop mit Andreas Leidig"
+      },
+      {
+        "name": "Softwerkskammer, Karlsruhe, 11.9.2013",
+        "title": "Workshop: Refactoring Legacy Code \"From Push to Pull\"",
+        "url": "https://www.softwerkskammer.org/activities/ka-treffen-25",
+        "kind": "Workshop mit Andreas Leidig"
+      },
+      {
+        "name": "Herbstcampus, Nürnberg, 5.9.2013",
+        "title": "Craftsman Swaps - Software-Entwickler auf der Walz",
+        "url": "http://www.herbstcampus.de/hc13/program/sessions.html#100004",
+        "kind": "Kurzvortrag"
+      },
+      {
+        "name": "Herbstcampus, Nürnberg, 3.9.2013",
+        "title": "Macht der Gewohnheit - Usus &ndash; ein Werkzeug zur Verbesserung der Code-Qualität",
+        "url": "http://www.herbstcampus.de/hc13/program/sessions.html#40",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "XP Conference, Wien, Österreich, 3.6.2013",
+        "title": "Restructuring Code: From \"Push\" to \"Pull\"",
+        "url": "http://xp2013.org/program/workshops-and-tutorials/restructuring-code-from-push-to-pull/",
+        "kind": "halbtägiger Workshop mit Andreas Leidig"
+      }
+    ]
+  },
+  {
+    "year": "2012",
+    "entries": [
+      {
+        "name": "XP-Days, Hamburg, 29.11.2012",
+        "title": "Beispielhaft (Specification by Example)",
+        "url": "http://www.xpdays.de/twiki/bin/view/XPDays2012/SpecificationByExample",
+        "kind": "Vortrag mit Andreas Leidig"
+      },
+      {
+        "name": "Herbstcampus, Nürnberg, 5.9.2012",
+        "title": "Monaden - Die nächste Herausforderung der funktionalen Welt",
+        "url": "http://www.herbstcampus.de/hc12/program/sessions.html#57",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Herbstcampus, Nürnberg, 4.9.2012",
+        "title": "Beispielhaft (Specification by Example)",
+        "url": "http://www.herbstcampus.de/hc12/program/sessions.html#46",
+        "kind": "Vortrag mit Andreas Leidig"
+      },
+      {
+        "name": "Entwicklertag, Karlsruhe, 10.5.2012",
+        "title": "Refactoring Legacy Code",
+        "url": "http://entwicklertag.de/karlsruhe/2012/refactoring-von-legacy-code-ein-praxisbericht",
+        "kind": "Vortrag mit Andreas Leidig"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 25.2.2012",
+        "title": "Refactoring Legacy Code",
+        "kind": "Vortrag mit Andreas Leidig"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 24.2.2012",
+        "title": "Wege aus der FIT-Test-Hölle",
+        "kind": "Vortrag mit Andreas Leidig"
+      }
+    ]
+  },
+  {
+    "year": "2011",
+    "entries": [
+      {
+        "name": "Deutsche Scrum Treffen, Stuttgart, 12.7.2011",
+        "title": "Scrum Smells",
+        "kind": "Vortrag / Diskussion"
+      }
+    ]
+  },
+  {
+    "year": "2010",
+    "entries": [
+      {
+        "name": "XP-Days Germany, Hamburg, 26.11.2010",
+        "title": "Unit Tests als Spezifikation?",
+        "url": "http://www.xpdays.de/twiki/bin/view/XPDays2010/UnitTestsAlsSpezifikation",
+        "kind": "Vortrag mit Marc Philipp"
+      },
+      {
+        "name": "Software Craftsmanship 2010, Bletchley Park, Milton Keynes, UK, 7.10.2010",
+        "title": "Customizing Project Usus",
+        "url": "https://sc2010subs.wordpress.com/2010/09/26/customizing-project-usus-nicole-rauch-andreas-leidig/",
+        "kind": "Vortrag mit Andreas Leidig"
+      },
+      {
+        "name": "JAX 2010, Mainz, 5.5.2010",
+        "title": "Das ist hier Usus...",
+        "kind": "Vortrag mit Andreas Leidig"
+      }
+    ]
+  }
+]
