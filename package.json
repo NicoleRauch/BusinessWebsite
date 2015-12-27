@@ -3,8 +3,7 @@
   "description": "The Website",
   "version": "1.0.0",
   "author": "Nicole Rauch",
-  "contributors ": [
-  ],
+  "contributors ": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/softwerkskammer/Agora"
@@ -17,6 +16,7 @@
   "dependencies": {
     "bootstrap": "3.3.5",
     "font-awesome": "4.5.0",
+    "fullpage.js": "2.7.6",
     "jquery": "2.1.4"
   },
   "devDependencies": {

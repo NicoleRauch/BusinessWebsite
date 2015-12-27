@@ -61,6 +61,12 @@ module.exports = function (grunt) {
         dest: 'build/stylesheets/less',
         expand: true,
         flatten: true
+      },
+      fullpageCSS: {
+        src: 'node_modules/fullpage.js/jquery.fullPage.css',
+        dest: 'jekyll/css',
+        expand: true,
+        flatten: true
       }
       /*
       ,
@@ -113,7 +119,6 @@ module.exports = function (grunt) {
         },
         files: {
           'jekyll/css/screen.css': [
-            'node_modules/font-awesome/css/font-awesome.css',
             'build/stylesheets/less/custom.less'
           ]
         }
