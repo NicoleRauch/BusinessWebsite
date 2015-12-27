@@ -2,27 +2,30 @@
 layout: default
 ---
 
-### Kommende Vorträge und Workshops
+<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1">
 
-* BOB Konferenz, Berlin, 19.2.2016:<br>
-  [Specification by Example](http://bobkonf.de/2016/rauch.html)<br>
-  <small>Interaktiver Vortrag</small>
+<h3>Kommende Vorträge und Workshops</h3>
 
-* Digicomp, Zürich, 2.3.2016:<br>
-  [Referat: Domain-Driven Design ("DDD")](https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen)<br>
-  <small>Vortrag mit Arif Chughtai</small>
+  <ul style="list-style-type: none;padding:0; margin:0;">
+{% for termin in site.data.termine.kommende %}
+  <li style="margin-bottom:0.5em;">{{termin.name}}:<br/>
+    {% if termin.url %}
+      <a href="{{ termin.url }}">{{ termin.title }}</a><br/>
+    {% else %}
+      {{ termin.title }}<br/>
+    {% endif %}
+    <small>{{ termin.kind }}</small>
+  </li>
+{% endfor %}
+  </ul>
 
-* Digicomp, Zürich / Bern / Basel, 3.3.2016 / 21.6.2016 / 5.9.2016 / 7.12.2016:<br>
-  [Kurs: Einführung in die funktionale Programmierung](https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung)<br>
-  <small>ganztägiger Workshop</small>
+</div>
 
-* Digicomp, Zürich / Bern / Basel, 4.3.2016 / 23.6.2016 / 6.9.2016 / 8.12.2016:<br>
-  [Kurs: Specification by Example - Endlich die richtige Software entwickeln!](https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example)<br>
-  <small>ganztägiger Workshop</small>
+<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1">
 
-* Digicomp, Zürich / Bern / Basel, 4.-5.4.2016 / 31.8.-1.9.2016 / 30.11.-1.12.2016:<br>
-  [Kurs: Domain-Driven Design ("DDD")](https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design)<br>
-  <small>zweitägiger Workshop</small>
+<div class="col-md-4 col-md-offset-1 hidden-xs hidden-sm" id="banner">
+    <p><img src="/img/banner3.png"></p>
+</div>
 
 * Mathema Campus, Erlangen, 9.4.2016:<br>
   Wenn die Domäne treibt - Einführung in Domain-Driven Design<br>
@@ -40,7 +43,7 @@ layout: default
   TBA<br>
   <small>Vortrag</small>  
 
-### Vergangene Vorträge und Workshops
+<h3>Vergangene Vorträge und Workshops</h3>
 
 * XP-Days Karlsruhe, 27.11.2015:<br>
   [Design on Steroids](http://www.xpdays.de/2015/sessions/065-design-on-steroids.html)<br>
@@ -194,3 +197,5 @@ layout: default
 * JAX 2010, Mainz, 5.5.2010:<br>
   Das ist hier Usus...<br>
   <small>Vortrag mit Andreas Leidig</small>
+
+</div>

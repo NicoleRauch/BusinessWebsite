@@ -1,0 +1,32 @@
+[
+{
+  "name": "BOB Konferenz, Berlin, 19.2.2016",
+  "title": "Specification by Example",
+  "url": "http://bobkonf.de/2016/rauch.html",
+  "kind": "Interaktiver Vortrag"
+},
+{
+  "name": "Digicomp, Zürich, 2.3.2016",
+  "title": "Referat: Domain-Driven Design (\"DDD\")",
+  "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen",
+  "kind": "Vortrag mit Arif Chughtai"
+},
+{
+  "name": "Digicomp, Zürich / Bern / Basel, 3.3.2016 / 21.6.2016 / 5.9.2016 / 7.12.2016",
+  "title": "Kurs: Einführung in die funktionale Programmierung",
+  "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung",
+  "kind": "ganztägiger Workshop"
+},
+{
+  "name": "Digicomp, Zürich / Bern / Basel, 4.3.2016 / 23.6.2016 / 6.9.2016 / 8.12.2016",
+  "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
+  "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
+  "kind": "ganztägiger Workshop"
+},
+{
+  "name": "Digicomp, Zürich / Bern / Basel, 4.-5.4.2016 / 31.8.-1.9.2016 / 30.11.-1.12.2016",
+  "title": "Kurs: Domain-Driven Design (\"DDD\")",
+  "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+  "kind": "zweitägiger Workshop"
+}
+]
