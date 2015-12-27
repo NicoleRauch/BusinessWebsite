@@ -97,24 +97,6 @@ module.exports = function (grunt) {
       }
       */
     },
-    patch: {
-      smartmenus: {
-        options: {
-          patch: 'frontend/3rd_party_js/jquery.smartmenus.bootstrap.js.patch'
-        },
-        files: {
-          'build/javascript/jquery.smartmenus.bootstrap-patched.js': 'node_modules/drmonty-smartmenus/js/jquery.smartmenus.bootstrap.js'
-        }
-      },
-      fullcalendar: {
-        options: {
-          patch: 'frontend/3rd_party_js/fullcalendar.js.patch'
-        },
-        files: {
-          'build/javascript/fullcalendar-patched.js': 'node_modules/fullcalendar/dist/fullcalendar.js'
-        }
-      }
-    },
     eslint: {
       options: {quiet: true},
       target: ['**/*.js']
@@ -170,9 +152,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-eslint');
-  grunt.loadNpmTasks('grunt-patch');
 
-  grunt.registerTask('prepare', ['copy', 'patch', 'less']);
+  grunt.registerTask('prepare', ['copy', 'less']);
   grunt.registerTask('frontendtests', ['clean', 'prepare', 'jade', 'uglify:production_de', 'karma:once', 'uglify:development_de', 'karma:once', 'istanbul_check_coverage:frontend']);
   grunt.registerTask('deploy_development', ['prepare', 'uglify:development_de', 'uglify:development_en']);
 
