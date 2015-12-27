@@ -21,18 +21,16 @@ layout: default
 
 </div>
 
-<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1">
-
-<div class="col-md-4 col-md-offset-1 hidden-xs hidden-sm" id="banner">
+<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1 year">
     <p><img src="/img/banner3.png"></p>
-</div>
 
 <h3>Vergangene Vorträge und Workshops</h3>
 
   {% for jahr in site.data.termine.vergangene %}
 
-  <h4>Im Jahr {{jahr.year}}</h4>
-  
+    <a data-toggle="collapse" href="#year{{jahr.year}}" data-parent="#year"><h4>Im Jahr {{jahr.year}}</h4></a>
+    <div id="year{{jahr.year}}" class="collapse">
+
     <ul style="list-style-type: none;padding:0; margin:0;">
   {% for termin in jahr.entries %}
   <li style="margin-bottom:0.5em;">{{termin.name}}:<br/>
@@ -49,3 +47,4 @@ layout: default
   {% endfor %}
   
   </div>
+</div>  
