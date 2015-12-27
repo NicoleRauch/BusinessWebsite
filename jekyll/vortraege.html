@@ -2,35 +2,91 @@
 layout: default
 ---
 
-<h2>Themen meiner Vorträge und Workshops</h2>
+<div class="col-md-4 col-md-offset-1">
+    <p><img class="img-responsive center-block" src="img/banner4.png" id="banner"></p>
+    <p>Mein Repertoire an Vorträgen und Workshops umfasst die
+        Themenbereiche Softwareentwicklung, Softwarequalität,
+        Software Craftsmanship und Funktionale Programmierung.</p>
 
-<p>Mein Repertoire an Vorträgen und Workshops umfasst die Themenbereiche Softwareentwicklung und Softwarequalität, Funktionale Programmierung und Software Craftsmanship.</p>
-<p>Sollten Sie Interesse an einem dieser Vorträge oder Workshops haben oder haben Sie eigene Wünsche in diesen
-Themengebieten, freue ich mich über Ihre Kontaktaufnahme.</p>
-
-<p>&nbsp;</p>
-
-<h3>Softwareentwicklung und Softwarequalität</h3>
-
-<h4>Vortrag: Specification by Example</h4>
-<p>Ein Überblick über die Kernideen hinter Specification by Example, gefolgt von einem kurzen Workshop, in dem
-die Teilnehmer anhand eines Beispiels die Unterschiede zu konventionellen Tests hautnah erfahren können.</p>
-
-<h4>Vortrag: Einführung in Domain-Driven Design</h4>
-<p>In einem unterhaltsamen Dialog wird in das Thema Domain-Driven Design eingeführt, und die verschiedenen
-Aspekte werden vorgestellt.</p>
+    <p>Sollten Sie Interesse an einem dieser Vorträge oder Workshops
+        haben oder haben Sie eigene Wünsche in diesen Themengebieten,
+        freue ich mich über Ihre Kontaktaufnahme.</p>
+</div>
 
 
-<h4>Workshop: „From Push to Pull“</h4>
-<p>In betriebswirtschaftlicher Software trifft man häufig auf ein Entwicklungsmuster, das wir „Push“ getauft
-haben: Ergebnisse werden irgendwo berechnet und in eine Ergebnisstruktur hineingeschoben („push“), dort
-häufig auch im weiteren Verlauf nachbearbeitet, ohne dass später nachvollziehbar ist, auf welchem Weg ein
-bestimmter Ergebniswert entstanden ist. Der Workshop, der aus einer realen Codebasis entstanden ist, zeigt
-den Teilnehmern, welche Probleme mit „Push“-Code verbunden sind. In kleinen, nachvollziehbaren Schritten
-werden die Teilnehmer angeleitet, die Codebasis in eine „Pull“-Struktur umzubauen. Diese zeichnet sich
-dadurch aus, dass die Berechnung von Ergebniswerten isoliert und lokal erfolgt. Zum Weiterverarbeiten der
-Ergebniswerte werden diese aus den Berechnungsobjekten herausgezogen („pull“). Auf diese Weise sind die
-einzelnen Berechnungen klar nachvollziehbar und isoliert testbar.</p>
+<div class="col-md-4 col-sm-12 col-xs-12 col-md-offset-1 workshop">
+
+    <h3>Softwareentwicklung und Softwarequalität</h3>
+
+    <a data-toggle="collapse" href="#workshop1" data-parent="#workshop"><h4>Vortrag: Specification by Example</h4></a>
+    <div id="workshop1" class="collapse in">
+        Ein Überblick über die Kernideen hinter Specification by Example, gefolgt von einem kurzen Workshop, in dem
+        die Teilnehmer anhand eines Beispiels die Unterschiede zu konventionellen Tests hautnah erfahren können.
+    </div>
+
+    <a data-toggle="collapse" href="#workshop2" data-parent="#workshop"><h4>Vortrag: Einführung in Domain-Driven Design</h4></a>
+    <div id="workshop2" class="collapse">
+        In einem unterhaltsamen Dialog wird in das Thema Domain-Driven Design eingeführt, und die verschiedenen
+        Aspekte werden vorgestellt.
+    </div>
+
+    <a data-toggle="collapse" href="#workshop3" data-parent="#workshop"><h4>Workshop: „From Push to Pull“</h4></a>
+    <div id="workshop3" class="collapse">
+        In betriebswirtschaftlicher Software trifft man häufig auf ein Entwicklungsmuster, das wir „Push“ getauft
+        haben: Ergebnisse werden irgendwo berechnet und in eine Ergebnisstruktur hineingeschoben („push“), dort
+        häufig auch im weiteren Verlauf nachbearbeitet, ohne dass später nachvollziehbar ist, auf welchem Weg ein
+        bestimmter Ergebniswert entstanden ist. Der Workshop, der aus einer realen Codebasis entstanden ist, zeigt
+        den Teilnehmern, welche Probleme mit „Push“-Code verbunden sind. In kleinen, nachvollziehbaren Schritten
+        werden die Teilnehmer angeleitet, die Codebasis in eine „Pull“-Struktur umzubauen. Diese zeichnet sich
+        dadurch aus, dass die Berechnung von Ergebniswerten isoliert und lokal erfolgt. Zum Weiterverarbeiten der
+        Ergebniswerte werden diese aus den Berechnungsobjekten herausgezogen („pull“). Auf diese Weise sind die
+        einzelnen Berechnungen klar nachvollziehbar und isoliert testbar.
+    </div>
+
+    <h3>Funktionale Programmierung</h3>
+
+    <a data-toggle="collapse" href="#workshop4" data-parent="#workshop"><h4>Vortrag: Einführung in die Funktionale Programmierung</h4></a>
+    <div id="workshop4" class="collapse">
+        Der Vortrag bietet einen kurzen Überblick über wichtige Aspekte der funktionalen Programmierung und
+        demonstriert diese anhand der Programmiersprachen JavaScript und Haskell bzw. Java 8 und Haskell.
+    </div>
+
+    <a data-toggle="collapse" href="#workshop5" data-parent="#workshop"><h4>Workshop: Einführung in die Funktionale Programmierung</h4></a>
+    <div id="workshop5" class="collapse">
+        In diesem ganztägigen Workshop wollen wir herausfinden, was die funktionale Programmierung so besonders macht.
+        Dabei werden wir praktisch vorgehen und das erlernte Wissen sofort in kleinen Programmierübungen umsetzen.
+        Auch das automatisierte Testen soll nicht zu kurz kommen.
+        Zu guter Letzt schlagen wir eine Brücke zurück zu Ihrer täglichen Arbeit und versuchen herauszufinden,
+        wie sich Aspekte der funktionalen Programmierung in das Arbeiten mit nicht-funktionalen Sprachen wie Java, C# oder C++ einbringen lassen.
+    </div>
+
+    <a data-toggle="collapse" href="#workshop6" data-parent="#workshop"><h4>Vortrag: Monaden</h4></a>
+    <div id="workshop6" class="collapse">
+        Ein Ausflug in die höheren Weihen der funktionalen Programmierung. Monaden sind ein wichtiges Konzept, das
+        hier anschaulich erklärt wird.
+    </div>
+
+    <h3>Software Craftsmanship</h3>
+
+    <a data-toggle="collapse" href="#workshop7" data-parent="#workshop"><h4>Code Retreat / Legacy Code Retreat</h4></a>
+    <div id="workshop7" class="collapse">
+        Ein Code Retreat ist eine Übungsform, die darauf abzielt, sich durch wiederholte Implementierung desselben
+        Problems diesem von verschiedenen Richtungen zu nähern und sich gleichzeitig auf das Einüben hilfreicher
+        Vorgehensweisen zu konzentrieren. Während man bei einem Code Retreat ein Problem immer wieder „von Null auf“
+        löst, bearbeitet man bei einem Legacy Code Retreat immer wieder dieselbe Codebasis und lernt so, wie man mit
+        Legacy Code geeignet umgehen kann.
+    </div>
+
+    <a data-toggle="collapse" href="#workshop8" data-parent="#workshop"><h4>Vortrag: Craftsman Swaps</h4></a>
+    <div id="workshop8" class="collapse">
+        Ein aus der Software Craftsmanship-Bewegung stammender Terminus, der die aktive Mitarbeit eines Entwicklers
+        in einer anderen Firma über einen begrenzten Zeitraum bezeichnet. Die verschiedenen Möglichkeiten für einen
+        solchen Austausch sowie die sich daraus ergebenden Vorteile werden kurz vorgestellt. Im Anschluss ist Raum
+        für Diskussionen sowie den Austausch der Teilnehmer gegeben.
+    </div>
+
+</div>
+
 
 <!--
 <h4>Workshop: Entwicklung einer Webplattform mit JavaScript, Node.js und MongoDB</h4>
@@ -56,32 +112,4 @@ ermöglicht eine graphische Ansicht die schnelle Analyse von Paketzyklen, Klasse
 Zusammenhangskomponenten in Paketen usw.</p>
 -->
 
-<h3>Funktionale Programmierung</h3>
-
-<h4>Vortrag: Einführung in die Funktionale Programmierung</h4>
-<p>Der Vortrag bietet einen kurzen Überblick über wichtige Aspekte der funktionalen Programmierung und
-demonstriert diese anhand der Programmiersprachen JavaScript und Haskell bzw. Java 8 und Haskell.</p>
-
-<h4>Workshop: Einführung in die Funktionale Programmierung</h4>
-<p>In diesem ganztägigen Workshop wollen wir herausfinden, was die funktionale Programmierung so besonders macht. Dabei werden wir praktisch vorgehen und das erlernte Wissen sofort in kleinen Programmierübungen umsetzen. Auch das automatisierte Testen soll nicht zu kurz kommen. Zu guter Letzt schlagen wir eine Brücke zurück zu Ihrer täglichen Arbeit und versuchen herauszufinden, wie sich Aspekte der funktionalen Programmierung in das Arbeiten mit nicht-funktionalen Sprachen wie Java, C# oder C++ einbringen lassen.</p>
-
-
-<h4>Vortrag: Monaden</h4>
-<p>Ein Ausflug in die höheren Weihen der funktionalen Programmierung. Monaden sind ein wichtiges Konzept, das
-hier anschaulich erklärt wird.</p>
-
-<h3>Software Craftsmanship</h3>
-
-<h4>Code Retreat / Legacy Code Retreat</h4>
-<p>Ein Code Retreat ist eine Übungsform, die darauf abzielt, sich durch wiederholte Implementierung desselben
-Problems diesem von verschiedenen Richtungen zu nähern und sich gleichzeitig auf das Einüben hilfreicher
-Vorgehensweisen zu konzentrieren. Während man bei einem Code Retreat ein Problem immer wieder „von Null auf“
-löst, bearbeitet man bei einem Legacy Code Retreat immer wieder dieselbe Codebasis und lernt so, wie man mit
-Legacy Code geeignet umgehen kann.</p>
-
-<h4>Vortrag: Craftsman Swaps</h4>
-<p>Ein aus der Software Craftsmanship-Bewegung stammender Terminus, der die aktive Mitarbeit eines Entwicklers
-in einer anderen Firma über einen begrenzten Zeitraum bezeichnet. Die verschiedenen Möglichkeiten für einen
-solchen Austausch sowie die sich daraus ergebenden Vorteile werden kurz vorgestellt. Im Anschluss ist Raum
-für Diskussionen sowie den Austausch der Teilnehmer gegeben.</p>
 
