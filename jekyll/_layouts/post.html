@@ -3,12 +3,15 @@
 
   {% include head.html %}
 
-  <body style="padding-top: 70px;">
+  <body>
 
-    {% include header.html %}
+  <div  id="fullpage">
+    <div class="section">
 
-    <div class="container">
-      
+      <div class="container-fluid viewport">
+
+      {% include header.html %}
+
       <div class="post">
 
         <header class="post-header">
@@ -31,6 +34,15 @@
       <hr />
 
     </div>
+
+    {% include footer.html %}
+
+    </div><!-- end container -->
+
+    {% include javascript.html %}
+
+    </div></div>
+
   </body>
 
 </html>
