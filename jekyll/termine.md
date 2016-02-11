@@ -24,6 +24,21 @@ layout: default
   [Kurs: Domain-Driven Design ("DDD")](https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design)<br>
   <small>zweitägiger Workshop</small>
 
+* Mathema Campus, Erlangen, 9.4.2016:<br>
+  Wenn die Domäne treib t- Einführung in Domain-Driven Design<br>
+  <small>Vortrag</small>
+
+* JAX, Mainz, 18.4.2016:<br>
+  [Eine "Grand Unified Theory" der Softwareentwicklung](https://jax.de/session/eine-grand-unified-theory-der-softwareentwicklung/)<br>
+  <small>Vortrag</small>
+
+* React Europe, Paris, 2.6.2016:<br>
+  It's Shallow Rendering All the Way Down<br>
+  <small>Lightning Talk</small>
+
+* Digicomp DevDay, Zürich, 22.6.2016:<br>
+  TBA<br>
+  <small>Vortrag</small>  
 
 ### Vergangene Vorträge und Workshops
 
