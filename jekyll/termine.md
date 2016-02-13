@@ -25,7 +25,7 @@ layout: default
   <small>zweitägiger Workshop</small>
 
 * Mathema Campus, Erlangen, 9.4.2016:<br>
-  Wenn die Domäne trei  t- Einführung in Domain-Driven Design<br>
+  Wenn die Domäne treibt - Einführung in Domain-Driven Design<br>
   <small>Vortrag</small>
 
 * JAX, Mainz, 18.4.2016:<br>
