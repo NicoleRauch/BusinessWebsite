@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg4158"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Referenzen.svg">
+  <defs
+     id="defs4160">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Blog-Verlauf-6"
+       id="linearGradient4150"
+       x1="143.24001"
+       y1="218.83629"
+       x2="362.70554"
+       y2="245.97916"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="Blog-Verlauf-6"
+       inkscape:collect="always">
+      <stop
+         id="stop4154"
+         offset="0"
+         style="stop-color:#ea1c27;stop-opacity:1" />
+      <stop
+         id="stop4156"
+         offset="1"
+         style="stop-color:#ee5a28;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Blog-Verlauf-6"
+       id="linearGradient4787"
+       gradientUnits="userSpaceOnUse"
+       x1="143.24001"
+       y1="218.83629"
+       x2="276.99124"
+       y2="254.55058" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Blog-Verlauf-6"
+       id="linearGradient4789"
+       gradientUnits="userSpaceOnUse"
+       x1="143.24001"
+       y1="218.83629"
+       x2="276.99124"
+       y2="254.55058" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Blog-Verlauf-6"
+       id="linearGradient4791"
+       gradientUnits="userSpaceOnUse"
+       x1="143.24001"
+       y1="218.83629"
+       x2="276.99124"
+       y2="254.55058" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="250.20261"
+     inkscape:cy="721.51891"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="1137"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4163">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       transform="translate(-21.315923,139.74381)"
+       xml:space="preserve"
+       id="flowRoot4136"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:49.375px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient4150);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="C:\Users\Till\Documents\BusinessWebsite\jekyll\img\referenzen.png"
+       inkscape:export-xdpi="122.61198"
+       inkscape:export-ydpi="122.61198"><flowRegion
+         id="flowRegion4138"
+         style="fill:url(#linearGradient4789);fill-opacity:1"><rect
+           id="rect4140"
+           width="682.85712"
+           height="414.28571"
+           x="140"
+           y="206.64792"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:49.375px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient4787);fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara4142"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:49.375px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient4791);fill-opacity:1"># Referenzen</flowPara></flowRoot>  </g>
+</svg>
