@@ -1,5 +1,16 @@
 [
   {
+    "year": "2016",
+    "entries": [
+        {
+          "name": "BOB Konferenz, Berlin, 19.2.2016",
+          "title": "Specification by Example",
+          "url": "http://bobkonf.de/2016/rauch.html",
+          "kind": "Tutorial"
+        }
+    ]
+  },
+  {
     "year": "2015",
     "entries": [
       {
