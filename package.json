@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "author": "Nicole Rauch",
   "contributors ": [],
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/softwerkskammer/Agora"
+    "url": "https://github.com/NicoleRauch/BusinessWebsite"
   },
   "license": "(MIT OR Apache-2.0)",
   "main": "",
@@ -28,5 +29,8 @@
     "grunt-contrib-less": "1.1.0",
     "grunt-contrib-uglify": "0.11.0",
     "grunt-eslint": "17.3.1"
+  },
+  "scripts": {
+    "start": "npm install && node_modules/.bin/grunt prepare"
   }
 }

@@ -1,8 +1,6 @@
 #!/bin/sh
 
 git pull
-cd setup
-npm install
-grunt
-cd ../jekyll
+npm start
+cd jekyll
 jekyll build
