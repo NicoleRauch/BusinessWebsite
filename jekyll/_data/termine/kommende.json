@@ -1,17 +1,5 @@
 [
   {
-    "name": "Digicomp, Zürich, 2.3.2016",
-    "title": "Referat: Domain-Driven Design (\"DDD\")",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen",
-    "kind": "Vortrag mit Arif Chughtai"
-  },
-  {
-    "name": "Digicomp, Zürich / Bern / Basel, 4.-5.4.2016 / 31.8.-1.9.2016 / 30.11.-1.12.2016",
-    "title": "Kurs: Domain-Driven Design (\"DDD\")",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
-    "kind": "zweitägiger Workshop"
-  },
-  {
     "name": "Mathema Campus, Erlangen, 9.4.2016",
     "title": "Wenn die Domäne treibt - Einführung in Domain-Driven Design",
     "kind": "Vortrag",
@@ -25,8 +13,18 @@
   {
     "name": "React Europe, Paris, 2.6.2016",
     "title": "It's Shallow Rendering All the Way Down",
-    "url": "",
     "kind": "Lightning Talk"
+  },
+  {
+    "name": "Entwicklertag Karlsruhe, 15.6.2016",
+    "title": "Schnelle Reaktion - mit React und Redux",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 20.-21.6.2016 / 31.8.-1.9.2016 / 30.11.-1.12.2016",
+    "title": "Kurs: Domain-Driven Design (\"DDD\")",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+    "kind": "zweitägiger Workshop"
   },
   {
     "name": "Digicomp, Zürich / Bern / Basel, 21.6.2016 / 5.9.2016 / 7.12.2016",
@@ -37,13 +35,22 @@
   {
     "name": "Digicomp DevDay, Zürich, 22.6.2016",
     "title": "TBA",
-    "url": "",
     "kind": "Vortrag"
   },
   {
     "name": "Digicomp, Zürich / Bern / Basel, 23.6.2016 / 6.9.2016 / 8.12.2016",
     "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
     "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 20.9.2016, 3.11.2016, 5.12.2016",
+    "title": "Workshop: Coderetreat",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 29.9.2016, 28.11.2016",
+    "title": "Workshop: Legacy Coderetreat",
     "kind": "ganztägiger Workshop"
   }
 ]

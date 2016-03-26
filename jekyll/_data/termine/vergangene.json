@@ -3,6 +3,12 @@
     "year": "2016",
     "entries": [
         {
+          "name": "Digicomp, Zürich, 2.3.2016",
+          "title": "Referat: Domain-Driven Design (\"DDD\")",
+          "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen",
+          "kind": "Vortrag mit Arif Chughtai"
+        },
+        {
           "name": "BOB Konferenz, Berlin, 19.2.2016",
           "title": "Specification by Example",
           "url": "http://bobkonf.de/2016/rauch.html",
