@@ -34,22 +34,35 @@
   },
   {
     "name": "Digicomp DevDay, Zürich, 22.6.2016",
-    "title": "TBA",
+    "title": "Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016",
     "kind": "Vortrag"
   },
   {
-    "name": "Digicomp, Zürich / Bern / Basel, 23.6.2016 / 6.9.2016 / 8.12.2016",
+    "name": "Digicomp DevDay, Zürich, 22.6.2016",
+    "title": "Schnelle Reaktion: Einführung in React.js und Redux",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp, Zürich, 23.6.2016",
+    "title": "Workshop: Einführung in React.js and Redux",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/web-und-mobile-app-entwicklung/webentwicklung/einfuehrung-in-react-js-and-redux",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 24.6.2016 / 6.9.2016 / 8.12.2016",
     "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
     "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
     "kind": "ganztägiger Workshop"
   },
   {
-    "name": "Digicomp, Zürich / Bern / Basel, 20.9.2016, 3.11.2016, 5.12.2016",
+    "name": "Digicomp, Zürich / Bern / Basel, 28.9.2016, 3.11.2016, 6.12.2016",
     "title": "Workshop: Coderetreat",
     "kind": "ganztägiger Workshop"
   },
   {
-    "name": "Digicomp, Zürich / Bern / Basel, 29.9.2016, 28.11.2016",
+    "name": "Digicomp, Zürich / Bern / Basel, 29.9.2016, 29.11.2016",
     "title": "Workshop: Legacy Coderetreat",
     "kind": "ganztägiger Workshop"
   }
