@@ -412,7 +412,7 @@ What we can test with shallow rendering:
 
 ## Repository
 
-If you are interested in playing around with the code and tests that I showed here, you can find them online [in this repository]().
+If you are interested in playing around with the code and tests that I showed here, you can find them online [in this repository](https://github.com/NicoleRauch/shallow-rendering).
 
 
 <hr/>
