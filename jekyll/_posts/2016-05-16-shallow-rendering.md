@@ -12,7 +12,21 @@ Shallow Rendering was introduced to React in 0.13. Its promise is that one can w
 
 React comes with a bunch of test utilities called ReactTestUtils. One of their great features is shallow rendering. This is how it is done:
 
-Suppose we have a very simple (function) component
+<pre>
+import ReactTestUtils from "react-addons-test-utils";
+
+function shallowRender(component) {
+  var renderer = ReactTestUtils.createRenderer();
+  renderer.render(component);
+  return renderer.getRenderOutput();
+}
+</pre>
+
+I've defined this as a helper function, it takes a component and returns the shallowly rendered result.
+
+## What can we get out of it?
+
+Now, what can we get out of this result? Suppose we have a very simple (function) component
 
 <pre>
 import React from "react";
@@ -20,35 +34,14 @@ import React from "react";
 export default () => &lt;p>Simple Function Component&lt;/p>
 </pre>
 
-You can shallowly render this component e.g. in the <code>beforeEach</code> section:
+This is what the shallowly rendered result looks like:
 
 <pre>
-import ReactTestUtils from "react-addons-test-utils";
-import React from "react";
-import expect from "must";
-
-import SimpleFunctionComponent from "../src/SimpleFunctionComponent";
-
-describe('SimpleFunctionComponent', function () {
-  beforeEach(function () {
-    var renderer = ReactTestUtils.createRenderer();
-    renderer.render(&lt;SimpleFunctionComponent />);
-    this.result = renderer.getRenderOutput();
-  });
-  
-  // ...
-});
+const result = shallowRender(<SimpleFunctionComponent />);
+expect(JSON.stringify(result)).to.eql('{"type":"p","key":null,"ref":null,"props":{"children":"Simple Function Component"},"_owner":null,"_store":{}}');
 </pre>
 
-## What do we get out of it?
-
-This is what the whole thing looks like:
-
-<pre>
-expect(JSON.stringify(this.result)).to.eql('{"type":"p","key":null,"ref":null,"props":{"children":"Simple Function Component"},"_owner":null,"_store":{}}');
-</pre>
-
-As you can see, we basically get a JavaScript object that contains all kinds of useful information about what the component will display on the screen when it gets rendered. (By the way, this object looks the same, whether we create a function component or derive it from <code>React.Component</code>.)
+As you can see, we basically get a JavaScript object that contains all kinds of useful information about what the component will display on screen when it gets rendered. (By the way, this object looks the same whether we render a function component or one that is derived from <code>React.Component</code>.)
 
 We can examine individual parts of this object to make our tests more resilient. E.g. we can ask for the outermost element's type or for its children:
 
@@ -62,9 +55,6 @@ expect(result.props.children).to.eql('Simple Class Component');
 Of course, our components are not always that simple. We might also have a nested component, e.g.:
 
 <pre>
-import React, {Component} from "react";
-import SimpleFunctionComponent from "./SimpleFunctionComponent";
-
 export default class extends Component {
   render() {
     return (
@@ -77,62 +67,43 @@ export default class extends Component {
 }
 </pre>
 
-We can of course also render it shallowly:
+We can also render it shallowly and examine the resulting object:
 
 <pre>
-import ReactTestUtils from "react-addons-test-utils";
-import React from "react";
-import expect from "must";
+const result = shallowRender(<NestedClassComponent />);
 
-import NestedClassComponent from "../src/NestedClassComponent";
-
-describe('NestedClassComponent', function () {
-
-  beforeEach(function () {
-    var renderer = ReactTestUtils.createRenderer();
-    renderer.render(&lt;NestedClassComponent />);
-    this.result = renderer.getRenderOutput();
-  });
-  
-  // ...
-});
-</pre>
-
-and we can examine the resulting object:
-
-<pre>
-expect(JSON.stringify(this.result)).to.eql(
+expect(JSON.stringify(result)).to.eql(
   '{"type":"div",' +
   '"key":null,' +
   '"ref":null,' +
   '"props":{"children":' +
   '[{"type":"p","key":null,"ref":null,"props":{"children":"Nested Component with"},"_owner":null,"_store":{}},' +
   '{"key":null,"ref":null,"props":{},"_owner":null,"_store":{}}]' +
-  '},'+
-  '"_owner":null,'+
+  '},' +
+  '"_owner":null,' +
   '"_store":{}}');
 </pre>
 
 but this is not really that helpful any more. We can still ask more specific questions about the parts of this component:
 
 <pre>
-expect(this.result.type).to.be('div');
-expect(this.result.props.children.length).to.eql(2);
+expect(result.type).to.be('div');
+expect(result.props.children.length).to.eql(2);
 </pre>
 
 and about its children:
 
 <pre>
-expect(this.result.props.children[0].type).to.eql('p');
+expect(result.props.children[0].type).to.eql('p');
 </pre>
 
 and about its children's children:
 
 <pre>
-expect(this.result.props.children[0].props.children).to.eql('Nested Component with');
+expect(result.props.children[0].props.children).to.eql('Nested Component with');
 </pre>
 
-Tests that apply this style become really long-winding and fragile because they are tightly coupled to the actual component layout. To improve this situation, many helper libraries have been developed, with [AirBnB's enzyme](http://airbnb.io/enzyme/) being one of the most well-known and most powerful ones. For the sake of simplicity - and because I want to show you the bare metal of shallow rendering - we will not make use of its amazing search abilities in this article. But if you want to apply shallow rendering in your tests, by all means go and have a look at it.
+Tests that follow this style become really long-winding and fragile because they are tightly coupled to the actual component layout. To improve this situation, many helper libraries for searching and accessing parts of the shallow rendering result have been developed, with [AirBnB's enzyme](http://airbnb.io/enzyme/) being one of the most well-known and most powerful ones. For the sake of simplicity - and because I want to show you the bare metal of shallow rendering in this article - we will not make use of its amazing search abilities in this article. But if you want to apply shallow rendering in your tests, by all means go and have a look at it.
 
 Even when only using plain vanilla shallow rendering, we can still examine interesting aspects. First of all, we can observe that the second child component (the <code>SimpleFunctionComponent</code>) does not reveal anything interesting when it is rendered into a string:
 
@@ -179,9 +150,7 @@ import NotReallyNestedClassComponent from "../src/NotReallyNestedClassComponent"
 
 describe('NotReallyNestedClassComponent', function () {
   it('checks the result\'s type and contents', function () {
-    const renderer = ReactTestUtils.createRenderer();
-    renderer.render(&lt;NotReallyNestedClassComponent showIt={false} />);
-    const result = renderer.getRenderOutput();
+    const result = shallowRender(<NotReallyNestedClassComponent showIt={false} />);
 
     expect(result.props.children.length).to.eql(2);
     expect(result.props.children[0].type).to.eql('p');
@@ -216,9 +185,9 @@ export default class extends Component {
 Now we can ask the shallow rendering result about the subcomponent's props:
 
 <pre>
-expect(this.result.props.children[1].props).to.eql({passedProp: "Yes!"});
+expect(result.props.children[1].props).to.eql({passedProp: "Yes!"});
 // or
-expect(this.result.props.children[1].props.passedProp).to.eql("Yes!");
+expect(result.props.children[1].props.passedProp).to.eql("Yes!");
 </pre>
 
 These are the most interesting static aspects of React components, and we can both test them with shallow rendering, which is great. But what about some more dynamic aspects?
@@ -444,3 +413,10 @@ What we can test with shallow rendering:
 ## Repository
 
 If you are interested in playing around with the code and tests that I showed here, you can find them online [in this repository]().
+
+
+<hr/>
+
+## Comments:
+
+(please comment on this article <a href="mailto:info@nicole-rauch.de?Subject=Your blogpost 'It's Shallow Rendering All The Way Down">via email</a>)
