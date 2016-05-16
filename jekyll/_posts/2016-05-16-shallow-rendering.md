@@ -91,13 +91,13 @@ expect(result.type).to.be('div');
 expect(result.props.children.length).to.eql(2);
 </pre>
 
-and about its children:
+and we can even ask about its children:
 
 <pre>
 expect(result.props.children[0].type).to.eql('p');
 </pre>
 
-and about its children's children:
+and about its children's children (that's because it is an HTML component):
 
 <pre>
 expect(result.props.children[0].props.children).to.eql('Nested Component with');
