@@ -203,11 +203,7 @@ import React, {Component} from "react";
 export default ({onButtonClick}) => (
   &lt;div>
     &lt;p>Button Component with&lt;/p>
-    &lt;button type="button"
-            onClick={onButtonClick}
-    >
-      Click me!
-    &lt;/button>
+    &lt;button onClick={onButtonClick} >Click me!&lt;/button>
   &lt;/div>
 );
 </pre>
