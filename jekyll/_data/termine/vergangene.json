@@ -3,6 +3,17 @@
     "year": "2016",
     "entries": [
         {
+          "name": "JAX, Mainz, 18.4.2016",
+          "title": "Eine \"Grand Unified Theory\" der Softwareentwicklung",
+          "url": "https://jax.de/session/eine-grand-unified-theory-der-softwareentwicklung/",
+          "kind": "Vortrag"
+        },
+        {
+          "name": "Mathema Campus, Erlangen, 9.4.2016",
+          "title": "Wenn die Domäne treibt - Einführung in Domain-Driven Design",
+          "kind": "Vortrag",
+        },
+        {
           "name": "Digicomp, Zürich, 2.3.2016",
           "title": "Referat: Domain-Driven Design (\"DDD\")",
           "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen",

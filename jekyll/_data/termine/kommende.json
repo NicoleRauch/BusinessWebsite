@@ -1,17 +1,6 @@
 [
   {
-    "name": "Mathema Campus, Erlangen, 9.4.2016",
-    "title": "Wenn die Domäne treibt - Einführung in Domain-Driven Design",
-    "kind": "Vortrag",
-  },
-  {
-    "name": "JAX, Mainz, 18.4.2016",
-    "title": "Eine \"Grand Unified Theory\" der Softwareentwicklung",
-    "url": "https://jax.de/session/eine-grand-unified-theory-der-softwareentwicklung/",
-    "kind": "Vortrag"
-  },
-  {
-    "name": "React Europe, Paris, 2.6.2016",
+    "name": "React Europe, Paris, 3.6.2016",
     "title": "It's Shallow Rendering All the Way Down",
     "kind": "Lightning Talk"
   },
@@ -36,13 +25,13 @@
   {
     "name": "Digicomp DevDay, Zürich, 22.6.2016",
     "title": "Einführung in die funktionale Programmierung",
-    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folmMAAQ",
     "kind": "Vortrag"
   },
   {
     "name": "Digicomp DevDay, Zürich, 22.6.2016",
     "title": "Schnelle Reaktion: Einführung in React.js und Redux",
-    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folqdAAA",
     "kind": "Vortrag"
   },
   {
@@ -58,13 +47,21 @@
     "kind": "ganztägiger Workshop"
   },
   {
+    "name": "NordicJS, Stockholm, 8. - 9.9.2016",
+    "title": "Event Sourcing a Node.js Application",
+    "url": "http://nordicjs.com/speakers",
+    "kind": "Vortrag"
+  },
+  {
     "name": "Digicomp, Zürich / Bern / Basel, 28.9.2016, 3.11.2016, 6.12.2016",
     "title": "Workshop: Coderetreat",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/code-retreat",
     "kind": "ganztägiger Workshop"
   },
   {
     "name": "Digicomp, Zürich / Bern / Basel, 29.9.2016, 29.11.2016",
     "title": "Workshop: Legacy Coderetreat",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/legacy-code-retreat",
     "kind": "ganztägiger Workshop"
   }
 ]
