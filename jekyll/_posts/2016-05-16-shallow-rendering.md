@@ -37,7 +37,7 @@ export default () => &lt;p>Simple Function Component&lt;/p>
 This is what the shallowly rendered result looks like:
 
 <pre>
-const result = shallowRender(<SimpleFunctionComponent />);
+const result = shallowRender(&lt;SimpleFunctionComponent />);
 expect(JSON.stringify(result)).to.eql('{"type":"p","key":null,"ref":null,"props":{"children":"Simple Function Component"},"_owner":null,"_store":{}}');
 </pre>
 
@@ -108,7 +108,7 @@ Tests that follow this style become really long-winding and fragile because they
 Even when only using plain vanilla shallow rendering, we can still examine interesting aspects. First of all, we can observe that the second child component (the <code>SimpleFunctionComponent</code>) does not reveal anything interesting when it is rendered into a string:
 
 <pre>
-expect(JSON.stringify(this.result.props.children[1])).to.eql('{"key":null,"ref":null,"props":{},"_owner":null,"_store":{}}');
+expect(JSON.stringify(result.props.children[1])).to.eql('{"key":null,"ref":null,"props":{},"_owner":null,"_store":{}}');
 </pre>
 
 That's exactly why this method got its name: it only performs *shallow* rendering, i.e. it only renders our own components one level deep. The nested components are not rendered at all. In order to look at the contained components, we can render *them* shallowly, and then *their* contained components, and so on... So it's shallow rendering all the way down.
@@ -120,7 +120,7 @@ import SimpleFunctionComponent from "../src/SimpleFunctionComponent";
 
 // ...
 
-expect(this.result.props.children[1].type).to.eql(SimpleFunctionComponent);
+expect(result.props.children[1].type).to.eql(SimpleFunctionComponent);
 </pre>
 
 We can find out which type they have! (And please note that this is not a string comparison but that we check against the real subcomponent definition here.)
