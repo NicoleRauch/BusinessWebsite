@@ -1,0 +1,139 @@
+---
+layout: post
+author: Nicole Rauch
+# meta: 
+title: Setter machen Objekte kaputt
+lang: de
+---
+
+<p>... und damit meine ich nicht etwa Hunde, die auf Gegenständen herumkauen ...</p>
+
+<br/>
+<p><img src="/img/settermachenobjektekaputt1.jpg?w=150" alt="" title="Setter machen Objekte kaputt (Copyright &quot;Jakes World&quot;)" /> 
+  &nbsp;</p>
+
+<br style="clear:both;">
+
+<h2>Was ist so gefährlich an Settern?</h2>
+
+<p>Ein "klassischer" Setter, also eine öffentliche Methode, die direkt ein bestimmtes Attribut eines Objekts auf einen von außen übergebenen Wert setzt, untergräbt die Integrität dieses Objekts.
+Das Objekt kann nicht mehr selbständig dafür Sorge tragen, welches seiner Attribute welchen Inhalt hat. Damit können insbesondere implizite Invarianten des Objekts zerstört werden, so dass das Objekt inkonsistent wird.</p>
+
+<p>Oft werden Setter auch verwendet, um Objekte zu initialisieren. Dies birgt gleich mehrere Gefahren:</p>
+
+<ul>
+  <li>Es ist nicht klar, welche Setter aufgerufen werden müssen, und leicht wird ein Aufruf vergessen.</li>
+  <li>Es ist nicht klar, ob es eine bestimmte Reihenfolge gibt, in der mehrere Setter nacheinander aufgerufen werden sollen / dürfen / müssen.</li> 
+  <li>Die Setter können im weiteren Verlauf des Programms erneut aufgerufen werden und so die Daten des Objekts durcheinanderbringen.</li>
+</ul>
+
+<h2>Ein Leben ohne Setter</h2>
+
+<p>Setter werden dafür verwendet, um ein Objekt zu initialisieren und/oder seinen Zustand später von außen zu verändern. Allerdings gibt es bessere Alternativen, um diese Ziele zu erreichen:</p>
+
+<h4>Initialisierung zur rechten Zeit</h4>
+
+<p>Die Initialisierung eines Objekts sollte in einem Schritt mit seiner Erzeugung erfolgen, um sicherzustellen, dass jedes Objekt von Anfang an voll funktionsfähig ist. Werden Setter verwendet, ist die Erzeugung des Objekts bereits abgeschlossen, die "Initialisierung" kommt also zu spät.</p>
+
+<p>Statt Setter zur Initialisierung zu verwenden, kann ein Konstruktor angeboten werden, der die erforderlichen Argumente zur Initialisierung des Objekts erwartet. So kann das Objekt sich selbst initialisieren und damit seine Konsistenz wahren.</p>
+
+<p>Falls es mehrere mögliche Argumentsätze zur Initialisierung gibt, können auch mehrere Konstruktoren implementiert werden. Diese sollten sich intern nach Möglichkeit gegenseitig aufrufen.</p>
+
+<p><strong>Beispiel:</strong> Ein Vektor in einem zweidimensionalen Koordinatensystem.</p>
+
+<pre>
+public class Vektor {
+
+  private final double x;
+  private final double y;
+
+  public Vektor( double x, double y ){
+    this.x = x;
+    this.y = y;
+  }
+
+  public Vektor( int x, int y ){
+    this( (double) x, y );
+  }
+
+  public Vektor( Point2D p ){
+    this( p.getX(), p.getY() );
+  }
+}
+</pre>     
+
+
+<h4>Zustandsänderung konsistent gemacht</h4>
+
+<p>Werden Setter verwendet, um den Zustand eines Objekts zu verändern, können leicht Inkonsistenzen entstehen. Hier kann dem Objekt stattdessen eine geeignete Nachricht geschickt werden, die mit genügend Argumenten versehen ist, so dass das Objekt seinen Zustand in der gewünschten Weise verändern kann, ohne dabei seine Konsistenz zu verlieren.</p>
+
+<p><strong>Beispiel:</strong> Skalarmultiplikation eines Vektors</p>
+
+<pre>
+public void multipliziereMit( double skalar ){
+  x = x * skalar;
+  y = y * skalar;
+}
+</pre>
+
+<p>Beide Attribute des Vektors werden durch einen Methodenaufruf verändert. Es gibt keinen inkonsistenten Zustand.</p>
+
+<p>(Anmerkung: Dieser Code funktioniert im Zusammenhang mit dem ersten Beispiel natürlich nur dann, wenn die beiden Attribute nicht als final deklariert werden.)</p>
+
+<h2>Unveränderliche Objekte</h2>
+
+<p>Alternativ kann ein Objekt auch als Immutable (= unveränderlich) bzw. "Value Object" implementiert werden. In diesem Fall erzeugt jede Zustandsänderung ein neues Objekt mit der geänderten Information. Diese Vorgehensweise empfiehlt sich insbesondere für Objekte, die einerseits Teil des inneren Zustandes eines anderen Objekts sind, die andererseits aber von diesem Objekt über seine Schnittstelle herausgegeben werden. Hier darf es nicht möglich sein, von außen den inneren Zustand des herausgegebenen Objekts zu manipulieren, weswegen die Unveränderbarkeit eines solchen Objekts sehr wichtig ist.</p>
+
+<p><strong>Beispiel:</strong> Skalarmultiplikation eines Vektors liefert einen neuen Vektor:</p>
+
+<pre>
+public Vektor multipliziereMit( double skalar ){
+  return new Vektor( x * skalar, y * skalar );
+}
+</pre>
+
+<p>Der neue Vektor ist ein modifiziertes Abbild des ursprünglichen Vektors, natürlich voll initialisiert und mit konsistenten Werten befüllt.</p>
+
+<h2>Mehr Respekt gegenüber Objekten!</h2>
+
+<p>Wenn wir Objekten mit etwas Respekt begegnen und ihr Bedürfnis nach Autonomie berücksichtigen, werden sie es uns hoffentlich durch Robustheit und Fehlertoleranz danken.</p>
+
+<hr />
+
+<h2>Kommentare</h2>
+
+<blockquote>
+  <footer>
+04.03.2012 von <a href="http://www.printhelloworld.de">Johannes</a>
+  </footer>
+Hey Nicole,
+<p />
+danke für deinen Artikel - Ich bin ein großer Fan von immutability und einer Art wohldefinierten "contract" unter dem Objekte garantiert funktionieren und freue mich über jeden Input in diese Richtung.
+<p />
+Wie du schon erwähnst ist es oftmals sicherer, zum Setzen aller Werte die Konstruktoren zu verwenden, um die eben diese Contracts und auch die Aufrechterhaltung der Klasseninvariante zu gewährleisten.
+<p />
+Ein paar Dinge möchte ich noch anmerken: Setter an- und für sich sind nichts inhärent destruktives, wie der Artikeltitel suggeriert. Sie sind ein Workaround um das Uniform Access Principle (http://en.wikipedia.org/wiki/Uniform_access_principle) in Sprachen, die keine Properties oder andere Sprachfeatures zur Unterstützung des UAP bieten.
+<p />
+Grundsätzlich denke ich getter und setter sollten für optionale Attribute verwendet werden. Weil das manchmal gar nicht so einfach ist, und lange Argumentlisten in Sprachen wie Java absolut unleserlich sind, greife ich dann gerne auch gerne mal zum Builder Pattern, um die Regeln unter denen ein Funktionierendes Objekt produziert wird explizit zu machen. 
+<p />
+Eine Kleinigkeit noch: das Beispiel, zur Skalarmultiplikation eines Vektors ist nich thread safe - teilen sich mehrere Klassen den gleichen Vektor kann es doch vorkommen dass ein inkonsistenter interner Zustand ausgelesen wird - eine immutable copy wie du direkt danach vorschlägst hat diesen Fehler nicht - das würde ich unbedingt noch erwähnen.
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <footer>
+23.01.2013 von TutNichtsZurSache
+  </footer>
+
+  Offenbar haben Sie den Sinn von Setter-Methoden nicht begriffen. Der Grund, wieso man eine Methode verwendet, statt das betreffende Feld einfach public zu machen, ist ja gerade, dass eine Methode sicherstellen kann, dass Invarianten erhalten werden.
+<p />
+Zudem wirkt sich eine Initialisierung mittels eines Konstruktors nachteilig auf die Lesbarkeit aus, da für den Leser nicht klar ist, welches Argument im Konstruktor welchem Feld entspricht:
+<pre>
+new Person("Walter", "Gerhard")
+</pre>
+Ist das nun Herr Gerhard oder Herr Walter? Mit Settern ist das eindeutig. Und in Sprachen, die anders als Java nicht in den 90ern stecken geblieben sind, z. B. C#, kann man das auch recht hübsch aufschreiben:
+<pre>
+new Person { GivenName = "Walter", Surname = "Gerhard" }
+</pre>
+</blockquote>

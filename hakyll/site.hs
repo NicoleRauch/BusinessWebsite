@@ -54,6 +54,20 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
 
+    match "blog.html" $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll "posts/*"
+            let blogCtx =
+                    listField "englishPosts" postCtx (return posts) `mappend`
+                    listField "germanPosts" postCtx (return posts) `mappend`
+                    generalContext
+
+            getResourceBody
+                >>= applyAsTemplate blogCtx
+                >>= loadAndApplyTemplate "templates/default.html" blogCtx
+                >>= relativizeUrls
+
 
     match "index.html" $ do
         route idRoute

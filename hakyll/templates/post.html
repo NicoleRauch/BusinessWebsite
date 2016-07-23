@@ -1,8 +1,49 @@
-<div class="info">
-    Posted on $date$
-    $if(author)$
-        by $author$
-    $endif$
-</div>
+<!DOCTYPE html>
+<html>
 
-$body$
+  $partial("templates/head.html")$
+
+  <body>
+
+  <div  id="fullpage">
+    <div class="section">
+
+      <div class="container-fluid viewport">
+
+        $partial("templates/header.html")$
+
+      <div class="col-md-10 col-md-offset-1 post">
+
+        <header class="post-header">
+          <h1 class="post-title">$title$</h1>
+          $if(subtitle)$<h3 style="margin-top: 10px; margin-bottom: 15px;">$subtitle$</h3>$endif$
+          <p class="post-meta">$date$
+            $if(author)$ • $author$$endif$
+            $if(meta)$ • $meta$$endif$
+          </p>
+        </header>
+        <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+          <article class="post-content">
+            $body$
+          </article>
+        </div>
+      </div>
+      <hr />
+
+    </div>
+
+    $partial("templates/footer.html")$
+
+    </div><!-- end container -->
+
+    $partial("templates/javascript.html")$
+
+    </div></div>
+
+  </body>
+
+</html>
+

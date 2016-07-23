@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1">
+
+<h2>English Blog Posts</h2>
+
+$for(englishPosts)$
+<!-- {% if post.lang == "en" %} -->
+<h4><a href="$url$">$title$</a></h4>
+$if(subtitle)$<h5><a href="$url$">$subtitle$</a></h5>$endif$
+<small>$date$</small><br/>
+  <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> ...excerpt...
+  <a href="$url$"><small>(read more)</small></a>
+<!-- {% endif %} -->
+$endfor$
+
+</div>
+  
+<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1 year">
+  <p style="margin-top: 30px; margin-bottom: 30px;"><img src="/img/blog.png"></p>
+  
+<h2>Deutschsprachige Blog-Artikel</h2>
+
+$for(germanPosts)$
+<!-- {% if post.lang == "de" %} -->
+<h4><a href="$url$">$title$</a></h4>
+$subtitle$<h5><a href="$post.url$">$subtitle$</a></h5>$endif$
+<small>$date$</small><br/>
+  <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> ...excerpt...
+  <a href="$url$"><small>(weiterlesen)</small></a>
+<!-- {% endif %} -->
+$endfor$
+
+</div>

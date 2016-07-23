@@ -1,0 +1,98 @@
+---
+layout: post
+author: Nicole Rauch
+# meta: 
+# title: 
+lang: en
+---
+
+<p>Since version 5, Java features autoboxing, which means that <code>int</code> and <code>Integer</code> are transformed into each other as needed, without cluttering the code with explicit conversions.</p>
+
+<p>What sounds cool in the beginning does have its tradeoffs once you take a closer look. For me, these tradeoffs are so massive that I do not allow autoboxing in my code at all. This article discusses the tradeoffs in detail.</p>
+
+
+<h3>Possible NullPointerExceptions</h3>
+
+<p>When comparing  the value sets of <code>int</code> and <code>Integer</code>, I note that they are not identical: <code>Integer</code> has one value in addition, which is <code>null</code>. For boxing (i.e. transforming an <code>int</code> into an <code>Integer</code>) this can be ignored, but for unboxing, one can encounter unwanted and surprising behavior, like in the following test (which is green, btw):</p>
+
+<pre>
+@Test(expected = NullPointerException.class)
+public void unboxingOfNull() {
+    Integer i = null;
+    int j = i;
+}
+</pre>
+
+<p>Here, the assignment of <code>null</code> to an <code>int</code> causes the <code>NullPointerException</code>.</p>
+
+<h3>Comparisons using <code>==</code></h3>
+
+<p>When comparing individual <code>int</code> values, one can only use <code>==</code> because the <code>equals()</code> method is not available for primitive types. But what happens when we compare <code>Integer</code>s this way? The following (green) test shows us what happens:</p>
+
+<pre>
+@Test
+public void equalityOnInt() {
+    assertTrue(7 == 7);
+    assertFalse(new Integer(7) == new Integer(7));
+}
+</pre>
+
+<p>If I lose track of <code>int</code> and <code>Integer</code> in my code (e.g. because it does not really matter any more anyways) I might start mixing up the comparison operators and get in trouble.</p>
+
+<p>Well, you may say that one ought to use <code>Integer.valueOf()</code> instead of the <code>Integer</code> constructor. Agreed, but why is the constructor available if we should not use it? And what happens if we use valueOf? Look at the following (green) test:</p>
+
+<pre>
+@Test
+public void valueOf() {
+    assertTrue(Integer.valueOf(127) == Integer.valueOf(127));
+    assertFalse(Integer.valueOf(128) == Integer.valueOf(128));
+    assertTrue( Integer.valueOf( -128 ) == Integer.valueOf( -128 ) );
+    assertFalse( Integer.valueOf( -129 ) == Integer.valueOf( -129 ) );
+}
+</pre>
+
+<p>Now, this is really sick: The behaviour of the comparison depends on the value of the <code>Integer</code>. Even more strangely, when mixed types are used, this behaviour changes again:</p>
+
+
+<pre>
+@Test
+public void mixedTypes() {
+    assertTrue( 127 == Integer.valueOf( 127 ) );
+    assertTrue( 128 == Integer.valueOf( 128 ) );
+    assertTrue( 127 == new Integer( 127 ) );
+    assertTrue( 128 == new Integer( 128 ) );
+}
+</pre>
+
+<p>But, of course, this is an issue of <code>Integer</code> and is by no means related to the contents of this article, so we shall rather not dwell on this...</p>
+
+<h3>Obfuscating the Semantics</h3>
+
+<p>There may be situations where I want to use <code>Integer</code> because I need a semantics that states "not defined yet". <code>Integer</code> provides an elegant solution for this; the ominous "-1" is no longer needed. On the other hand, there may be situations where I definitely want to have a number, no matter what. Autoboxing blurs the borders between these two, and I can no longer rely on the compiler to distinguish them and to help us clarify our code. And once these semantical issues are set straight and clearly established throughout the code, I often notice that explicit conversions are only required at very few occasions (when using frameworks, working with nullable values or implementing GUI code). In general, I prefer to use the primitives where possible and only use the reference types when I need nullables. Often I do not even need nullables, instead I use initial values that match the semantics of the numbers.</p>
+
+<h3>You may say: Yes of course, it all behaves as defined.</h3>
+
+<p>Will you guarantee to never ever forget about the caveats? - I am NOT perfect. To me this is too risky. I'd need to define too many additional test cases for all of the specialities (null, int larger than 127 or smaller than -128, etc.) to have an insurance against being human and making mistakes.
+  Therefore, I neither need nor want autoboxing in my code.</p>
+
+<hr />
+
+<h2>Comments</h2>
+
+<blockquote>
+  <footer>9.11.2010 by <a href="http://blog.schauderhaft.de/">Jens Schauder</a></footer>
+<p>
+Hmm, while your points about autoboxing (and Integers and null values and the definition of equal vs. == and primitives vs Objects) are valid, I don't agree with the proposed solution.
+  </p>
+Autoboxing solves a real problem: Reduction of Code Noise. It does its job. Most of its weaknesses are inherited from weaknesses of the language. Don't blame autoboxing for them.
+<p/>
+We might agree: If everybody stops using autoboxing as an excuse to careless (and thoughtless) mix primitives and Integers the java world would be better place.
+</blockquote>
+
+<hr/>
+
+<blockquote>
+  <footer>9.11.2010 by Andreas Leidig</footer>
+<p/>
+Good points. You are right: This post is indeed somewhat fundamentalistic. Our aim is to provoke thinking. And yes, it is a language (Java) matter. We have only seen too much code where autoboxing is used thoughtlessly. As always: If you know what you are doing and what the consequences are and you decide to do it this way, it is more than ok; as long as you start complaining about the results.
+</blockquote>
