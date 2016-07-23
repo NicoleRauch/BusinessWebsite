@@ -76,14 +76,14 @@ main = hakyll $ do
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
+    generalContext
 
 activeClassField :: Context a
 activeClassField = functionField "activeClass" $ \[p] _ -> do
          path <- toFilePath <$> getUnderlying
          return $ if dropExtension (head (splitDirectories path)) == p
-                     then "active"
-                     else "inactive"
+                     then "class=\"active\""
+                     else ""
 
 generalContext :: Context String
 generalContext =
