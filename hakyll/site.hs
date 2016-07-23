@@ -2,7 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
-
+import           System.FilePath.Posix (dropExtension, splitDirectories)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -30,7 +30,7 @@ main = hakyll $ do
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= loadAndApplyTemplate "templates/default.html" generalContext
             >>= relativizeUrls
 
     match "posts/*" $ do
@@ -47,7 +47,7 @@ main = hakyll $ do
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Archives"            `mappend`
-                    defaultContext
+                    generalContext
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
@@ -62,7 +62,7 @@ main = hakyll $ do
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Home"                `mappend`
-                    defaultContext
+                    generalContext
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
@@ -77,3 +77,15 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+activeClassField :: Context a
+activeClassField = functionField "activeClass" $ \[p] _ -> do
+         path <- toFilePath <$> getUnderlying
+         return $ if dropExtension (head (splitDirectories path)) == p
+                     then "active"
+                     else "inactive"
+
+generalContext :: Context String
+generalContext =
+               activeClassField `mappend`
+               defaultContext
