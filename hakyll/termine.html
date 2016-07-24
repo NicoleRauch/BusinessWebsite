@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1">
+
+<h3>Kommende Vorträge und Workshops</h3>
+
+  <ul style="list-style-type: none;padding:0; margin:0;">
+    $for(kommende)$
+  <li style="margin-bottom:0.5em;">$name$:<br/>
+    $if(url)$
+      <a href="$url$">$title$</a><br/>
+    $else$
+      $title$<br/>
+    $endif$
+    <small>$kind$</small>
+  </li>
+$endfor$
+  </ul>
+
+</div>
+
+<div class="col-md-5 col-sm-11 col-xs-12 col-md-offset-1 col-sm-offset-1 year">
+    <p><img src="/img/banner3.png"></p>
+
+<h3>Vergangene Vorträge und Workshops</h3>
+
+  {% for jahr in site.data.termine.vergangene %}
+
+  <a data-toggle="collapse" href="#year{{jahr.year}}" data-parent="#year"><h4>Im Jahr {{jahr.year}}</h4></a>
+  <div id="year{{jahr.year}}" class="collapse">
+
+    <ul style="list-style-type: none;padding:0; margin:0;">
+  {% for termin in jahr.entries %}
+  <li style="margin-bottom:0.5em;">{{termin.name}}:<br/>
+    {% if termin.url %}
+      <a href="{{ termin.url }}">{{ termin.title }}</a><br/>
+    {% else %}
+      {{ termin.title }}<br/>
+    {% endif %}
+    {% if termin.videoUrl %}<a href="{{termin.videoUrl}}">(Video)</a><br/>{% endif %}
+    <small>{{ termin.kind }}</small>
+  </li>
+{% endfor %}
+  </ul>
+  </div>
+  
+  {% endfor %}
+  
+ 
+</div>  

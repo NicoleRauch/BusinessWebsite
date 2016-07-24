@@ -1,0 +1,67 @@
+[
+  {
+    "name": "React Europe, Paris, 3.6.2016",
+    "title": "It's Shallow Rendering All the Way Down",
+    "kind": "Lightning Talk"
+  },
+  {
+    "name": "Entwicklertag Karlsruhe, 15.6.2016",
+    "title": "Schnelle Reaktion - mit React und Redux",
+    "url": "https://entwicklertag.de/karlsruhe/2016/schnelle-reaktion-mit",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 20.-21.6.2016 / 31.8.-1.9.2016 / 30.11.-1.12.2016",
+    "title": "Kurs: Domain-Driven Design (\"DDD\")",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+    "kind": "zweitägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 21.6.2016 / 5.9.2016 / 7.12.2016",
+    "title": "Kurs: Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp DevDay, Zürich, 22.6.2016",
+    "title": "Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folmMAAQ",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp DevDay, Zürich, 22.6.2016",
+    "title": "Schnelle Reaktion: Einführung in React.js und Redux",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folqdAAA",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp, Zürich, 23.6.2016",
+    "title": "Workshop: Einführung in React.js and Redux",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/web-und-mobile-app-entwicklung/webentwicklung/einfuehrung-in-react-js-and-redux",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 24.6.2016 / 6.9.2016 / 8.12.2016",
+    "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "NordicJS, Stockholm, 8. - 9.9.2016",
+    "title": "Event Sourcing a Node.js Application",
+    "url": "http://nordicjs.com/speakers",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 28.9.2016, 3.11.2016, 6.12.2016",
+    "title": "Workshop: Coderetreat",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/code-retreat",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 29.9.2016, 29.11.2016",
+    "title": "Workshop: Legacy Coderetreat",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/legacy-code-retreat",
+    "kind": "ganztägiger Workshop"
+  }
+]

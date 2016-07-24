@@ -1,8 +1,14 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+import qualified Data.Aeson as A
+import           Data.Aeson ((.:), (.:?))
 import           Data.Monoid (mappend)
 import           Hakyll
 import           System.FilePath.Posix (dropExtension, splitDirectories)
+import           GHC.Generics (Generic)
+import           Data.Binary (Binary)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -26,6 +32,13 @@ main = hakyll $ do
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
+
+    match "data/termine/kommende.json" $ do
+        compile $ do
+            lbs <- fmap itemBody getResourceLBS
+            case A.eitherDecode lbs of
+                 Left err -> fail err
+                 Right ts -> makeItem (ts::Termine) 
 
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
@@ -83,10 +96,60 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
+    match "termine.html" $ do
+        route idRoute
+        compile $ do
+            
+            let terminItems = do
+                           Termine termine  <- loadBody "data/termine/kommende.json"
+                           mapM makeItem termine
+                indexCtx =
+                    constField "title" "Home"                `mappend`
+                    listField "kommende" terminCtx terminItems                 `mappend`
+                    generalContext
+
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= relativizeUrls
+
     match "templates/*" $ compile templateBodyCompiler
 
 
 --------------------------------------------------------------------------------
+
+data Termin = Termin {
+     terminName :: String
+     , terminTitle :: String
+     , terminUrl :: Maybe String
+     , terminKind :: String
+} deriving (Generic)
+
+terminCtx :: Context Termin
+terminCtx = mconcat [field "name" (return . terminName . itemBody),
+                     field "title" (return . terminTitle . itemBody),
+                     field "url" (maybe (fail "") return . terminUrl . itemBody),
+                     field "kind" (return . terminKind . itemBody)
+                     ]
+
+instance Binary Termin
+
+instance A.FromJSON Termin where
+    parseJSON = A.withObject "Can't parse Termin" $ \obj -> do
+              name <- obj .: "name"
+              title <- obj .: "title"
+              url <- obj .:? "url"
+              kind <- obj .: "kind"
+              return $ Termin name title url kind
+
+newtype Termine = Termine {
+        unTermine :: [Termin]
+} deriving (Generic, A.FromJSON)
+
+instance Binary Termine
+
+instance Writable Termine
+   where write _ _ = return ()
 
 german :: Compiler [Item a] -> Compiler [Item a]
 german c = fmap (langFilter "de") c
