@@ -7,6 +7,6 @@ jekyll/js
 jekyll-beispielfiles
 build
 node_modules
-screen.css
-jquery.fullPage.css
+#screen.css
+#jquery.fullPage.css
 .idea
