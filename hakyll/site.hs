@@ -58,9 +58,11 @@ main = hakyll $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
-            let blogCtx =
-                    listField "englishPosts" postCtx (return posts) `mappend`
-                    listField "germanPosts" postCtx (return posts) `mappend`
+            let 
+                postList = return posts
+                blogCtx =
+                    listField "germanPosts" postCtx (german postList) `mappend`
+                    listField "englishPosts" postCtx (english postList) `mappend`
                     generalContext
 
             getResourceBody
@@ -85,6 +87,17 @@ main = hakyll $ do
 
 
 --------------------------------------------------------------------------------
+
+german :: Compiler [Item a] -> Compiler [Item a]
+german c = fmap (langFilter "de") c
+
+--  {% if post.lang == "en" %}
+english :: Compiler [Item a] -> Compiler [Item a]
+english c = fmap (langFilter "en") c
+
+langFilter :: String -> [Item a] -> [Item a]
+langFilter lang x = x
+
 postCtx :: Context String
 postCtx =
     dateField "date" "%-d.%m.%Y" 
