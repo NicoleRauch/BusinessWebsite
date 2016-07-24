@@ -7,13 +7,11 @@ layout: default
 <h2>English Blog Posts</h2>
 
 $for(englishPosts)$
-<!-- {% if post.lang == "en" %} -->
 <h4><a href="$url$">$title$</a></h4>
 $if(subtitle)$<h5><a href="$url$">$subtitle$</a></h5>$endif$
 <small>$date$</small><br/>
   <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> ...excerpt...
   <a href="$url$"><small>(read more)</small></a>
-<!-- {% endif %} -->
 $endfor$
 
 </div>
@@ -24,13 +22,11 @@ $endfor$
 <h2>Deutschsprachige Blog-Artikel</h2>
 
 $for(germanPosts)$
-<!-- {% if post.lang == "de" %} -->
 <h4><a href="$url$">$title$</a></h4>
-$subtitle$<h5><a href="$post.url$">$subtitle$</a></h5>$endif$
+$subtitle$<h5><a href="$url$">$subtitle$</a></h5>$endif$
 <small>$date$</small><br/>
   <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> ...excerpt...
   <a href="$url$"><small>(weiterlesen)</small></a>
-<!-- {% endif %} -->
 $endfor$
 
 </div>
