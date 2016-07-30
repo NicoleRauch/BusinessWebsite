@@ -155,36 +155,21 @@ instance Writable Termine
 -- what I need:
 
 german :: Compiler [Item String] -> Compiler [Item String]
--- german c = fmap (langFilter "de") c
--- german c = fmap (langFilter2 "de") c
-german c = c >>= langFilter2a "de"
+german c = c >>= filterByLang "de"
 
-langFilter2a :: String -> [Item String] -> Compiler [Item String]
-langFilter2a lang posts = filterM isGerman2 posts
+english :: Compiler [Item String] -> Compiler [Item String]
+english c = c >>= filterByLang "en"
 
-langFilter2 :: String -> [Item a] -> [Item a]
-langFilter2 lang [] = []
-langFilter2 lang (x:xs) = (langFilter3 lang x) ++ (langFilter2 lang xs)
+filterByLang :: String -> [Item String] -> Compiler [Item String]
+filterByLang lang posts = filterM (hasLang lang) posts
 
-langFilter3 :: String -> Item a -> [Item a]
-langFilter3 lang item = [item]
-
---  {% if post.lang == "en" %}
-english :: Compiler [Item a] -> Compiler [Item a]
-english c = fmap (langFilter "en") c
-
-langFilter :: String -> [Item a] -> [Item a]
-langFilter lang x = x
+hasLang :: String -> Item String -> Compiler Bool
+hasLang lang item = fmap ((==) lang) $ langOfItem item
 
 langOfItem :: Item String -> Compiler String
 langOfItem item = langOfPost $ itemIdentifier item
 
-isGerman2 :: Item String -> Compiler Bool
-isGerman2 item = fmap ((==) "de") $ langOfItem item
-
-
-
-langOfPost :: MonadMetadata m => Identifier -> m String
+langOfPost :: Identifier -> Compiler String
 langOfPost id = getMetadataField' id "lang"
 
 postCtx :: Context String
