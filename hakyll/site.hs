@@ -9,6 +9,7 @@ import           Hakyll
 import           System.FilePath.Posix (dropExtension, splitDirectories)
 import           GHC.Generics (Generic)
 import           Data.Binary (Binary)
+import           Control.Monad (filterM)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -153,8 +154,20 @@ instance Writable Termine
 
 -- what I need:
 
-german :: Compiler [Item a] -> Compiler [Item a]
-german c = fmap (langFilter "de") c
+german :: Compiler [Item String] -> Compiler [Item String]
+-- german c = fmap (langFilter "de") c
+-- german c = fmap (langFilter2 "de") c
+german c = c >>= langFilter2a "de"
+
+langFilter2a :: String -> [Item String] -> Compiler [Item String]
+langFilter2a lang posts = filterM isGerman2 posts
+
+langFilter2 :: String -> [Item a] -> [Item a]
+langFilter2 lang [] = []
+langFilter2 lang (x:xs) = (langFilter3 lang x) ++ (langFilter2 lang xs)
+
+langFilter3 :: String -> Item a -> [Item a]
+langFilter3 lang item = [item]
 
 --  {% if post.lang == "en" %}
 english :: Compiler [Item a] -> Compiler [Item a]
