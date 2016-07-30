@@ -151,6 +151,8 @@ instance Binary Termine
 instance Writable Termine
    where write _ _ = return ()
 
+-- what I need:
+
 german :: Compiler [Item a] -> Compiler [Item a]
 german c = fmap (langFilter "de") c
 
@@ -160,6 +162,17 @@ english c = fmap (langFilter "en") c
 
 langFilter :: String -> [Item a] -> [Item a]
 langFilter lang x = x
+
+langOfItem :: Item String -> Compiler String
+langOfItem item = langOfPost $ itemIdentifier item
+
+isGerman2 :: Item String -> Compiler Bool
+isGerman2 item = fmap ((==) "de") $ langOfItem item
+
+
+
+langOfPost :: MonadMetadata m => Identifier -> m String
+langOfPost id = getMetadataField' id "lang"
 
 postCtx :: Context String
 postCtx =
