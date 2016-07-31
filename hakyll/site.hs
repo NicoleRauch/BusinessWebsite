@@ -118,6 +118,8 @@ main = hakyll $ do
 
 --------------------------------------------------------------------------------
 
+-- Termine management:
+
 data Termin = Termin {
      terminName :: String
      , terminTitle :: String
@@ -151,7 +153,9 @@ instance Binary Termine
 instance Writable Termine
    where write _ _ = return ()
 
--- what I need:
+--------------------------------------------------------------------------------
+
+-- Multi-Language blog post management:
 
 german :: Compiler [Item String] -> Compiler [Item String]
 german c = c >>= filterByLang "de"
@@ -170,6 +174,10 @@ langOfItem item = langOfPost $ itemIdentifier item
 
 langOfPost :: Identifier -> Compiler String
 langOfPost id = getMetadataField' id "lang"
+
+--------------------------------------------------------------------------------
+
+-- Contexts:
 
 postCtx :: Context String
 postCtx =
