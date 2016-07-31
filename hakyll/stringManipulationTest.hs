@@ -17,13 +17,13 @@ main = hspec $ do
 
   describe "bla" $ do
     it "returns 0 when the substring matches from the start" $ do
-      bla 0 "abc" 'a' "bc" 0 `shouldBe` (Just 1)
+      bla "abc" 'a' "bc" 0 `shouldBe` (Just 1)
 
     it "adds the cutoff to the result" $ do
-      bla 0 "abc" 'a' "bc" 12 `shouldBe` (Just 13)
+      bla "abc" 'a' "bc" 12 `shouldBe` (Just 13)
 
     it "returns 6 when the substring matches from position 5" $ do
-      bla 6 "12345abc" 'a' "bc" 0 `shouldBe` (Just 6)
+      bla "12345abc" 'a' "bc" 6 `shouldBe` (Just 6)
 
   describe "substringPos" $ do
     it "returns Nothing when the substring is empty" $ do

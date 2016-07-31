@@ -2,7 +2,6 @@ module StringManipulation where
 
 import           Data.List (elemIndex, isPrefixOf)
 
-
 getExcerpt :: String -> String
 getExcerpt x = untilCount x $ substringPos x "tests" 0
 
@@ -18,16 +17,12 @@ substringPos string (c:cs) cutoff =
              in
                 case firstOccurrence of
                      Nothing -> Nothing
-                     Just i  -> bla i string c cs cutoff
+                     Just i  -> bla (drop (i+1) string) c cs (cutoff+i+1)
 
-bla :: Int -> String -> Char -> String -> Int -> Maybe Int
-bla i string firstChar remainingChars cutoff = foo (drop (i+1) string) firstChar remainingChars (i+cutoff+1)
+bla :: String -> Char -> String -> Int -> Maybe Int
+bla string firstChar remainingChars cutoff = foo string firstChar remainingChars cutoff
 
 foo :: String -> Char -> String -> Int -> Maybe Int
 foo remainingString firstChar remainingChars currentIndex
     | isPrefixOf remainingChars remainingString = Just currentIndex
     | otherwise = substringPos remainingString (firstChar:remainingChars) currentIndex
-
--- drop count list
--- elemIndex elem list
--- isPrefixOf 
