@@ -3,7 +3,7 @@ module StringManipulation where
 import           Data.List (elemIndex, isPrefixOf)
 
 getExcerpt :: String -> String
-getExcerpt x = untilCount x $ substringPos x "tests" 0
+getExcerpt x = untilCount x $ substringPos x "\n\n" 0
 
 untilCount :: String -> Maybe Int -> String
 untilCount _ Nothing = ""
