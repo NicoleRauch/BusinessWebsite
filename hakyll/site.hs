@@ -179,7 +179,7 @@ langOfPost id = getMetadataField' id "lang"
 -- Blog Post Excerpts:
 
 getResourceBodyExcerpt :: Item String -> Compiler String
-getResourceBodyExcerpt = error "not implemented yet"
+getResourceBodyExcerpt item = return $ itemBody item
 
 --------------------------------------------------------------------------------
 

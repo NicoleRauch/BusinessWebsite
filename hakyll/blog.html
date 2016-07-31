@@ -10,7 +10,7 @@ $for(englishPosts)$
 <h4><a href="$url$">$title$</a></h4>
 $if(subtitle)$<h5><a href="$url$">$subtitle$</a></h5>$endif$
 <small>$date$</small><br/>
-  <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> ...excerpt...
+  <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> $excerpt$
   <a href="$url$"><small>(read more)</small></a>
 $endfor$
 
@@ -25,7 +25,7 @@ $for(germanPosts)$
 <h4><a href="$url$">$title$</a></h4>
 $if(subtitle)$<h5><a href="$url$">$subtitle$</a></h5>$endif$
 <small>$date$</small><br/>
-  <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> ...excerpt...
+  <!-- {{ post.excerpt | remove: '<p>' | remove: '</p>' }} --> $excerpt$
   <a href="$url$"><small>(weiterlesen)</small></a>
 $endfor$
 
