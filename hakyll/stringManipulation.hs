@@ -7,7 +7,7 @@ getExcerpt x = untilCount x $ substringPos x "tests" 0
 
 untilCount :: String -> Maybe Int -> String
 untilCount _ Nothing = ""
-untilCount string (Just i) = take i string
+untilCount string (Just i) = take (i-1) string
 
 substringPos :: String -> String -> Int -> Maybe Int
 substringPos _ [] _ = Nothing
