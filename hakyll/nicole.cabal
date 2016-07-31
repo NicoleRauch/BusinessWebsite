@@ -12,3 +12,8 @@ executable site
                   , binary
   ghc-options:      -threaded
   default-language: Haskell2010
+
+library
+  exposed-modules:  StringManipulation
+  build-depends:    base == 4.*
+  default-language: Haskell2010

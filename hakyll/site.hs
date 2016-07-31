@@ -10,6 +10,7 @@ import           System.FilePath.Posix (dropExtension, splitDirectories)
 import           GHC.Generics (Generic)
 import           Data.Binary (Binary)
 import           Control.Monad (filterM)
+import           StringManipulation (getExcerpt)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -166,11 +167,10 @@ langOfPost :: Identifier -> Compiler String
 langOfPost id = getMetadataField' id "lang"
 
 --------------------------------------------------------------------------------
--- Blog Post Excerpts:
+-- Blog Post Excerpts (i.e. the first paragraph):
 
 getResourceBodyExcerpt :: Item String -> Compiler String
-getResourceBodyExcerpt item = return $ itemBody item
-
+getResourceBodyExcerpt item = return $ getExcerpt $ itemBody item
 
 --------------------------------------------------------------------------------
 
