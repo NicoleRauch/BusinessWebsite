@@ -31,6 +31,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "robots.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
