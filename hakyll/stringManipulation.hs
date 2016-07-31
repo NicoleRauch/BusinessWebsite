@@ -17,10 +17,7 @@ substringPos string (c:cs) cutoff =
              in
                 case firstOccurrence of
                      Nothing -> Nothing
-                     Just i  -> bla (drop (i+1) string) c cs (cutoff+i+1)
-
-bla :: String -> Char -> String -> Int -> Maybe Int
-bla string firstChar remainingChars cutoff = foo string firstChar remainingChars cutoff
+                     Just i  -> foo (drop (i+1) string) c cs (cutoff+i+1)
 
 foo :: String -> Char -> String -> Int -> Maybe Int
 foo remainingString firstChar remainingChars currentIndex

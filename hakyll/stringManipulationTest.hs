@@ -15,15 +15,14 @@ main = hspec $ do
     it "returns Nothing if the remaining string does not contain remaining chars" $ do
        foo "abcde" 'x' "yz" 7 `shouldBe` Nothing
 
-  describe "bla" $ do
     it "returns 0 when the substring matches from the start" $ do
-      bla "abc" 'a' "bc" 0 `shouldBe` (Just 1)
+      foo "abc" 'a' "bc" 0 `shouldBe` (Just 1)
 
     it "adds the cutoff to the result" $ do
-      bla "abc" 'a' "bc" 12 `shouldBe` (Just 13)
+      foo "abc" 'a' "bc" 12 `shouldBe` (Just 13)
 
     it "returns 6 when the substring matches from position 5" $ do
-      bla "12345abc" 'a' "bc" 6 `shouldBe` (Just 6)
+      foo "12345abc" 'a' "bc" 0 `shouldBe` (Just 6)
 
   describe "substringPos" $ do
     it "returns Nothing when the substring is empty" $ do
