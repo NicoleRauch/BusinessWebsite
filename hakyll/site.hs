@@ -46,12 +46,6 @@ main = hakyll $ do
                  Left err -> fail err
                  Right ts -> makeItem (ts::Termine) 
 
-    match (fromList ["about.rst", "contact.markdown"]) $ do
-        route   $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" generalContext
-            >>= relativizeUrls
-
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
