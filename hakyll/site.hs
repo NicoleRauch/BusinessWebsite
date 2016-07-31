@@ -53,16 +53,19 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= relativizeUrls
 
+    match "posts/*" $ version "raw" $ do
+        route   $ setExtension "html"   -- we need to "cheat" here in order to get the correct URLs from the $url$ tag
+        compile getResourceBody
 
     match "blog.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAll ("posts/*" .&&. hasVersion "raw")
             let 
                 postList = return posts
                 blogCtx =
-                    listField "germanPosts" postCtx (german postList) `mappend`
-                    listField "englishPosts" postCtx (english postList) `mappend`
+                    listField "germanPosts" postWithExcerptCtx (german postList) `mappend`
+                    listField "englishPosts" postWithExcerptCtx (english postList) `mappend`
                     generalContext
 
             getResourceBody
@@ -168,16 +171,20 @@ langOfPost id = getMetadataField' id "lang"
 getResourceBodyExcerpt :: Item String -> Compiler String
 getResourceBodyExcerpt item = return $ itemBody item
 
+
 --------------------------------------------------------------------------------
 
 -- Contexts:
 
 postCtx :: Context String
 postCtx =
-    field "excerpt" getResourceBodyExcerpt `mappend`
-    dateField "date" "%-d.%m.%Y" 
-                          `mappend`
+    dateField "date" "%-d.%m.%Y" `mappend`
     generalContext
+
+postWithExcerptCtx :: Context String
+postWithExcerptCtx =
+    field "excerpt" getResourceBodyExcerpt `mappend`
+    postCtx
 
 activeClassField :: Context a
 activeClassField = functionField "activeClass" $ \[p] _ -> do
