@@ -16,17 +16,14 @@ main = hspec $ do
        foo "abcde" 'x' "yz" 7 `shouldBe` Nothing
 
   describe "bla" $ do
-    it "returns nothing when there is no current index" $ do
-      bla Nothing "abc" 'a' "bc" 0 `shouldBe` Nothing
-
     it "returns 0 when the substring matches from the start" $ do
-      bla (Just 0) "abc" 'a' "bc" 0 `shouldBe` (Just 1)
+      bla 0 "abc" 'a' "bc" 0 `shouldBe` (Just 1)
 
     it "adds the cutoff to the result" $ do
-      bla (Just 0) "abc" 'a' "bc" 12 `shouldBe` (Just 13)
+      bla 0 "abc" 'a' "bc" 12 `shouldBe` (Just 13)
 
     it "returns 6 when the substring matches from position 5" $ do
-      bla (Just 6) "12345abc" 'a' "bc" 0 `shouldBe` (Just 6)
+      bla 6 "12345abc" 'a' "bc" 0 `shouldBe` (Just 6)
 
   describe "substringPos" $ do
     it "returns Nothing when the substring is empty" $ do

@@ -13,11 +13,15 @@ untilCount string (Just i) = take i string
 substringPos :: String -> String -> Int -> Maybe Int
 substringPos _ [] _ = Nothing
 substringPos [] _ _ = Nothing
-substringPos string (c:cs) cutoff = bla (elemIndex c string) string c cs cutoff
+substringPos string (c:cs) cutoff = 
+             let firstOccurrence = (elemIndex c string)
+             in
+                case firstOccurrence of
+                     Nothing -> Nothing
+                     Just i  -> bla i string c cs cutoff
 
-bla :: Maybe Int -> String -> Char -> String -> Int -> Maybe Int
-bla Nothing _ _ _ _ = Nothing
-bla (Just i) string firstChar remainingChars cutoff = foo (drop (i+1) string) firstChar remainingChars (i+cutoff+1)
+bla :: Int -> String -> Char -> String -> Int -> Maybe Int
+bla i string firstChar remainingChars cutoff = foo (drop (i+1) string) firstChar remainingChars (i+cutoff+1)
 
 foo :: String -> Char -> String -> Int -> Maybe Int
 foo remainingString firstChar remainingChars currentIndex
