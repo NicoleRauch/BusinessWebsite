@@ -17,7 +17,7 @@ substringPos string (c:cs) = bla (elemIndex c string) string c cs
 
 bla :: Maybe Int -> String -> Char -> String -> Maybe Int
 bla Nothing _ _ _ = Nothing
-bla (Just i) string firstChar remainingChars = foo (drop i string) firstChar remainingChars i
+bla (Just i) string firstChar remainingChars = foo (drop (i+1) string) firstChar remainingChars i
 
 foo :: String -> Char -> String -> Int -> Maybe Int
 foo remainingString firstChar remainingChars currentIndex
