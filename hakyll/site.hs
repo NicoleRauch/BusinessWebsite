@@ -46,6 +46,13 @@ main = hakyll $ do
                  Left err -> fail err
                  Right ts -> makeItem (ts::Termine) 
 
+    match "data/termine/vergangene.json" $ do
+        compile $ do
+            lbs <- fmap itemBody getResourceLBS
+            case A.eitherDecode lbs of
+                 Left err -> fail err
+                 Right ys -> makeItem (ys::Years) 
+
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
@@ -92,9 +99,13 @@ main = hakyll $ do
             let terminItems = do
                            Termine termine  <- loadBody "data/termine/kommende.json"
                            mapM makeItem termine
+                yearItems = do
+                          Years years <- loadBody "data/termine/vergangene.json"
+                          mapM makeItem years
                 indexCtx =
                     constField "title" "Home"                `mappend`
                     listField "kommende" terminCtx terminItems                 `mappend`
+                    listField "vergangene" yearCtx yearItems                   `mappend`
                     generalContext
 
             getResourceBody
@@ -141,6 +152,37 @@ instance Binary Termine
 
 instance Writable Termine
    where write _ _ = return ()
+
+--------------------------------------------------------------------------------
+
+-- Years containing Termine:
+
+data Year = Year {
+     yearYear :: String
+     , yearEntries :: Termine
+} deriving (Generic)
+
+yearCtx :: Context Year
+yearCtx = mconcat [field "year" (return . yearYear . itemBody)
+                   , field "entries" (return . yearEntries . itemBody)
+                   ]
+
+instance Binary Year
+
+instance A.FromJSON Year where
+         parseJSON = A.withObject "Can't parse Year" $ \obj -> do
+                   year <- obj .: "year"
+                   entries <- obj .: "entries"
+                   return $ Year year entries
+
+newtype Years = Years {
+        unYears :: [Year]
+} deriving (Generic, A.FromJSON)
+
+instance Binary Years
+
+instance Writable Years
+         where write _ _ = return ()
 
 --------------------------------------------------------------------------------
 
