@@ -21,7 +21,7 @@ bla (Just i) string firstChar remainingChars = foo (drop i string) firstChar rem
 
 foo :: String -> Char -> String -> Int -> Maybe Int
 foo remainingString firstChar remainingChars currentIndex
-    | isPrefixOf remainingString remainingChars = Just currentIndex
+    | isPrefixOf remainingChars remainingString = Just currentIndex
     | otherwise = substringPos remainingString (firstChar:remainingChars)
 
 -- drop count list
