@@ -29,13 +29,13 @@ module.exports = function (grunt) {
     copy: {
       bootstrapFONTS: {
         src: 'node_modules/bootstrap/dist/fonts/*',
-        dest: 'jekyll/fonts',
+        dest: 'hakyll/fonts',
         expand: true,
         flatten: true
       },
       fontawesomeFONTS: {
         src: 'node_modules/font-awesome/fonts/*',
-        dest: 'jekyll/fonts',
+        dest: 'hakyll/fonts',
         expand: true,
         flatten: true
       },
@@ -58,31 +58,31 @@ module.exports = function (grunt) {
       },
       fullpageCSS: {
         src: 'node_modules/fullpage.js/jquery.fullPage.css',
-        dest: 'jekyll/css',
+        dest: 'hakyll/css',
         expand: true,
         flatten: true
       },
       jqueryJS: {
         src: 'node_modules/jquery/dist/jquery.min.js',
-        dest: 'jekyll/js',
+        dest: 'hakyll/js',
         expand: true,
         flatten: true
       },
       bootstrapJS: {
         src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        dest: 'jekyll/js',
+        dest: 'hakyll/js',
         expand: true,
         flatten: true
       },
       jqueryEasingJS: {
         src: 'node_modules/jquery.easing/jquery.easing.min.js',
-        dest: 'jekyll/js',
+        dest: 'hakyll/js',
         expand: true,
         flatten: true
       },
       fullpageJS: {
         src: 'node_modules/fullpage.js/jquery.fullPage.js',
-        dest: 'jekyll/js',
+        dest: 'hakyll/js',
         expand: true,
         flatten: true
       }
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
           report: 'min'
         },
         files: {
-          'jekyll/css/screen.css': [
+          'hakyll/css/screen.css': [
             'build/stylesheets/less/custom.less'
           ]
         }

@@ -2,5 +2,6 @@
 
 git pull
 npm start
-cd jekyll
-jekyll build
+cd hakyll
+stack build
+stack exec site rebuild
