@@ -7,22 +7,22 @@ main :: IO ()
 main = hspec $ do
   describe "foo" $ do
     it "returns the current index if the remaining string starts with the remaining chars" $ do
-       foo "abcde" 'x' "abc" 7 `shouldBe` (Just 8)
+       foo "abcde" "abc" 7 `shouldBe` (Just 8)
 
     it "adds the index into the remaining string if it contains the remaining chars" $ do
-       foo "abcde" 'c' "d" 7 `shouldBe` (Just 10)
+       foo "abcde" "d" 7 `shouldBe` (Just 11)
 
     it "returns Nothing if the remaining string does not contain remaining chars" $ do
-       foo "abcde" 'x' "yz" 7 `shouldBe` Nothing
+       foo "abcde" "xyz" 7 `shouldBe` Nothing
 
     it "returns 0 when the substring matches from the start" $ do
-      foo "abc" 'a' "bc" 0 `shouldBe` (Just 1)
+      foo "abc" "bc" 0 `shouldBe` (Just 2)
 
     it "adds the cutoff to the result" $ do
-      foo "abc" 'a' "bc" 12 `shouldBe` (Just 13)
+      foo "abc" "abc" 12 `shouldBe` (Just 13)
 
     it "returns 6 when the substring matches from position 5" $ do
-      foo "12345abc" 'a' "bc" 0 `shouldBe` (Just 6)
+      foo "12345abc" "abc" 0 `shouldBe` (Just 6)
 
   describe "substringPos" $ do
     it "returns Nothing when the substring is empty" $ do

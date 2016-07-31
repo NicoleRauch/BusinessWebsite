@@ -17,9 +17,9 @@ substringPos string (c:cs) cutoff =
              in
                 case firstOccurrence of
                      Nothing -> Nothing
-                     Just i  -> foo (drop (i+1) string) c cs (cutoff+i+1)
+                     Just i  -> foo (drop i string) (c:cs) (cutoff+i)
 
-foo :: String -> Char -> String -> Int -> Maybe Int
-foo remainingString firstChar remainingChars currentIndex
-    | isPrefixOf remainingChars remainingString = Just currentIndex
-    | otherwise = substringPos remainingString (firstChar:remainingChars) currentIndex
+foo :: String -> String -> Int -> Maybe Int
+foo string searchString currentIndex
+    | isPrefixOf searchString string = Just (currentIndex + 1)
+    | otherwise = substringPos (drop 1 string) searchString (currentIndex + 1)
