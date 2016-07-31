@@ -17,3 +17,10 @@ library
   exposed-modules:  StringManipulation
   build-depends:    base == 4.*
   default-language: Haskell2010
+
+test-suite stringManipulationTest
+  type:             exitcode-stdio-1.0
+  main-is:          stringManipulationTest.hs
+  build-depends:    base
+                    , hspec
+  default-language: Haskell2010
