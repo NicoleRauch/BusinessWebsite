@@ -176,11 +176,18 @@ langOfPost :: Identifier -> Compiler String
 langOfPost id = getMetadataField' id "lang"
 
 --------------------------------------------------------------------------------
+-- Blog Post Excerpts:
+
+getResourceBodyExcerpt :: Item String -> Compiler String
+getResourceBodyExcerpt = error "not implemented yet"
+
+--------------------------------------------------------------------------------
 
 -- Contexts:
 
 postCtx :: Context String
 postCtx =
+    field "excerpt" getResourceBodyExcerpt `mappend`
     dateField "date" "%-d.%m.%Y" 
                           `mappend`
     generalContext
