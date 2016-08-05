@@ -124,6 +124,7 @@ data Termin = Termin {
      terminName :: String
      , terminTitle :: String
      , terminUrl :: Maybe String
+     , terminVideoUrl :: Maybe String
      , terminKind :: String
 } deriving (Generic)
 
@@ -131,6 +132,7 @@ terminCtx :: Context Termin
 terminCtx = mconcat [field "name" (return . terminName . itemBody),
                      field "title" (return . terminTitle . itemBody),
                      field "url" (maybe (fail "") return . terminUrl . itemBody),
+                     field "videoUrl" (maybe (fail "") return . terminVideoUrl . itemBody),
                      field "kind" (return . terminKind . itemBody)
                      ]
 
@@ -141,8 +143,9 @@ instance A.FromJSON Termin where
               name <- obj .: "name"
               title <- obj .: "title"
               url <- obj .:? "url"
+              videoUrl <- obj .:? "videoUrl"
               kind <- obj .: "kind"
-              return $ Termin name title url kind
+              return $ Termin name title url videoUrl kind
 
 newtype Termine = Termine {
         unTermine :: [Termin]
