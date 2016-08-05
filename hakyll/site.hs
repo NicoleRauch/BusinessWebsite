@@ -163,9 +163,12 @@ data Year = Year {
 } deriving (Generic)
 
 yearCtx :: Context Year
-yearCtx = mconcat [field "year" (return . yearYear . itemBody)
-                   , field "entries" (return . yearEntries . itemBody)
-                   ]
+yearCtx = mconcat
+    [ field         "year"    (return . yearYear . itemBody)
+    , listFieldWith "entries" terminCtx $ \yearItem -> do
+        let Termine entries = yearEntries (itemBody yearItem)
+        mapM makeItem entries
+    ]
 
 instance Binary Year
 
