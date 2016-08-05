@@ -18,9 +18,9 @@ library
   build-depends:    base == 4.*
   default-language: Haskell2010
 
-test-suite stringManipulationTest
+test-suite StringManipulationTest
   type:             exitcode-stdio-1.0
-  main-is:          stringManipulationTest.hs
+  main-is:          StringManipulationTest.hs
   build-depends:    base
                     , hspec
   default-language: Haskell2010
