@@ -13,8 +13,15 @@ import           Control.Monad (filterM)
 import           StringManipulation (getExcerpt)
 
 --------------------------------------------------------------------------------
+siteConfig :: Configuration
+siteConfig =  defaultConfiguration {
+              destinationDirectory = "../HTML"
+            , storeDirectory       = "../_hakyll_cache"
+            , tmpDirectory         = "../_hakyll_cache/tmp"
+           }
+
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith siteConfig $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
