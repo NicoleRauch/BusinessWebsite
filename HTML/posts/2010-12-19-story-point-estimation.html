@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nicole Rauch - Softwareentwicklung und Entwicklungscoaching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/screen.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic" rel="stylesheet" type="text/css">
+
+    <!-- Fullpage -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" />
+  
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.nicolerauch.de","*.nicole-rauch.de"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.nicolerauch.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.nicolerauch.de/piwik.php?idsite=1" style="border:0;" alt /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+
+
+  <body>
+
+  <div id="fullpage">
+    <div class="section">
+
+      <div class="container-fluid viewport">
+
+        <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../schwerpunkte.html">Schwerpunkte</a></li>
+            <li><a href="../termine.html">Termine</a></li>
+            <li class="hidden-xs hidden-sm"><a class="navbar-brand" href="../index.html"><img class="img-responsive" src="../img/logo_menu.png" /></a></li>
+            <li><a href="../themen.html">Themen</a></li>
+            <li><a href="../referenzen.html">Referenzen</a></li>
+            <li><a href="../impressum.html">Impressum</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+      <div class="col-md-10 col-md-offset-1 post">
+
+        <header class="post-header">
+          <h1 class="post-title">Story Point Estimation</h1>
+          
+          <p class="post-meta">19.12.2010
+             • Nicole Rauch
+            
+          </p>
+        </header>
+        <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+          <article class="post-content">
+            <p>I guess that most of the discussions around any part of Scrum that I participated in so far were related to estimating. Should we estimate in hours or in those ominous story points, and if we choose the latter, what does a story point describe?</p>
+<p>Is it the sheer duration of the story? Then why not estimate it in hours and save all the trouble of converting story points to hours? – Or does it describe the complexity? Then how can we make use of the estimations for our release planning? E.g. a complex formula may be implemented quickly (because it can be taken from a book) while implementing a routine thing may take a significant amount of time (because it requires lots of manual work).</p>
+<p>Usually, story points are described as a measure of the “size” of a story, where “size” is said to include a number of factors like complexity, duration, risk, and so on.<br />
+And usually, no further description is given on how to measure these factors. It is implicitly assumed that people know this already. In this article, I want to produce more insight and intuition on how to estimate in Story Points.</p>
+<h3 id="how-can-we-estimate-the-size-of-a-story">How can we Estimate the Size of a Story?</h3>
+<p>I think that it is of utmost importance that any team learns to take into consideration that ít is dangerous and wrong to restrict their estimations to just the time it takes to type the code into the editor. Instead, the estimations need to reflect the possible duration of a number of aspects:</p>
+<ul>
+<li><strong>Complexity:</strong> It takes time to think about possible solutions, to do some research, to decide which way to go, to implement some spikes, and so on.</li>
+<li><strong>Risk:</strong> What can go wrong with the story, how much uncertainty is in the solution we are likely to favor? How much experience does the team have with this solution? How much extra time should be added to cover these issues</li>
+<li><strong>Implementation:</strong> How long does it take to implement the desired solution? How much time do the automated tests take? How many tests do we need, and what kinds of tests? Do we need manual testing as well? Do we need to refactor the code? Maybe we even need larger code restructurings or architecture discussions?</li>
+<li><strong>Deployment:</strong> What is required for deployment? Do we have an automated build system in place or does it involve manual work? How long does it take to start the application and to inspect the new feature manually? What if we encounter problems?</li>
+<li><strong>Interdependencies:</strong> Is the task dependent on results that are not available yet? Is there any coordination required before the work can start? How long does it take until feedback is being provided, e.g. because the Product Owner is not always available?</li>
+<li><strong>…</strong></li>
+</ul>
+<p>The team should become sensitive with respect to these issues, and the team should become aware that simply suggesting a number of hours (while at the same time assuming that this number has anything to do with reality) does not do justice to the spectrum of factors illustrated above.</p>
+<p>The sum of all of these aspects is what is usually referred to as the “size” of the story.</p>
+<p>The time that needs to be considered until a story is called “done” can only be given as an order of magnitude of this size. And that is exactly what a Story Point is about: It is just an order of magnitude for the size of a given story. Not more, and also not less.</p>
+<hr />
+<h2 id="comments">Comments</h2>
+<blockquote>
+<p>20.12.2010 by <a href="http://agilescout.com">Agile Scout</a></p>
+<p></p>
+<p>Good post here. I would suggest that there would also be (included in your list) a relative estimate or baseline that developers can use when estimating their stories.</p>
+<p></p>
+<p>I’ve found that this works very well when you have all your developers understand relative size of a story. This relative size also (usually) includes complexity, inter-dependencies, and implementation requirements.</p>
+<blockquote>
+<p>25.12.2010 by Nicole Rauch</p>
+<p></p>
+<p>Your point is of course valid – as soon as a team is actually doing an estimation, it is important to have some estimation techniques at hand. Using a reference story as baseline is a useful approach.<br />
+My article, on the other hand, tries to establish an understanding of which factors are relevant and should be considered in estimates – no matter which estimation technique is being applied. In other words, the article tries to focus on the “what” of the estimation process and deliberately leaves out the “how”.</p>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<p>24.12.2010 by <a href="http://www.nlp-pm.de">Götz Müller</a></p>
+<p></p>
+<p>Story estimation is one issue, another is the estimation of the whole project. I can’t see (yet) how the relative size (of stories) could be a solution for that challenge. At the end of the day (more often before ;-) the customer wants to see the big picture he’s going to pay for.</p>
+<blockquote>
+<p>25.12.2010 by Nicole Rauch</p>
+<p></p>
+<p>When writing the article, I had estimations in agile projects in mind. When I read your comment related to traditional fixed price projects, I realized that the aspects mentioned above are important in traditional projects as well, and they need to be considered and integrated in the estimations. So, no matter whether the estimations are given in story points or in hours or days, the effort it takes to produce the software covers much more than the coding time.</p>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<p>25.12.2010 by <a href="http://www.armerkater.de">Felix</a></p>
+<p></p>
+<p>Hi Nicole,</p>
+<p></p>
+<p>estimating is a black art and there are ongoing discussions about it - be it in the Scrum/agile community or in the community of traditional project management. I like your short but there are even more factors that have an impact whether the story can be rated as DONE DONE. Most dangerous are factors that are not controlled by the developers but are coming from outside. Thats the reason to check if a story is READY READY to develop (something which is very often skipped / not possible).</p>
+<p></p>
+<p>However my experience shows me that in the end all estimates are always are translated to hours/days but still it creates value (confidence) if you estimate in abstract values in a first step.</p>
+<p></p>
+<p>In the comments of one of my articles in Armerkater.de I highlight an additional important aspect for the German speaking Scrum community:</p>
+<p></p>
+<p>“[…] Übersetzungsfehler: „Compexity“ wird nicht nur mit „Komplexität“ übersetzt sondern eben auch mit „Aufwand“ ;-) […]” http://www.armerkater.de/2010/06/aufwand-nicht-komplexitt/</p>
+<p></p>
+<p>Guess some of the discussions come from the one sided translation of complexity to German.</p>
+<p></p>
+<p>Felix</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>26.12.2010 by <a href="http://kurthaeusler.wordpress.com">Kurt Häusler</a></p>
+<p></p>
+<p>Nice article. For me story points are about splitting the time it takes to do something (which is, let’s face it, what we would like to know if possible) into 2 main groups of components. Those things that can reasonably be estimated, and those that can only be measured after something is done. Story points represent the former, and the teams velocity represent the latter.</p>
+<p></p>
+<p>The main reason we can’t estimate how long things will take, and need can only estimate an abstract component is because at the time things are estimated, usually during backlog grooming or the first part of the planning meeting, so many things are unknown, for example what the solution will be, and who will do it.</p>
+<p></p>
+<p>I find this dichotomy between what is estimable in points, and the velocity that is measured afterwards, corresponds roughly to the dichotomy between problem and solution. Teams have more luck understanding the difference between points and hours, when they realise that only the problem, or what needs to be done, can be estimated in points. How long it actually takes depends heavily on how it is solved, and encapsulated in the velocity metric.</p>
+<p></p>
+<p>Points describe problems.<br />
+Velocity describes how teams solve problems.</p>
+</blockquote>
+          </article>
+        </div>
+      </div>
+      <hr />
+
+    </div>
+
+    <div class="container-fluid viewport">
+  <footer class="row center-block">
+    <div class="col-sm-12">
+      <ul class="list-inline">
+        <li><a href="../"><img src="../img/footer_01.png"></a></li><!-- Home -->
+        <li><a href="https://de.linkedin.com/in/nicole-rauch-807ab52b"><img src="../img/footer_02.png"></a></li><!-- LinkedIn -->
+        <li><a href="https://www.xing.com/profile/Nicole_Rauch2"><img src="../img/footer_03.png"></a></li><!-- Xing -->
+        <li><a href="https://twitter.com/nicolerauch"><img src="../img/footer_04.png"></a></li><!-- Twitter -->
+      </ul>
+      <p>NICOLE RAUCH 2014-2016 &copy;</p>
+    </div>
+  </footer>
+</div>
+
+
+    </div><!-- end container -->
+
+    <!-- javascript -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+
+
+    </div></div>
+
+  </body>
+
+</html>
+

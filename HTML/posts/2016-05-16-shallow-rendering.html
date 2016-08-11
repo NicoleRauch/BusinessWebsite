@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nicole Rauch - Softwareentwicklung und Entwicklungscoaching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/screen.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic" rel="stylesheet" type="text/css">
+
+    <!-- Fullpage -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" />
+  
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.nicolerauch.de","*.nicole-rauch.de"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.nicolerauch.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.nicolerauch.de/piwik.php?idsite=1" style="border:0;" alt /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+
+
+  <body>
+
+  <div id="fullpage">
+    <div class="section">
+
+      <div class="container-fluid viewport">
+
+        <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../schwerpunkte.html">Schwerpunkte</a></li>
+            <li><a href="../termine.html">Termine</a></li>
+            <li class="hidden-xs hidden-sm"><a class="navbar-brand" href="../index.html"><img class="img-responsive" src="../img/logo_menu.png" /></a></li>
+            <li><a href="../themen.html">Themen</a></li>
+            <li><a href="../referenzen.html">Referenzen</a></li>
+            <li><a href="../impressum.html">Impressum</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+      <div class="col-md-10 col-md-offset-1 post">
+
+        <header class="post-header">
+          <h1 class="post-title">It's Shallow Rendering all the Way Down</h1>
+          
+          <p class="post-meta">16.05.2016
+             • Nicole Rauch
+            
+          </p>
+        </header>
+        <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+          <article class="post-content">
+            <p>Shallow Rendering was introduced to React in 0.13. Its promise is that one can write tests without requiring a DOM. Sounds great! This article takes a closer look at shallow rendering, how it works, what can be tested with it and what cannot.</p>
+<h2 id="first-of-all-how-do-we-use-shallow-rendering">First of all, how do we use shallow rendering?</h2>
+<p>React comes with a bunch of test utilities called ReactTestUtils. One of their great features is shallow rendering. This is how it is done:</p>
+<pre>
+import ReactTestUtils from "react-addons-test-utils";
+
+function shallowRender(component) {
+  var renderer = ReactTestUtils.createRenderer();
+  renderer.render(component);
+  return renderer.getRenderOutput();
+}
+</pre>
+<p>I’ve defined this as a helper function, it takes a component and returns the shallowly rendered result.</p>
+<h2 id="what-can-we-get-out-of-it">What can we get out of it?</h2>
+<p>Now, what can we get out of this result? Suppose we have a very simple (function) component</p>
+<pre>
+import React from "react";
+
+export default () => &lt;p>Simple Function Component&lt;/p>
+</pre>
+<p>This is what the shallowly rendered result looks like:</p>
+<pre>
+const result = shallowRender(&lt;SimpleFunctionComponent />);
+expect(JSON.stringify(result)).to.eql('{"type":"p","key":null,"ref":null,"props":{"children":"Simple Function Component"},"_owner":null,"_store":{}}');
+</pre>
+<p>As you can see, we basically get a JavaScript object that contains all kinds of useful information about what the component will display on screen when it gets rendered. (By the way, this object looks the same whether we render a function component or one that is derived from <code>React.Component</code>.)</p>
+<p>We can examine individual parts of this object to make our tests more resilient. E.g. we can ask for the outermost element’s type or for its children:</p>
+<pre>
+expect(result.type).to.be('p');
+expect(result.props.children).to.eql('Simple Class Component');
+</pre>
+<h3 id="nested-components">Nested Components</h3>
+<p>Of course, our components are not always that simple. We might also have a nested component, e.g.:</p>
+<pre>
+export default class extends Component {
+  render() {
+    return (
+      &lt;div>
+        &lt;p>Nested Component with&lt;/p>
+        &lt;SimpleFunctionComponent />
+      &lt;/div>
+    );
+  }
+}
+</pre>
+<p>We can also render it shallowly and examine the resulting object:</p>
+<pre>
+const result = shallowRender(<NestedClassComponent></NestedClassComponent>);
+
+expect(JSON.stringify(result)).to.eql(
+  '{"type":"div",' +
+  '"key":null,' +
+  '"ref":null,' +
+  '"props":{"children":' +
+  '[{"type":"p","key":null,"ref":null,"props":{"children":"Nested Component with"},"_owner":null,"_store":{}},' +
+  '{"key":null,"ref":null,"props":{},"_owner":null,"_store":{}}]' +
+  '},' +
+  '"_owner":null,' +
+  '"_store":{}}');
+</pre>
+<p>but this is not really that helpful any more. We can still ask more specific questions about the parts of this component:</p>
+<pre>
+expect(result.type).to.be('div');
+expect(result.props.children.length).to.eql(2);
+</pre>
+<p>and we can even ask about its children:</p>
+<pre>
+expect(result.props.children[0].type).to.eql('p');
+</pre>
+<p>and about its children’s children (that’s because it is an HTML component):</p>
+<pre>
+expect(result.props.children[0].props.children).to.eql('Nested Component with');
+</pre>
+<p>Tests that follow this style become really long-winding and fragile because they are tightly coupled to the actual component layout. To improve this situation, many helper libraries for searching and accessing parts of the shallow rendering result have been developed, with <a href="http://airbnb.io/enzyme/">AirBnB’s enzyme</a> being one of the most well-known and most powerful ones. For the sake of simplicity - and because I want to show you the bare metal of shallow rendering in this article - we will not make use of its amazing search abilities in this article. But if you want to apply shallow rendering in your tests, by all means go and have a look at it.</p>
+<p>Even when only using plain vanilla shallow rendering, we can still examine interesting aspects. First of all, we can observe that the second child component (the <code>SimpleFunctionComponent</code>) does not reveal anything interesting when it is rendered into a string:</p>
+<pre>
+expect(JSON.stringify(result.props.children[1])).to.eql('{"key":null,"ref":null,"props":{},"_owner":null,"_store":{}}');
+</pre>
+<p>That’s exactly why this method got its name: it only performs <em>shallow</em> rendering, i.e. it only renders our own components one level deep. The nested components are not rendered at all. In order to look at the contained components, we can render <em>them</em> shallowly, and then <em>their</em> contained components, and so on… So it’s shallow rendering all the way down.</p>
+<p>Still, we can examine <em>something</em> about the child components:</p>
+<pre>
+import SimpleFunctionComponent from "../src/SimpleFunctionComponent";
+
+// ...
+
+expect(result.props.children[1].type).to.eql(SimpleFunctionComponent);
+</pre>
+<p>We can find out which type they have! (And please note that this is not a string comparison but that we check against the real subcomponent definition here.) This way, we can examine whether our components are constructed correctly.</p>
+<h3 id="conditionally-rendered-subcomponents">Conditionally Rendered Subcomponents</h3>
+<p>This even applies to the dynamic aspects of hooking up the subcomponents. E.g. let’s look at a component that either includes a subcomponent or it doesn’t, depending on some property passed to it:</p>
+<pre>
+export default class extends Component {
+  render() {
+    return (
+      &lt;div>
+        &lt;p>Do we have a nested component?&lt;/p>
+        { this.props.showIt ? &lt;SimpleClassComponent /> : null }
+      &lt;/div>
+    );
+  }
+}
+</pre>
+<p>The shallowly rendered object does not contain the subcomponent if <code>false</code> is passed to the component:</p>
+<pre>
+import NotReallyNestedClassComponent from "../src/NotReallyNestedClassComponent";
+
+describe('NotReallyNestedClassComponent', function () {
+  it('checks the result\'s type and contents', function () {
+    const result = shallowRender(<NotReallyNestedClassComponent showIt="{false}"></NotReallyNestedClassComponent>);
+
+    expect(result.props.children.length).to.eql(2);
+    expect(result.props.children[0].type).to.eql('p');
+
+    expect(result.props.children[1]).to.eql(null);
+  });
+});
+</pre>
+<p>The component still has two children, and the first one still is a paragraph, but the second one gets rendered as <code>null</code>.</p>
+<h3 id="passing-props-to-subcomponents">Passing Props to Subcomponents</h3>
+<p>Another aspect of the subcomponent we can examine is whether it was passed the correct props. Let’s modify our nested component a little bit:</p>
+<pre>
+import React, {Component} from "react";
+import SimpleFunctionComponent from "./SimpleFunctionComponent";
+
+export default class extends Component {
+  render() {
+    return (
+      &lt;div>
+        &lt;p>Nested Component passing prop with&lt;/p>
+        &lt;SimpleFunctionComponent passedProp={"Yes!"} />
+      &lt;/div>
+    );
+  }
+}
+</pre>
+<p>Now we can ask the shallow rendering result about the subcomponent’s props:</p>
+<pre>
+expect(result.props.children[1].props).to.eql({passedProp: "Yes!"});
+// or
+expect(result.props.children[1].props.passedProp).to.eql("Yes!");
+</pre>
+<p>These are the most interesting static aspects of React components, and we can both test them with shallow rendering, which is great. But what about some more dynamic aspects? How far does this approach lead us?</p>
+<h3 id="callbacks">Callbacks</h3>
+<p>Let’s assume we have a component containing a button, and we are passing a handler function to this component via its props:</p>
+<pre>
+import React, {Component} from "react";
+
+export default ({onButtonClick}) => (
+  &lt;div>
+    &lt;p>Button Component with&lt;/p>
+    &lt;button onClick={onButtonClick} >Click me!&lt;/button>
+  &lt;/div>
+);
+</pre>
+<p>Wouldn’t it be nice to be able to make sure that this handler function is actually wired correctly? We can indeed do that, but only if we resort to the magical powers of AirBnB’s enzyme that I already mentioned above. It comes with its own shallow rendering function which returns the shallow rendering result inside a wrapper object. This wrapper object allows us to actually simulate clicking the button on our shallowly rendered object:</p>
+<pre>
+import React from "react";
+import sinon from "sinon";
+import expect from "must";
+import { shallow } from "enzyme";
+
+import ButtonComponent from "../src/ButtonComponent";
+
+describe('ButtonComponent', function () {
+
+  it('simulates click events', () => {
+    const handleButtonClick = sinon.spy();
+    const wrapper = shallow(
+      &lt;ButtonComponent onButtonClick={handleButtonClick} />
+    );
+
+    wrapper.find('button').simulate('click');
+
+    expect(handleButtonClick.calledOnce).to.equal(true);
+  });
+});
+</pre>
+<p>This is not possible (as far as I know) with plain vanilla shallow rendering because the button’s <code>onClick</code> prop is not included in the result object.</p>
+<h3 id="changing-internal-state-and-internal-props">Changing Internal State and Internal Props</h3>
+<p>And there is even more! Let’s look at a checkbox component that reflects the checkbox status in the component’s internal state:</p>
+<pre>
+import React, {Component} from "react";
+
+export default class extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {checked: true};
+  }
+
+  render() {
+    return (
+        &lt;input type="checkbox"
+               checked={this.state.checked}
+               onChange={e => this.setState({checked: !this.state.checked}) }
+        />
+    );
+  }
+}
+</pre>
+<p>Using enzyme, we can observe that the internal state is modified when the checkbox is clicked:</p>
+<pre>
+it('can observe state changes', function () {
+  const wrapper = shallow(&lt;CheckboxComponentWithState />);
+
+  expect(wrapper.state('checked')).to.eql(true);
+
+  wrapper.simulate('change');
+
+  expect(wrapper.state('checked')).to.eql(false);
+
+  wrapper.simulate('change');
+
+  expect(wrapper.state('checked')).to.eql(true);
+});
+</pre>
+<p>and also that the component’s property is changed as well:</p>
+<pre>
+it('can observe internal property changes', function () {
+  const wrapper = shallow(&lt;CheckboxComponentWithState />);
+
+  expect(wrapper.props().checked).to.eql(true);
+
+  wrapper.simulate('change');
+
+  expect(wrapper.props().checked).to.eql(false);
+
+  wrapper.simulate('change');
+
+  expect(wrapper.props().checked).to.eql(true);
+});
+</pre>
+<p>Please note that those checks only work for the root component, not for any children of it. We’re only <em>shallowly</em> rendering our components, after all.</p>
+<h3 id="lifecycle-methods">Lifecycle Methods</h3>
+<p>Another interesting category of tests deals with the React lifecycle methods. Most of those methods also get executed with enzyme’s shallow rendering. Let’s examine this more closely. This component implements many of the lifecycle methods and writes something to the console when they are invoked:</p>
+<pre>
+import React, {Component} from "react";
+
+export default class extends Component {
+
+  componentWillMount() {
+    console.log("Component will mount.");
+  }
+
+  componentDidMount() {
+    console.log("Component did mount.");
+  }
+
+  shouldComponentUpdate() {
+    console.log("Should component update?");
+    return true;
+  }
+
+  componentWillUpdate() {
+    console.log("Component will update.");
+  }
+
+  componentDidUpdate() {
+    console.log("Component did update.");
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {checked: true};
+  }
+
+  render() {
+    return (
+      <input type="checkbox" checked="{this.state.checked}" onChange="{(e)" => { this.setState({checked: !this.state.checked}) }}
+      />
+    );
+  }
+
+}
+</pre>
+<p>We use another state-backed checkbox here because the state change triggers a component update. If we display this component on screen, we get this in the console:</p>
+<pre>
+Component will mount.
+Component did mount.
+</pre>
+<p>And if we click the checkbox, we get this:</p>
+<pre>
+Should component update?
+Component will update.
+Component did update.
+</pre>
+<p>When we shallowly render the component by executing this test:</p>
+<pre>
+describe('LifecycleComponent', function () {
+  it('executes most lifecycle methods', function () {
+    console.log('Before rendering the component.');
+    const wrapper = shallow(<LifecycleComponent></LifecycleComponent>);
+    console.log('After rendering the component.');
+    wrapper.simulate('change');
+    console.log('After clicking the checkbox.');
+  });
+});
+</pre>
+<p>we get the following:</p>
+<pre>
+Before rendering the component.
+Component will mount.
+After rendering the component.
+Should component update?
+Component will update.
+Component did update.
+After clicking the checkbox.
+</pre>
+<p>So, as we can see, the only lifecycle method that did not get invoked is <code>componentDidMount</code>, which is understandable since the component was not mounted in the first place. (We are writing DOM-free tests here, remember?)</p>
+<h2 id="what-can-we-not-test-on-it">What can we not test on it?</h2>
+<p>There are of course cases that we cannot cover with shallow rendering:</p>
+<p>As soon as we want to test something in integration (more than one level deep), we are at a loss. Also, as you’ve seen above, observing state and property changes is only possible for the root component. If you really want to test all state and property changes with shallow rendering, you will probably end up with a lot of very fine-grained components. This might be a good thing or a bad thing, I don’t want to judge here. You need to find out which level of granularity is good for you to work with.</p>
+<p>Do you know of an example where shallow rendering is not sufficient to test your component? If so, I’d love to hear about it!</p>
+<h2 id="summary">Summary</h2>
+<p>What we can test with shallow rendering:</p>
+<ol style="list-style-type: decimal">
+<li>wiring of subcomponents into the component</li>
+<li>passing of subcomponent props</li>
+<li>wiring of handler functions that are passed to buttons etc.</li>
+<li>changes of state of the root component</li>
+<li>changes of properties of the root component</li>
+<li>the effects of most of the lifecycle methods</li>
+</ol>
+<h2 id="repository">Repository</h2>
+<p>If you are interested in playing around with the code and tests that I showed here, you can find them online <a href="https://github.com/NicoleRauch/shallow-rendering">in this repository</a>.</p>
+<hr />
+<h2 id="comments">Comments:</h2>
+<p>(please comment on this article <a href="mailto:info@nicole-rauch.de?Subject=Your blogpost 'It's Shallow Rendering All The Way Down">via email</a>)</p>
+          </article>
+        </div>
+      </div>
+      <hr />
+
+    </div>
+
+    <div class="container-fluid viewport">
+  <footer class="row center-block">
+    <div class="col-sm-12">
+      <ul class="list-inline">
+        <li><a href="../"><img src="../img/footer_01.png"></a></li><!-- Home -->
+        <li><a href="https://de.linkedin.com/in/nicole-rauch-807ab52b"><img src="../img/footer_02.png"></a></li><!-- LinkedIn -->
+        <li><a href="https://www.xing.com/profile/Nicole_Rauch2"><img src="../img/footer_03.png"></a></li><!-- Xing -->
+        <li><a href="https://twitter.com/nicolerauch"><img src="../img/footer_04.png"></a></li><!-- Twitter -->
+      </ul>
+      <p>NICOLE RAUCH 2014-2016 &copy;</p>
+    </div>
+  </footer>
+</div>
+
+
+    </div><!-- end container -->
+
+    <!-- javascript -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+
+
+    </div></div>
+
+  </body>
+
+</html>
+

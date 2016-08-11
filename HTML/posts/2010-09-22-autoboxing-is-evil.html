@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nicole Rauch - Softwareentwicklung und Entwicklungscoaching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/screen.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic" rel="stylesheet" type="text/css">
+
+    <!-- Fullpage -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" />
+  
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.nicolerauch.de","*.nicole-rauch.de"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.nicolerauch.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.nicolerauch.de/piwik.php?idsite=1" style="border:0;" alt /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+
+
+  <body>
+
+  <div id="fullpage">
+    <div class="section">
+
+      <div class="container-fluid viewport">
+
+        <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../schwerpunkte.html">Schwerpunkte</a></li>
+            <li><a href="../termine.html">Termine</a></li>
+            <li class="hidden-xs hidden-sm"><a class="navbar-brand" href="../index.html"><img class="img-responsive" src="../img/logo_menu.png" /></a></li>
+            <li><a href="../themen.html">Themen</a></li>
+            <li><a href="../referenzen.html">Referenzen</a></li>
+            <li><a href="../impressum.html">Impressum</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+      <div class="col-md-10 col-md-offset-1 post">
+
+        <header class="post-header">
+          <h1 class="post-title">Autoboxing is Evil</h1>
+          
+          <p class="post-meta">22.09.2010
+             • Nicole Rauch
+            
+          </p>
+        </header>
+        <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+          <article class="post-content">
+            <p>Since version 5, Java features autoboxing, which means that <code>int</code> and <code>Integer</code> are transformed into each other as needed, without cluttering the code with explicit conversions.</p>
+<p>What sounds cool in the beginning does have its tradeoffs once you take a closer look. For me, these tradeoffs are so massive that I do not allow autoboxing in my code at all. This article discusses the tradeoffs in detail.</p>
+<h3 id="possible-nullpointerexceptions">Possible NullPointerExceptions</h3>
+<p>When comparing the value sets of <code>int</code> and <code>Integer</code>, I note that they are not identical: <code>Integer</code> has one value in addition, which is <code>null</code>. For boxing (i.e. transforming an <code>int</code> into an <code>Integer</code>) this can be ignored, but for unboxing, one can encounter unwanted and surprising behavior, like in the following test (which is green, btw):</p>
+<pre><code>@Test(expected = NullPointerException.class)
+public void unboxingOfNull() {
+    Integer i = null;
+    int j = i;
+}</code></pre>
+<p>Here, the assignment of <code>null</code> to an <code>int</code> causes the <code>NullPointerException</code>.</p>
+<h3 id="comparisons-using">Comparisons using <code>==</code></h3>
+<p>When comparing individual <code>int</code> values, one can only use <code>==</code> because the <code>equals()</code> method is not available for primitive types. But what happens when we compare <code>Integer</code>s this way? The following (green) test shows us what happens:</p>
+<pre><code>@Test
+public void equalityOnInt() {
+    assertTrue(7 == 7);
+    assertFalse(new Integer(7) == new Integer(7));
+}</code></pre>
+<p>If I lose track of <code>int</code> and <code>Integer</code> in my code (e.g. because it does not really matter any more anyways) I might start mixing up the comparison operators and get in trouble.</p>
+<p>Well, you may say that one ought to use <code>Integer.valueOf()</code> instead of the <code>Integer</code> constructor. Agreed, but why is the constructor available if we should not use it? And what happens if we use valueOf? Look at the following (green) test:</p>
+<pre><code>@Test
+public void valueOf() {
+    assertTrue(Integer.valueOf(127) == Integer.valueOf(127));
+    assertFalse(Integer.valueOf(128) == Integer.valueOf(128));
+    assertTrue( Integer.valueOf( -128 ) == Integer.valueOf( -128 ) );
+    assertFalse( Integer.valueOf( -129 ) == Integer.valueOf( -129 ) );
+}</code></pre>
+<p>Now, this is really sick: The behaviour of the comparison depends on the value of the <code>Integer</code>. Even more strangely, when mixed types are used, this behaviour changes again:</p>
+<pre><code>@Test
+public void mixedTypes() {
+    assertTrue( 127 == Integer.valueOf( 127 ) );
+    assertTrue( 128 == Integer.valueOf( 128 ) );
+    assertTrue( 127 == new Integer( 127 ) );
+    assertTrue( 128 == new Integer( 128 ) );
+}</code></pre>
+<p>But, of course, this is an issue of <code>Integer</code> and is by no means related to the contents of this article, so we shall rather not dwell on this…</p>
+<h3 id="obfuscating-the-semantics">Obfuscating the Semantics</h3>
+<p>There may be situations where I want to use <code>Integer</code> because I need a semantics that states “not defined yet”. <code>Integer</code> provides an elegant solution for this; the ominous “-1” is no longer needed. On the other hand, there may be situations where I definitely want to have a number, no matter what. Autoboxing blurs the borders between these two, and I can no longer rely on the compiler to distinguish them and to help us clarify our code. And once these semantical issues are set straight and clearly established throughout the code, I often notice that explicit conversions are only required at very few occasions (when using frameworks, working with nullable values or implementing GUI code). In general, I prefer to use the primitives where possible and only use the reference types when I need nullables. Often I do not even need nullables, instead I use initial values that match the semantics of the numbers.</p>
+<h3 id="you-may-say-yes-of-course-it-all-behaves-as-defined.">You may say: Yes of course, it all behaves as defined.</h3>
+<p>Will you guarantee to never ever forget about the caveats? - I am NOT perfect. To me this is too risky. I’d need to define too many additional test cases for all of the specialities (null, int larger than 127 or smaller than -128, etc.) to have an insurance against being human and making mistakes. Therefore, I neither need nor want autoboxing in my code.</p>
+<hr />
+<h2 id="comments">Comments</h2>
+<blockquote>
+<p>9.11.2010 by <a href="http://blog.schauderhaft.de/">Jens Schauder</a></p>
+<p>Hmm, while your points about autoboxing (and Integers and null values and the definition of equal vs. == and primitives vs Objects) are valid, I don’t agree with the proposed solution.</p>
+<p>Autoboxing solves a real problem: Reduction of Code Noise. It does its job. Most of its weaknesses are inherited from weaknesses of the language. Don’t blame autoboxing for them.</p>
+<p></p>
+<p>We might agree: If everybody stops using autoboxing as an excuse to careless (and thoughtless) mix primitives and Integers the java world would be better place.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>9.11.2010 by Andreas Leidig</p>
+<p></p>
+<p>Good points. You are right: This post is indeed somewhat fundamentalistic. Our aim is to provoke thinking. And yes, it is a language (Java) matter. We have only seen too much code where autoboxing is used thoughtlessly. As always: If you know what you are doing and what the consequences are and you decide to do it this way, it is more than ok; as long as you start complaining about the results.</p>
+</blockquote>
+          </article>
+        </div>
+      </div>
+      <hr />
+
+    </div>
+
+    <div class="container-fluid viewport">
+  <footer class="row center-block">
+    <div class="col-sm-12">
+      <ul class="list-inline">
+        <li><a href="../"><img src="../img/footer_01.png"></a></li><!-- Home -->
+        <li><a href="https://de.linkedin.com/in/nicole-rauch-807ab52b"><img src="../img/footer_02.png"></a></li><!-- LinkedIn -->
+        <li><a href="https://www.xing.com/profile/Nicole_Rauch2"><img src="../img/footer_03.png"></a></li><!-- Xing -->
+        <li><a href="https://twitter.com/nicolerauch"><img src="../img/footer_04.png"></a></li><!-- Twitter -->
+      </ul>
+      <p>NICOLE RAUCH 2014-2016 &copy;</p>
+    </div>
+  </footer>
+</div>
+
+
+    </div><!-- end container -->
+
+    <!-- javascript -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+
+
+    </div></div>
+
+  </body>
+
+</html>
+

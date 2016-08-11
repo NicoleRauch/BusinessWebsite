@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nicole Rauch - Softwareentwicklung und Entwicklungscoaching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/screen.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic" rel="stylesheet" type="text/css">
+
+    <!-- Fullpage -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" />
+  
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.nicolerauch.de","*.nicole-rauch.de"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.nicolerauch.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.nicolerauch.de/piwik.php?idsite=1" style="border:0;" alt /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+
+
+  <body>
+
+  <div id="fullpage">
+    <div class="section">
+
+      <div class="container-fluid viewport">
+
+        <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../schwerpunkte.html">Schwerpunkte</a></li>
+            <li><a href="../termine.html">Termine</a></li>
+            <li class="hidden-xs hidden-sm"><a class="navbar-brand" href="../index.html"><img class="img-responsive" src="../img/logo_menu.png" /></a></li>
+            <li><a href="../themen.html">Themen</a></li>
+            <li><a href="../referenzen.html">Referenzen</a></li>
+            <li><a href="../impressum.html">Impressum</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+      <div class="col-md-10 col-md-offset-1 post">
+
+        <header class="post-header">
+          <h1 class="post-title">Setters Destroy Objects</h1>
+          
+          <p class="post-meta">4.03.2012
+             • Nicole Rauch
+            
+          </p>
+        </header>
+        <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+          <article class="post-content">
+            <p>… and I am not referring to dogs who are chewing on things …</p>
+<p><br />
+<img src="../img/settermachenobjektekaputt1.jpg" title="Setters destroy objects (Copyright &quot;Jakes World&quot;)" alt="Setters destroy objects" /></p>
+<p>(<a href="../2011/11/16/setter-machen-objekte-kaputt" title="Setter machen Objekte kaputt">this article was originally published in German</a>)</p>
+<h2 id="what-makes-setters-dangerous">What Makes Setters Dangerous?</h2>
+<p>A “classical” setter, i.e. a public method that directly sets an object’s field to a value passed in from the outside, undermines an object’s integrity. The object can no longer take care of its fields and determine autonomously which field has which contents. This can especially destroy implicit object invariants, leaving the object in an inconsistent state.</p>
+<p>Setters are often used for the initialization of an object. This bears several risks:</p>
+<ul>
+<li>It is unclear which setters need to be invoked, and it is easy to leave out the invocation of a required setter.</li>
+<li>It is unclear whether there is a given order in which several subsequent setter invocations can / should / must happen.</li>
+<li>The setters can be invoked again in the subsequent code, thus potentially damaging the object’s internal data.</li>
+</ul>
+<h2 id="there-is-a-life-without-setters">There is a Life Without Setters</h2>
+<p>Setters are used to initialize an object and/or to change its state. There are better ways to achieve these goals:</p>
+<h4 id="initialize-the-object-at-the-right-time">Initialize the Object at the Right Time</h4>
+<p>The initialization of an object should happen at the same time as its creation, in the same step. This way, we are sure that each object is fully functional right from the start. If we use setters, the object creation is already completed, and the “initialization” through the setter happens too late.</p>
+<p>Instead of using setters for this initialization, we can use constructors that expect all of the required arguments to properly initialize the object. This way, the object can initialize itself, thus keeping its consistency.</p>
+<p>If there are several combinations of arguments which can be used to initialize the object, we can offer several constructors. It is recommended that these constructors invoke each other internally.</p>
+<p><strong>Example:</strong> A vector in a two-dimensional coordinate system.</p>
+<pre><code>public class Vector {
+
+  private final double x;
+  private final double y;
+
+  public Vector( double x, double y ){
+    this.x = x;
+    this.y = y;
+  }
+
+  public Vector( int x, int y ){
+    this( (double) x, y );
+  }
+
+  public Vector( Point2D p ){
+    this( p.getX(), p.getY() );
+  }
+}</code></pre>
+<h4 id="consistent-state-changes">Consistent State Changes</h4>
+<p>Using setters to change the state of an object can easily lead to inconsistencies. Instead, we can send a suitable message (including all required arguments) to the object. The object can change its state in the desired way without losing its consistency.</p>
+<p><strong>Example:</strong> Scalar multiplication of a vector</p>
+<pre><code>public void multiplyWith( double scalar ){
+  x = x * scalar;
+  y = y * scalar;
+}</code></pre>
+<p>Both fields of the vector are changed through the method invocation. There is no inconsistent state.</p>
+<p>(Note: This code only works in combination with the first example when the fields are not declared final.)</p>
+<h2 id="immutable-objects">Immutable Objects</h2>
+<p>Alternatively, we can implement an “immutable object” or “value object”. In this case, instead of changing the state of some object, we create a new object that reflects the changed state.<br />
+This approach is especially recommended for objects that are part of the internal state of a “surrounding” object, while the surrounding object at the same time allows the outside world to access these internal objects. Here it must be impossible to change the internal state of the surrounding object by directly modifying the internal objects from the outside. Therefore, the immutability of the internal objects is crucial.</p>
+<p><strong>Example:</strong> Scalar multiplication of a vector yields another vector:</p>
+<pre><code>public Vector multiplyWith( double scalar ){
+  return new Vector( x * scalar, y * scalar );
+}</code></pre>
+<p>The new vector is a modified copy of the initial vector. Of course, it is fully initialized and filled with consistent values.</p>
+<h2 id="respect-your-objects">Respect Your Objects!</h2>
+<p>If we treat objects with respect and if we allow for their need for autonomy, they will hopefully respond by being robust and fault-tolerant.</p>
+<h2 id="comments">Comments</h2>
+<blockquote>
+5.3.2012 by <a href="http://davidtanzer.net">David Tanzer</a>
+Good article, I can not agree more! I currently have to work on a code base where (almost) all properties of objects are public, can be set and are observable (fire change events). It is not maintainable at all - there is no way to find out how states change in the program by reading the source code, you have to debug it to see which values are changed. If only the original authors had access to this article when they had started the project ;)
+</blockquote>
+<hr />
+<blockquote>
+<p>5.3.2012 by Hayati Ayguen</p>
+<p>I absolutely agree, especially for IDE generated setters, which just set one single member variable.</p>
+<p></p>
+<p>This kind of setters nearly always destroy the object: no object stays consistent when setting any content. For usual at least some range check or even adjusting other member variables is necessary.</p>
+</blockquote>
+          </article>
+        </div>
+      </div>
+      <hr />
+
+    </div>
+
+    <div class="container-fluid viewport">
+  <footer class="row center-block">
+    <div class="col-sm-12">
+      <ul class="list-inline">
+        <li><a href="../"><img src="../img/footer_01.png"></a></li><!-- Home -->
+        <li><a href="https://de.linkedin.com/in/nicole-rauch-807ab52b"><img src="../img/footer_02.png"></a></li><!-- LinkedIn -->
+        <li><a href="https://www.xing.com/profile/Nicole_Rauch2"><img src="../img/footer_03.png"></a></li><!-- Xing -->
+        <li><a href="https://twitter.com/nicolerauch"><img src="../img/footer_04.png"></a></li><!-- Twitter -->
+      </ul>
+      <p>NICOLE RAUCH 2014-2016 &copy;</p>
+    </div>
+  </footer>
+</div>
+
+
+    </div><!-- end container -->
+
+    <!-- javascript -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+
+
+    </div></div>
+
+  </body>
+
+</html>
+
