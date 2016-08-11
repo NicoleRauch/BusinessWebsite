@@ -3,9 +3,42 @@
     "year": "2016",
     "entries": [
         {
+          "name": "Digicomp, Zürich, 23.6.2016",
+          "title": "Workshop: Einführung in React.js and Redux",
+          "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/web-und-mobile-app-entwicklung/webentwicklung/einfuehrung-in-react-js-and-redux",
+          "kind": "ganztägiger Workshop"
+        },
+        {
+          "name": "Digicomp DevDay, Zürich, 22.6.2016",
+          "title": "Einführung in die funktionale Programmierung",
+          "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folmMAAQ",
+          "kind": "Vortrag"
+        },
+        {
+          "name": "Digicomp DevDay, Zürich, 22.6.2016",
+          "title": "Schnelle Reaktion: Einführung in React.js und Redux",
+          "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folqdAAA",
+          "kind": "Vortrag"
+        },
+        {
+          "name": "Entwicklertag Karlsruhe, 15.6.2016",
+          "title": "Schnelle Reaktion - mit React und Redux",
+          "url": "https://entwicklertag.de/karlsruhe/2016/schnelle-reaktion-mit",
+          "videoUrl": "https://www.youtube.com/watch?v=YyYUAVlz5eY",
+          "kind": "Vortrag"
+        },
+        {
+          "name": "React Europe, Paris, 3.6.2016",
+          "title": "Shallow Rendering All the Way Down",
+          "url": "https://www.react-europe.org/#schedule",
+          "videoUrl": "https://www.youtube.com/watch?v=EJDqzTKllFA",
+          "kind": "Lightning Talk"
+        },
+        {
           "name": "JAX, Mainz, 18.4.2016",
           "title": "Eine \"Grand Unified Theory\" der Softwareentwicklung",
           "url": "https://jax.de/session/eine-grand-unified-theory-der-softwareentwicklung/",
+          "videoUrl": "https://vimeo.com/jaxtv/review/167721588/2014c48aae",
           "kind": "Vortrag"
         },
         {
