@@ -13,3 +13,4 @@ node_modules
 *.hi
 *.o
 HTML.jekyll
+_hakyll_cache
