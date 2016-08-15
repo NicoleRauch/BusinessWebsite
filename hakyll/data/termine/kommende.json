@@ -1,23 +1,5 @@
 [
   {
-    "name": "Digicomp, Zürich / Bern / Basel, 31.8.-1.9.2016 / 30.11.-1.12.2016",
-    "title": "Kurs: Domain-Driven Design (\"DDD\")",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
-    "kind": "zweitägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Bern / Basel, 5.9.2016 / 7.12.2016",
-    "title": "Kurs: Einführung in die funktionale Programmierung",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung",
-    "kind": "ganztägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Bern / Basel, 6.9.2016 / 8.12.2016",
-    "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
-    "kind": "ganztägiger Workshop"
-  },
-  {
     "name": "NordicJS, Stockholm, 8. - 9.9.2016",
     "title": "Event Sourcing a Node.js Application",
     "url": "http://nordicjs.com/speakers",
@@ -40,5 +22,23 @@
     "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
     "url": "http://www.xpdays.de/2016/sessions/025-programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert.html",
     "kind": "Vortrag mit Michael Sperber"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 30.11.-1.12.2016",
+    "title": "Kurs: Domain-Driven Design (\"DDD\")",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+    "kind": "zweitägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 7.12.2016",
+    "title": "Kurs: Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 8.12.2016",
+    "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
+    "kind": "ganztägiger Workshop"
   }
 ]
