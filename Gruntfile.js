@@ -43,36 +43,6 @@ module.exports = function (grunt) {
         dest: 'build/stylesheets/less',
         expand: true,
         flatten: true
-      },
-      fullpageCSS: {
-        src: 'node_modules/fullpage.js/jquery.fullPage.css',
-        dest: 'hakyll/css',
-        expand: true,
-        flatten: true
-      },
-      jqueryJS: {
-        src: 'node_modules/jquery/dist/jquery.min.js',
-        dest: 'hakyll/js',
-        expand: true,
-        flatten: true
-      },
-      bootstrapJS: {
-        src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        dest: 'hakyll/js',
-        expand: true,
-        flatten: true
-      },
-      jqueryEasingJS: {
-        src: 'node_modules/jquery.easing/jquery.easing.min.js',
-        dest: 'hakyll/js',
-        expand: true,
-        flatten: true
-      },
-      fullpageJS: {
-        src: 'node_modules/fullpage.js/jquery.fullPage.js',
-        dest: 'hakyll/js',
-        expand: true,
-        flatten: true
       }
       /*
       ,
