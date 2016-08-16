@@ -27,18 +27,6 @@ module.exports = function (grunt) {
       options: {force: true}
     },
     copy: {
-      bootstrapFONTS: {
-        src: 'node_modules/bootstrap/dist/fonts/*',
-        dest: 'hakyll/fonts',
-        expand: true,
-        flatten: true
-      },
-      fontawesomeFONTS: {
-        src: 'node_modules/font-awesome/fonts/*',
-        dest: 'hakyll/fonts',
-        expand: true,
-        flatten: true
-      },
       bootstrapLESS: {
         cwd: 'node_modules/bootstrap/less/',
         src: ['**', '!variables.less'],
