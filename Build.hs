@@ -14,7 +14,8 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
     phony "css" $ do
         need ["pull"]
         putNormal "Generating CSS files"
-        cmd "npm start"
+        unit $ cmd "npm install"
+        unit $ cmd "node_modules/.bin/grunt prepare"
 
     phony "hakyll" $ do
         need ["css"]
