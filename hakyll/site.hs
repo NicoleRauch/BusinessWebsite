@@ -30,14 +30,6 @@ main = hakyllWith siteConfig $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "fonts/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "js/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
     match "robots.txt" $ do
         route   idRoute
         compile copyFileCompiler
