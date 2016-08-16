@@ -6,7 +6,7 @@ import Control.Monad
 
 main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
-    want ["hakyll"]
+    want ["HTML"]
 
     phony "pull" $ do
         putNormal "Pulling from github"
@@ -18,7 +18,7 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
         unit $ cmd "npm install"
         unit $ cmd "node_modules/.bin/grunt prepare"
 
-    phony "hakyll" $ do
+    phony "HTML" $ do
         need ["css"]
         need [".fullpage_css"]
         putNormal "Generating HTML files"
