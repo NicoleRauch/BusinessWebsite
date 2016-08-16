@@ -23,26 +23,28 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
         putNormal "Generating HTML files"
         unit $ cmd (Cwd "hakyll") "stack build"
         unit $ cmd (Cwd "hakyll") "stack exec site rebuild"
+        need [".bootstrap_fonts", ".fontawesome_fonts"] 
+        need [".fullpage_css"]
+        need [".jquery_js", ".bootstrap_js", ".jquery_easing_js", ".fullpage_js"]
 
-    want [".bootstrap_fonts", ".fontawesome_fonts"] 
-    ".bootstrap_fonts" %> copyFiles "node_modules/bootstrap/dist/fonts" "hakyll/fonts"
-    ".fontawesome_fonts" %> copyFiles "node_modules/font-awesome/fonts" "hakyll/fonts"
+    ".bootstrap_fonts" %> copyFiles "node_modules/bootstrap/dist/fonts" "HTML/fonts"
+    ".fontawesome_fonts" %> copyFiles "node_modules/font-awesome/fonts" "HTML/fonts"
 
-    want [".fullpage_css"]
     ".fullpage_css" %> copyFile "node_modules/fullpage.js" "jquery.fullPage.css" "hakyll/css"
 
-    want [".jquery_js", ".bootstrap_js", ".jquery_easing_js", ".fullpage_js"]
-    ".jquery_js" %> copyFile "node_modules/jquery/dist" "jquery.min.js" "hakyll/js"
-    ".bootstrap_js" %> copyFile "node_modules/bootstrap/dist/js" "bootstrap.min.js" "hakyll/js"
-    ".jquery_easing_js" %> copyFile "node_modules/jquery.easing" "jquery.easing.min.js" "hakyll/js"
-    ".fullpage_js" %> copyFile "node_modules/fullpage.js" "jquery.fullPage.js" "hakyll/js"
+    ".jquery_js" %> copyFile "node_modules/jquery/dist" "jquery.min.js" "HTML/js"
+    ".bootstrap_js" %> copyFile "node_modules/bootstrap/dist/js" "bootstrap.min.js" "HTML/js"
+    ".jquery_easing_js" %> copyFile "node_modules/jquery.easing" "jquery.easing.min.js" "HTML/js"
+    ".fullpage_js" %> copyFile "node_modules/fullpage.js" "jquery.fullPage.js" "HTML/js"
 
 
 copyFile from filename to = \out -> do
+        unit $ cmd "mkdir -p" to
         copyFile' (from </> filename) (to </> filename)
         writeFile' out ""
 
 copyFiles from to = \out -> do
+        unit $ cmd "mkdir -p" to
         files <- getDirectoryFiles from ["*"]
         forM_ files $ \file -> do
             copyFile' (from </> file) (to </> file)
