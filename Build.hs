@@ -20,11 +20,11 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
 
     phony "hakyll" $ do
         need ["css"]
+        need [".fullpage_css"]
         putNormal "Generating HTML files"
         unit $ cmd (Cwd "hakyll") "stack build"
         unit $ cmd (Cwd "hakyll") "stack exec site rebuild"
         need [".bootstrap_fonts", ".fontawesome_fonts"] 
-        need [".fullpage_css"]
         need [".jquery_js", ".bootstrap_js", ".jquery_easing_js", ".fullpage_js"]
 
     ".bootstrap_fonts" %> copyFiles "node_modules/bootstrap/dist/fonts" "HTML/fonts"
