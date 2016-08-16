@@ -8,17 +8,17 @@ main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
     want ["HTML"]
 
-    phony "pull" $ do
+    "pull" ~> do
         putNormal "Pulling from github"
         cmd "git pull"
 
-    phony "css" $ do
         need ["pull"]
+    "css" ~> do
         putNormal "Generating CSS files"
         unit $ cmd "npm install"
         unit $ cmd "node_modules/.bin/grunt prepare"
 
-    phony "HTML" $ do
+    "HTML" ~> do
         need ["css"]
         need [".fullpage_css"]
         putNormal "Generating HTML files"
