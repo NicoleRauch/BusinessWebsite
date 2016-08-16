@@ -15,8 +15,15 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
         need ["pull"]
     "css" ~> do
         putNormal "Generating CSS files"
+        need [".bootstrap_less"]
+        need [".bootstrap_custom_variables_less"]
+        need [".custom_less"]
         unit $ cmd "npm install"
-        unit $ cmd "node_modules/.bin/grunt prepare"
+        unit $ cmd "node_modules/.bin/grunt less"
+
+    ".bootstrap_less" ~> copyFiles "node_modules/bootstrap/less" "build/stylesheets/less"
+    ".bootstrap_custom_variables_less" ~> copyRenameFile "node_modules/bootstrap/less/variables.less" "build/stylesheets/less/original-variables.less"
+    ".custom_less" ~> copyFiles "frontend/less" "build/stylesheets/less"
 
     "HTML" ~> do
         need ["css"]
@@ -37,6 +44,9 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
     ".jquery_easing_js" ~> copyFile "node_modules/jquery.easing" "jquery.easing.min.js" "HTML/js"
     ".fullpage_js" ~> copyFile "node_modules/fullpage.js" "jquery.fullPage.js" "HTML/js"
 
+    
+copyRenameFile from to = do
+    copyFile' from to
 
 copyFile from filename to = do
         unit $ cmd "mkdir -p" to
