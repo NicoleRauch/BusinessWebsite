@@ -8,6 +8,9 @@ main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
     want ["HTML"]
 
+    "clean" ~> do
+        unit $ cmd "rm -r build HTML hakyll/css"
+
     "pull" ~> do
         putNormal "Pulling from github"
         cmd "git pull"
