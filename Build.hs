@@ -12,8 +12,8 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
         putNormal "Pulling from github"
         cmd "git pull"
 
-        need ["pull"]
     "css" ~> do
+        -- need ["pull"]
         putNormal "Generating CSS files"
         need [".bootstrap_less"]
         need [".bootstrap_custom_variables_less"]
