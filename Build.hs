@@ -54,6 +54,9 @@ copyFile from filename to = do
 
 copyFiles from to = do
         unit $ cmd "mkdir -p" to
+        dirs <- getDirectoryDirs from
+        forM_ dirs $ \dir -> do
+            copyFiles (from </> dir) (to </> dir)
         files <- getDirectoryFiles from ["*"]
         forM_ files $ \file -> do
             copyFile' (from </> file) (to </> file)
