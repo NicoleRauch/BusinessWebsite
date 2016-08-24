@@ -40,5 +40,11 @@
     "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
     "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
     "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Topconf, Linz, 1. - 2.3.2017",
+    "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
+    "url": "http://topconf.com/linz-2017/schedule/",
+    "kind": "Vortrag mit Michael Sperber"
   }
 ]
