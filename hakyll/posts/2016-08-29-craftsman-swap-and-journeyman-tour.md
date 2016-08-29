@@ -38,3 +38,7 @@ A Craftsman Swap is basically the same thing as a Journeyman Tour, just with two
 #### Discussion Group
 
 * [Softwerkskammer Craftsman Swap Group](http://www.softwerkskammer.org/groups/craftsmanswap) (German)
+
+## Comments
+
+(please comment on this article <a href="mailto:info@nicole-rauch.de?Subject=Your blogpost 'Craftsman Swap and Journeyman Tour'">via email</a>)
