@@ -3,6 +3,13 @@
     "year": "2016",
     "entries": [
         {
+          "name": "NordicJS, Stockholm, 8.9.2016",
+          "title": "Event Sourcing a Node.js Application",
+          "url": "http://nordicjs.com/speakers#1600-Nicole-Rauch",
+          "videoUrl": "https://www.youtube.com/watch?v=tWH-K2E3EIo&feature=youtu.be",
+          "kind": "Vortrag"
+        },
+        {
           "name": "Digicomp, Zürich, 23.6.2016",
           "title": "Workshop: Einführung in React.js and Redux",
           "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/web-und-mobile-app-entwicklung/webentwicklung/einfuehrung-in-react-js-and-redux",

@@ -1,20 +1,8 @@
 [
   {
-    "name": "NordicJS, Stockholm, 8.9.2016",
-    "title": "Event Sourcing a Node.js Application",
-    "url": "http://nordicjs.com/speakers#1600-Nicole-Rauch",
-    "kind": "Vortrag"
-  },
-  {
-    "name": "Digicomp, Zürich / Bern / Basel, 28.9.2016 / 3.11.2016 / 6.12.2016",
+    "name": "Digicomp, Zürich / Bern / Basel, 3.11.2016 / 6.12.2016",
     "title": "Workshop: Coderetreat",
     "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/code-retreat",
-    "kind": "ganztägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Bern / Basel, 29.9.2016 / 29.11.2016",
-    "title": "Workshop: Legacy Coderetreat",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/legacy-code-retreat",
     "kind": "ganztägiger Workshop"
   },
   {
@@ -22,6 +10,12 @@
     "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
     "url": "http://www.xpdays.de/2016/sessions/025-programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert.html",
     "kind": "Vortrag mit Michael Sperber"
+  },
+  {
+    "name": "Digicomp, Zürich / Bern / Basel, 29.11.2016",
+    "title": "Workshop: Legacy Coderetreat",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/legacy-code-retreat",
+    "kind": "ganztägiger Workshop"
   },
   {
     "name": "Digicomp, Zürich / Bern / Basel, 30.11.-1.12.2016",
@@ -40,6 +34,12 @@
     "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
     "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
     "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Domain-Driven Design Europe, Amsterdam, 2.-3.2.2017",
+    "title": "Refactoring Legacy Code: From \"Big Ball of Mud\" to Domain-Driven Design",
+    "url": "https://dddeurope.com/2017/speakers/nicole-rauch/",
+    "kind": "Workshop"
   },
   {
     "name": "Topconf, Linz, 1. - 2.3.2017",
