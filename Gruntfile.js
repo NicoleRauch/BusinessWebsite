@@ -55,6 +55,20 @@ module.exports = function (grunt) {
       }
     },
 
+    htmlmin: {
+      build: {
+        options: {
+          removeComments: true,
+          removeCommentsFromCDATA: true,
+          removeCDATASectionsFromCDATA: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: false
+        },
+        files: {
+          'HTML/index.html': 'HTML/index.html'
+        }
+      }
+    }
   });
 
   // These plugins provide necessary tasks.
@@ -69,6 +83,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['less']);
   grunt.registerTask('usemin-optimize', ['useminPrepare', 'concat:generated', 'uglify:generated', 'usemin']);
   grunt.registerTask('optimize', ['usemin-optimize']);
-  grunt.registerTask('css-mangling', ['uncss:build', 'cssmin:build', 'critical:build']);
+  grunt.registerTask('css-mangling', ['uncss:build', 'cssmin:build', 'critical:build', 'htmlmin:build']);
 
 };
