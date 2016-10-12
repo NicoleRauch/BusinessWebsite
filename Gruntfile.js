@@ -15,12 +15,29 @@ module.exports = function (grunt) {
           ]
         }
       }
+    },
+
+    pkg: grunt.file.readJSON('package.json'),
+
+    useminPrepare: {
+      html: 'HTML/index.html'
+    },
+
+    usemin: {
+      html: ['HTML/index.html']
     }
   });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-less');
+  //grunt.loadNpmTasks('grunt-contrib-less');
+
+//  grunt.loadNpmTasks('grunt-usemin');
 
   // Default task.
+  // Load all files starting with `grunt-`
+  require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
+
   grunt.registerTask('default', ['less']);
+  grunt.registerTask('usemin-optimize', ['useminPrepare', 'concat:generated', 'cssmin:generated', 'uglify:generated', 'usemin']);
+  grunt.registerTask('optimize', ['usemin-optimize']);
 };

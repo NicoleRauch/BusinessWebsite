@@ -6,7 +6,7 @@ import Control.Monad
 
 main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
-    want ["HTML"]
+    want ["usemin"]
 
     "clean" ~> do
         unit $ cmd "rm -r build HTML hakyll/css"
@@ -28,6 +28,7 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
     ".bootstrap_custom_variables_less" ~> copyRenameFile "node_modules/bootstrap/less/variables.less" "build/stylesheets/less/original-variables.less"
     ".custom_less" ~> copyFiles "frontend/less" "build/stylesheets/less"
 
+
     "HTML" ~> do
         need ["css"]
         need [".fullpage_css"]
@@ -36,6 +37,11 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
         unit $ cmd (Cwd "hakyll") "stack exec site rebuild"
         need [".bootstrap_fonts", ".fontawesome_fonts"] 
         need [".jquery_js", ".bootstrap_js", ".jquery_easing_js", ".fullpage_js"]
+
+    "usemin" ~> do
+        need ["HTML"]
+        unit $ cmd "node_modules/.bin/grunt -v optimize"
+        copyFiles "dist" "HTML"
 
     ".bootstrap_fonts" ~> copyFiles "node_modules/bootstrap/dist/fonts" "HTML/fonts"
     ".fontawesome_fonts" ~> copyFiles "node_modules/font-awesome/fonts" "HTML/fonts"
