@@ -6,8 +6,442 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Nicole Rauch - Softwareentwicklung und Entwicklungscoaching</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/nicole.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic" rel="stylesheet" type="text/css">
+    <style type="text/css">
+img {
+  vertical-align: middle;
+}
+
+img {
+  border: 0;
+}
+
+
+
+body {
+  margin: 0;
+}
+
+.col-xs-12 {
+  float: left;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+nav {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button {
+  text-transform: none;
+}
+
+button {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.navbar-toggle {
+  background-image: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+ul {
+  margin-top: 0;
+}
+
+ul {
+  margin-bottom: 10px;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-md-4,
+.col-md-5,
+.col-sm-11,
+.col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.collapse {
+  display: none;
+}
+
+.nav>li,
+.nav>li>a {
+  display: block;
+  position: relative;
+}
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav>li>a {
+  padding: 10px 15px;
+}
+
+.nav>li>a>img {
+  max-width: none;
+}
+
+.navbar {
+  position: relative;
+  min-height: 91px;
+  margin-bottom: 20px;
+}
+
+.navbar-collapse {
+  overflow-x: visible;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  -webkit-overflow-scrolling: touch;
+}
+
+.navbar-brand {
+  float: left;
+  padding: 35.5px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 91px;
+}
+
+.navbar-brand>img {
+  display: block;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 28.5px;
+  margin-bottom: 28.5px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+  margin-top: 4px;
+}
+
+.navbar-nav {
+  margin: 17.75px -15px;
+}
+
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+.navbar-default {
+  background-color: #F6F2EE;
+  border-color: #ebe1d8;
+}
+
+.navbar-default .navbar-brand {
+  color: #E53B29;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #E53B29;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.navbar-default .navbar-collapse {
+  border-color: #ebe1d8;
+}
+
+.container-fluid:after,
+.container-fluid:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.row:after,
+.row:before {
+  content: " ";
+  display: table;
+}
+
+.container-fluid:after,
+.nav:after,
+.navbar-collapse:after,
+.navbar-header:after,
+.navbar:after,
+.row:after {
+  clear: both;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visible-sm,
+.visible-xs {
+  display: none!important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+ul {
+  color: #4d4d4d;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@media (max-width:767px) {
+  .visible-xs {
+    display: block!important;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .visible-sm {
+    display: block!important;
+  }
+}
+
+@media (max-width:767px) {
+  .hidden-xs {
+    display: none!important;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .hidden-sm {
+    display: none!important;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Lato,sans-serif;
+  font-size: 14pt;
+  font-weight: 400;
+  line-height: 16.8pt;
+  color: #333;
+}
+
+.viewport {
+  min-height: 97%;
+}
+
+.container-fluid {
+  background-color: #F6F2EE;
+  margin: 15px;
+}
+
+span {
+  padding-right: 5px;
+}
+
+#banner {
+  padding-top: 10%;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  border: 0;
+  text-transform: uppercase;
+  font-size: 11.27pt;
+}
+
+.navbar-default .navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-default .navbar-nav>li {
+  display: inline-block;
+  float: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 146px;
+}
+
+@media (max-width:767px) {
+  .navbar-default .navbar-nav>li {
+    display: block;
+    float: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+ul.slash li:before {
+  content: '// ';
+}
+
+.italic {
+  font-weight: 300;
+  color: #4d4d4d;
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+</style>
+<script id="loadcss">
+(function(u,s){!function(e){"use strict";var n=function(n,t,o){var l,r=e.document,i=r.createElement("link");if(t)l=t;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;l=a[a.length-1]}var d=r.styleSheets;i.rel="stylesheet",i.href=n,i.media="only x",l.parentNode.insertBefore(i,t?l:l.nextSibling);var f=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};"undefined"!=typeof module?module.exports=n:e.loadCSS=n}("undefined"!=typeof global?global:this);for(var i in u){loadCSS(u[i],s);}}(['/css/nicole.min.css','https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic'],document.getElementById("loadcss")));
+</script>
+<noscript>
+<link rel="stylesheet" href="/css/nicole.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic" rel="stylesheet" type="text/css">
+</noscript>
+    
   
     <!-- Piwik -->
     <script type="text/javascript">
@@ -23,7 +457,7 @@
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
-    <noscript><p><img src="//piwik.nicolerauch.de/piwik.php?idsite=1" style="border:0;" alt /></p></noscript>
+    <noscript><p><img src="//piwik.nicolerauch.de/piwik.php?idsite=1" style="border:0;" alt=""></p></noscript>
     <!-- End Piwik Code -->
 </head>
 
@@ -51,7 +485,7 @@
             <li><a href="./blog.html">Blog</a></li>
             <li><a href="./schwerpunkte.html">Schwerpunkte</a></li>
             <li><a href="./termine.html">Termine</a></li>
-            <li class="hidden-xs hidden-sm"><a class="navbar-brand" href="./index.html"><img class="img-responsive" src="./img/logo_menu.png" /></a></li>
+            <li class="hidden-xs hidden-sm"><a class="navbar-brand" href="./index.html"><img class="img-responsive" src="./img/logo_menu.png"></a></li>
             <li><a href="./themen.html">Themen</a></li>
             <li><a href="./referenzen.html">Referenzen</a></li>
             <li><a href="./impressum.html">Impressum</a></li>

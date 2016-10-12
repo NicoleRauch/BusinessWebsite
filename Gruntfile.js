@@ -25,7 +25,20 @@ module.exports = function (grunt) {
 
     usemin: {
       html: ['HTML/index.html']
-    }
+    },
+
+    critical: {
+      build: {
+        options: {
+          base: 'HTML/',
+          width: 260,
+          height: 640
+        },
+        src: 'HTML/index.html',
+        dest: 'HTML/index.html'
+      }
+    },
+
   });
 
   // These plugins provide necessary tasks.
@@ -40,4 +53,8 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['less']);
   grunt.registerTask('usemin-optimize', ['useminPrepare', 'concat:generated', 'cssmin:generated', 'uglify:generated', 'usemin']);
   grunt.registerTask('optimize', ['usemin-optimize']);
+  grunt.registerTask('css-mangling', [
+      // 'uncss:build', 'cssmin:build',
+    'critical:build']);
+
 };
