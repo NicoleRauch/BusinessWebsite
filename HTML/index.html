@@ -7,22 +7,14 @@
     <title>Nicole Rauch - Softwareentwicklung und Entwicklungscoaching</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
+.nav,
+ul {
+  list-style: none;
+}
+
 img {
   vertical-align: middle;
-}
-
-img {
   border: 0;
-}
-
-
-
-body {
-  margin: 0;
-}
-
-.col-xs-12 {
-  float: left;
 }
 
 html {
@@ -31,12 +23,17 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-nav {
-  display: block;
+body {
+  margin: 0;
+  background-color: #fff;
 }
 
-a {
-  background-color: transparent;
+.col-xs-12 {
+  float: left;
+}
+
+nav {
+  display: block;
 }
 
 button {
@@ -45,16 +42,8 @@ button {
   margin: 0;
 }
 
-button {
-  overflow: visible;
-}
-
-button {
-  text-transform: none;
-}
-
-button {
-  -webkit-appearance: button;
+body {
+  font-weight: 400;
 }
 
 button::-moz-focus-inner {
@@ -62,12 +51,8 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-.navbar-toggle {
-  background-image: none;
-}
-
-body {
-  background-color: #fff;
+button {
+  font-family: inherit;
 }
 
 *,
@@ -83,12 +68,15 @@ html {
 }
 
 button {
-  font-family: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
   font-size: inherit;
   line-height: inherit;
 }
 
 a {
+  background-color: transparent;
   color: #337ab7;
   text-decoration: none;
 }
@@ -110,6 +98,10 @@ a {
   border: 0;
 }
 
+ul {
+  margin-bottom: 10px;
+}
+
 p {
   margin: 0 0 10px;
 }
@@ -118,16 +110,9 @@ ul {
   margin-top: 0;
 }
 
-ul {
-  margin-bottom: 10px;
-}
-
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-}
-
-.container-fluid {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -164,7 +149,6 @@ ul {
 .nav {
   margin-bottom: 0;
   padding-left: 0;
-  list-style: none;
 }
 
 .nav>li>a {
@@ -203,6 +187,7 @@ ul {
 }
 
 .navbar-toggle {
+  background-image: none;
   position: relative;
   float: right;
   margin-right: 15px;
@@ -296,22 +281,12 @@ ul {
   display: none!important;
 }
 
-.italic {
-  font-style: italic;
-}
-
 ul {
   color: #4d4d4d;
 }
 
 @-ms-viewport {
   width: device-width;
-}
-
-@media (max-width:767px) {
-  .visible-xs {
-    display: block!important;
-  }
 }
 
 @media (min-width:768px) and (max-width:991px) {
@@ -321,6 +296,10 @@ ul {
 }
 
 @media (max-width:767px) {
+  .visible-xs {
+    display: block!important;
+  }
+
   .hidden-xs {
     display: none!important;
   }
@@ -340,7 +319,6 @@ html {
 body {
   font-family: Lato,sans-serif;
   font-size: 14pt;
-  font-weight: 400;
   line-height: 16.8pt;
   color: #333;
 }
@@ -392,17 +370,42 @@ span {
   }
 }
 
-ul {
-  list-style: none;
-}
-
 ul.slash li:before {
   content: '// ';
 }
 
 .italic {
+  font-style: italic;
   font-weight: 300;
   color: #4d4d4d;
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'),local('Lato-Light'),url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'),local('Lato-Bold'),url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'),local('Lato-LightItalic'),url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
 }
 
 @font-face {

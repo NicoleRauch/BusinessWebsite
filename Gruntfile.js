@@ -39,6 +39,22 @@ module.exports = function (grunt) {
       }
     },
 
+    uncss: {
+      build: {
+        files: {
+          'HTML/css/nicole.un.css': ['HTML/index.html']
+        }
+      }
+    },
+
+    cssmin: {
+      build: {
+        files: {
+          'HTML/css/nicole.min.css': ['HTML/css/nicole.un.css']
+        }
+      }
+    },
+
   });
 
   // These plugins provide necessary tasks.
@@ -51,10 +67,8 @@ module.exports = function (grunt) {
   require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('default', ['less']);
-  grunt.registerTask('usemin-optimize', ['useminPrepare', 'concat:generated', 'cssmin:generated', 'uglify:generated', 'usemin']);
+  grunt.registerTask('usemin-optimize', ['useminPrepare', 'concat:generated', 'uglify:generated', 'usemin']);
   grunt.registerTask('optimize', ['usemin-optimize']);
-  grunt.registerTask('css-mangling', [
-      // 'uncss:build', 'cssmin:build',
-    'critical:build']);
+  grunt.registerTask('css-mangling', ['uncss:build', 'cssmin:build', 'critical:build']);
 
 };
