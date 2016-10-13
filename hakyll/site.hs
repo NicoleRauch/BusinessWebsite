@@ -22,10 +22,6 @@ siteConfig =  defaultConfiguration {
 
 main :: IO ()
 main = hakyllWith siteConfig $ do
-    match "images/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
     match "img/*" $ do
         route   idRoute
         compile copyFileCompiler
