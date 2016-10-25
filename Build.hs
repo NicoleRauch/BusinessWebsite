@@ -15,7 +15,7 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
         putNormal "Pulling from github"
         cmd "git pull"
 
-    "css" ~> do
+    "css-from-less" ~> do
         -- need ["pull"]
         putNormal "Generating CSS files"
         need [".bootstrap_less"]
@@ -30,7 +30,7 @@ main = shakeArgs shakeOptions{shakeFiles="_build"} $ do
 
 
     "HTML" ~> do
-        need ["css"]
+        need ["css-from-less"]
         need [".fullpage_css"]
         putNormal "Generating HTML files"
         unit $ cmd (Cwd "hakyll") "stack build"
