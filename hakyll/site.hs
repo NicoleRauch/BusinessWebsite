@@ -239,13 +239,6 @@ activeClassField = functionField "activeClass" $ \[p] _ -> do
                                                       then " active " else ""
                                  return $ "class=\"" ++ activeClass ++ additionalClasses ++ "\""
 
-forCurrentFile :: String -> String -> Context a
-forCurrentFile fieldName result = functionField fieldName $ \[p] _ -> do
-                                           path <- toFilePath <$> getUnderlying
-                                           return $ if dropExtension (head (splitDirectories path)) == p
-                                                       then result
-                                                       else ""
-
 generalContext :: Context String
 generalContext =
                activeClassField `mappend`
