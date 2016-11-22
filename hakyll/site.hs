@@ -5,6 +5,7 @@
 import qualified Data.Aeson as A
 import           Data.Aeson ((.:), (.:?))
 import           Data.Monoid (mappend)
+import           Data.Maybe (fromMaybe)
 import           Hakyll
 import           System.FilePath.Posix (dropExtension, splitDirectories)
 import           GHC.Generics (Generic)
@@ -230,12 +231,11 @@ postWithExcerptCtx =
     postCtx
 
 activeClassField :: Context a
-activeClassField = forCurrentFile "activeClass" "class=\"active\""
-
-activeField :: Context a
-activeField = functionField "active" $ \[p] _ -> do
+activeClassField = functionField "activeClass" $ \[p] _ -> do
                                  path <- toFilePath <$> getUnderlying
-                                 let [filePath, additionalClasses] = split ';' p
+                                 let result = split ';' p
+                                 let filePath = head result
+                                 let additionalClasses = fromMaybe "" $ safeHead $ tail result
                                  let activeClass = if dropExtension (head (splitDirectories path)) == filePath
                                                       then " active " else ""
                                  return $ "class=\"" ++ activeClass ++ additionalClasses ++ "\""
@@ -250,8 +250,11 @@ forCurrentFile fieldName result = functionField fieldName $ \[p] _ -> do
 generalContext :: Context String
 generalContext =
                activeClassField `mappend`
-               activeField `mappend`
                defaultContext
 
 split :: Char -> String -> [String]
 split c s = map C8.unpack $ C8.split c $ C8.pack s
+
+safeHead :: [a] -> Maybe a
+safeHead [] = Nothing
+safeHead (x:xs) = Just x
