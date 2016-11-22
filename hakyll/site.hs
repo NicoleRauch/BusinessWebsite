@@ -233,9 +233,8 @@ postWithExcerptCtx =
 activeClassField :: Context a
 activeClassField = functionField "activeClass" $ \[p] _ -> do
                                  path <- toFilePath <$> getUnderlying
-                                 let result = split ';' p
-                                 let filePath = head result
-                                 let additionalClasses = fromMaybe "" $ safeHead $ tail result
+                                 let (filePath:maybeAdditionalClasses) = split ';' p
+                                 let additionalClasses = fromMaybe "" $ safeHead maybeAdditionalClasses
                                  let activeClass = if dropExtension (head (splitDirectories path)) == filePath
                                                       then " active " else ""
                                  return $ "class=\"" ++ activeClass ++ additionalClasses ++ "\""
