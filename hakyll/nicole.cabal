@@ -10,6 +10,7 @@ executable site
                   , filepath
                   , aeson
                   , binary
+                  , bytestring
   ghc-options:      -threaded
   default-language: Haskell2010
 

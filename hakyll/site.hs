@@ -11,6 +11,8 @@ import           GHC.Generics (Generic)
 import           Data.Binary (Binary)
 import           Control.Monad (filterM)
 import           StringManipulation (getExcerpt)
+import qualified Data.ByteString.Char8 as C8
+
 
 --------------------------------------------------------------------------------
 siteConfig :: Configuration
@@ -228,13 +230,28 @@ postWithExcerptCtx =
     postCtx
 
 activeClassField :: Context a
-activeClassField = functionField "activeClass" $ \[p] _ -> do
-         path <- toFilePath <$> getUnderlying
-         return $ if dropExtension (head (splitDirectories path)) == p
-                     then "class=\"active\""
-                     else ""
+activeClassField = forCurrentFile "activeClass" "class=\"active\""
+
+activeField :: Context a
+activeField = functionField "active" $ \[p] _ -> do
+                                 path <- toFilePath <$> getUnderlying
+                                 let [filePath, additionalClasses] = split ';' p
+                                 let activeClass = if dropExtension (head (splitDirectories path)) == filePath
+                                                      then " active " else ""
+                                 return $ "class=\"" ++ activeClass ++ additionalClasses ++ "\""
+
+forCurrentFile :: String -> String -> Context a
+forCurrentFile fieldName result = functionField fieldName $ \[p] _ -> do
+                                           path <- toFilePath <$> getUnderlying
+                                           return $ if dropExtension (head (splitDirectories path)) == p
+                                                       then result
+                                                       else ""
 
 generalContext :: Context String
 generalContext =
                activeClassField `mappend`
+               activeField `mappend`
                defaultContext
+
+split :: Char -> String -> [String]
+split c s = map C8.unpack $ C8.split c $ C8.pack s
