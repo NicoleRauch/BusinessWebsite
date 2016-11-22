@@ -3,6 +3,12 @@
     "year": "2016",
     "entries": [
         {
+          "name": "XP-Days, Hamburg, 21.11.2016",
+          "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
+          "url": "http://www.xpdays.de/2016/sessions/025-programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert.html",
+          "kind": "Vortrag mit Michael Sperber"
+        },
+        {
           "name": "NordicJS, Stockholm, 8.9.2016",
           "title": "Event Sourcing a Node.js Application",
           "url": "http://nordicjs.com/speakers#1600-Nicole-Rauch",

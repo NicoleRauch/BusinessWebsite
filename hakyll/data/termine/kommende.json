@@ -1,17 +1,5 @@
 [
   {
-    "name": "XP-Days, Hamburg, 21.11.2016",
-    "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
-    "url": "http://www.xpdays.de/2016/sessions/025-programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert.html",
-    "kind": "Vortrag mit Michael Sperber"
-  },
-  {
-    "name": "Digicomp, Zürich / Bern / Basel, 6.12.2016",
-    "title": "Workshop: Coderetreat",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/basistechniken-und-technologien/code-retreat-workshops/code-retreat",
-    "kind": "ganztägiger Workshop"
-  },
-  {
     "name": "Digicomp, Zürich / Bern / Basel, 7.12.2016",
     "title": "Kurs: Einführung in die funktionale Programmierung",
     "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung",
