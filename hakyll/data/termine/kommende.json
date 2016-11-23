@@ -1,17 +1,5 @@
 [
   {
-    "name": "Digicomp, Zürich / Bern / Basel, 7.12.2016",
-    "title": "Kurs: Einführung in die funktionale Programmierung",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/andere-programmiersprachen/funktionale-programmierung/einfuehrung-in-die-funktionale-programmierung",
-    "kind": "ganztägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Bern / Basel, 8.12.2016",
-    "title": "Kurs: Specification by Example - Endlich die richtige Software entwickeln!",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklung/software-engineering/anforderungsanalyse/specification-by-example",
-    "kind": "ganztägiger Workshop"
-  },
-  {
     "name": "Domain-Driven Design Europe, Amsterdam, 2.-3.2.2017",
     "title": "Refactoring Legacy Code: From \"Big Ball of Mud\" to Domain-Driven Design",
     "url": "https://dddeurope.com/2017/speakers/nicole-rauch/",
