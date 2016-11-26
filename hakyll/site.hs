@@ -237,7 +237,8 @@ activeClassField = functionField "activeClass" $ \[p] _ -> do
                                  let additionalClasses = fromMaybe "" $ safeHead maybeAdditionalClasses
                                  let activeClass = if dropExtension (head (splitDirectories path)) == filePath
                                                       then " active " else ""
-                                 return $ "class=\"" ++ activeClass ++ additionalClasses ++ "\""
+                                 let allClasses = activeClass ++ additionalClasses
+                                 return $ if null allClasses then "" else "class=\"" ++ allClasses ++ "\""
 
 generalContext :: Context String
 generalContext =
