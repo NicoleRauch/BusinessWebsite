@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nicole Rauch - Softwareentwicklung und Entwicklungscoaching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- build:css /css/nicole.min.css -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/screen.css">
+
+    <!-- Fullpage -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" />
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic" rel="stylesheet" type="text/css">
+  
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.nicolerauch.de","*.nicole-rauch.de"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.nicolerauch.de/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.nicolerauch.de/piwik.php?idsite=1" style="border:0;" alt /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+
+
+  <body>
+
+  <div id="fullpage">
+    <div class="section">
+
+      <div class="container-fluid viewport">
+
+        <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="hidden-sm hidden-md hidden-lg"><a href="../index.html">Startseite</a></li>
+            <li class=" active "><a href="../blog.html">Blog</a></li>
+            <li><a href="../schwerpunkte.html">Schwerpunkte</a></li>
+            <li><a href="../termine.html">Termine</a></li>
+            <li class="hidden-xs"><a class="navbar-brand" href="../index.html"><img class="img-responsive" src="../img/logo_menu.png" /></a></li>
+            <li><a href="../themen.html">Themen</a></li>
+            <li><a href="../referenzen.html">Referenzen</a></li>
+            <li><a href="../impressum.html">Impressum</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+      <div class="col-md-10 col-md-offset-1 post">
+
+        <header class="post-header">
+          <h1 class="post-title">Parsing Strings with Haskell's Parsec Library</h1>
+          
+          <p class="post-meta">13.12.2016
+             • Nicole Rauch
+            
+          </p>
+        </header>
+        <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+          <article class="post-content">
+            <p>When I tried to walk my first steps with Haskell’s Parsec library, I was unable to find a detailed tutorial aimed at non-experts in functional programming. So, after I got my code working, I decided to write that tutorial myself.</p>
+<h2 id="what-am-i-planning-to-parse-anyway">What am I Planning to Parse, Anyway?</h2>
+<p>I was writing a bot for a coding contest where the goal is to write a computer player for the drinking game <a href="https://github.com/NicoleRauch/maexchen">“Mia” or “Mäxchen”</a>. This bot connects to a server (the game master) via UDP which sends simple string messages to the clients to inform them about the current state of the game. These messages can be something like “A new round is about to start”, “This is the current score” or “A player lost”.</p>
+<p>My first attempt, hacked together during an actual contest, was to compare those strings to expected constants all over the place, but soon I found this to be extremely unelegant, especially since I was coding in Haskell, and of course I wanted my code to be more typesafe.</p>
+<p>So I decided to learn Parsec and to use it for this task. I was well aware that applying Parsec to the problem might be a tad of an overkill, but I wanted to learn about it anyway, and I always prefer to have a real-world use case when playing around with something new.</p>
+<h2 id="defining-the-input-and-the-output">Defining the Input and the Output</h2>
+<p>I decided to start with a very simple bot, one that would always <a href="https://en.wikipedia.org/wiki/Mia_%28game%29">want to “see”</a> whenever it was its turn. This reduced the number of relevant commands from the server to the following:</p>
+<pre><code>ROUND STARTING;some-token
+YOUR TURN;some-token</code></pre>
+<p>All other server commands would be ignored for the moment.</p>
+<p>We also need a data structure that will be the output of our parser:</p>
+<pre><code>data Command =
+  RoundStarting String
+  | YourTurn String
+  | Unknown String
+  deriving (Eq, Show)</code></pre>
+<p>Here, the two known commands will be identified by the matching data type constructors <code>RoundStarting</code> and <code>YourTurn</code>, where the string argument will hold the token that was submitted as part of the command. In order to allow for a total parser function, I also added a third data type constructor called <code>Unknown</code> whose string argument contains the full command that was submitted from the server.</p>
+<h2 id="defining-the-language">Defining the Language</h2>
+<p>First of all, we need to describe what elements our language contains. This description is done via <a href="https://hackage.haskell.org/package/parsec-3.1.11/docs/Text-ParserCombinators-Parsec-Token.html">the <code>LanguageDef</code> type</a>. When looking at this type, we can see that it is very much specialized to parsing programming languages; we can specify different kinds of comments, identifiers, operators and reserved words. Clearly, our minimalistic Mia commands are not a programming language, so we need not specify any of these. Luckily, there is a empty language definition available which perfectly serves our purpose.</p>
+<p>The <code>Text.ParserCombinators.Parsec.Token</code> module contains a function called <code>makeTokenParser</code> which generates a scanner (also called lexer) for us - in principle, a scanner is used to break the stream of characters into different tokens, to remove whitespace and comments. As we do not define any language features, our scanner does not really do much work for us. But we need one anyways, so here goes:</p>
+<pre><code>lexer = T.makeTokenParser emptyDef</code></pre>
+<h2 id="parsing-individual-command-strings">Parsing Individual Command Strings</h2>
+<p><a href="https://hackage.haskell.org/package/parsec-3.1.11/docs/Text-ParserCombinators-Parsec-Token.html">The Parsec.Token module</a> provides us with numerous small and helpful parsers which we can use to construct the parsers we actually need. First let’s define some shortcuts for utility functions:</p>
+<pre><code>import qualified Text.ParserCombinators.Parsec.Token as T
+
+semiP     = T.semi lexer          -- a semicolon
+symbolP   = T.symbol lexer        -- a constant symbol
+lineP     = many $ noneOf &quot;\n&quot;    -- a full line
+tokenP    = many $ noneOf &quot;;&quot;     -- a token, i.e. everything up to the next semicolon</code></pre>
+<p>With these helpers, we can now construct the parsers for each of our commands:</p>
+<pre><code>roundStartingP = do
+  try $ symbolP &quot;ROUND STARTING&quot;
+  semiP
+  token &lt;- tokenP
+  return $ RoundStarting token</code></pre>
+<p>The <code>roundStartingP</code> parser parses the first of our two commands, <code>ROUND STARTING</code>. It first reads the constant symbol, then a semicolon, and then the token, and finally it returns an element of type <code>Command</code> constructed by the <code>RoundStarting</code> data constructor which takes the parsed token as its argument. The <code>try</code> function tells Parsec not to consume any characters from our input string when the symbol does not match.</p>
+<pre><code>yourTurnP = do
+  try $ symbolP &quot;YOUR TURN&quot;
+  semiP
+  token &lt;- tokenP
+  return $ YourTurn token</code></pre>
+<p>In <code>yourTurnP</code> we parse the second command, <code>YOUR TURN</code>. It is identical in structure to the first command, and unsurprisingly the parser is also identical in structure.</p>
+<pre><code>unknownP = do
+  unknownCommand &lt;- lineP
+  return $ Unknown unknownCommand</code></pre>
+<p><code>unknownP</code> is our final parser, which simply reads the whole line and returns it as the argument of the <code>Unknown</code> data constructor.</p>
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+<p>Parsec actually is a parser <em>combinator</em>, and it will hopefully become clear what this means when we look at our full parsing function:</p>
+<pre><code>commandParser :: Parser Command
+commandParser = roundStartingP
+            &lt;|&gt; yourTurnP
+            &lt;|&gt; unknownP
+            &lt;?&gt; &quot;Parse error&quot;</code></pre>
+<p>Parsec tries out in sequence each of the parser functions that are combined via <code>&lt;|&gt;</code>. If none matches, it raises a parse error.</p>
+<p>Now, how to use this beast? We can define a generic function <code>runParser</code>:</p>
+<pre><code>runParser :: Parser a -&gt; String -&gt; a
+runParser p str = case parse p &quot;&quot; str of
+  Left err  -&gt; error $ &quot;parse error at &quot; ++ (show err)
+  Right val -&gt; val</code></pre>
+<p>and define our actual parser function with its help:</p>
+<pre><code>parseCommand :: String -&gt; Command
+parseCommand = runParser commandParser</code></pre>
+<p>That’s it!</p>
+<p>You can have a look <a href="https://github.com/NicoleRauch/maexchen/blob/master/client/haskell-bot/src/MessageParser.hs">at the full parser code in my Mia bot</a>.</p>
+<p>If you have any questions, comments or suggestions for improvement, please feel free to drop me a line (see below).</p>
+<hr />
+<h2 id="comments">Comments:</h2>
+<p>(please comment on this article <a href="mailto:info@nicole-rauch.de?Subject=Your blogpost 'CoolBeans - Dependency Injection for Node.js'">via email</a>)</p>
+          </article>
+        </div>
+      </div>
+      <hr />
+
+    </div>
+
+    <div class="container-fluid viewport">
+  <footer class="row center-block">
+    <div class="col-sm-12">
+      <ul class="list-inline">
+        <li><a href="../"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAXtJREFUeNqUUr9LQlEU/u57PrX8hRVSpBDhUkSRYENLNEW4tBRBSzUEDbW0FrX1F+Ra0RISRE4RmLQkJEI5tQi1WDSU+dLXez69HQWtlwV14HK555zvfud857Cs198DYB4QAW4CBBGsrQLm5mAuum0cXGWAxsBLlFlmd5SFKmgTf7cL03dP+9EuhA43mARisUPe24J6GTfkCF8f0vAgzCMB5Ne3KcIhuNzQUudNVAYm58Za7WYWCWJ3L0rpJJyrYQgOO1Chtm6SeNsPfzKJXZ0wB4ZQPIyAa0rN934ahxI5g9QfhDQQRClzayzPtrRIvCa0zs7Qr2Xo9xlSigK6XouXn7JQEzEjqGV6qlGm6POC557Biwr1lKj5lOiBsadqaVoyRXOieTAGy9goTP4+CL40xTwElqHEjo2g8sMjXhaWG8O1r8zBGgqBv+ZhnZyAehUDL8g/q1e3ipxHgVRiHiJ26ChEdn6XvG5K9KR5jcAMoGs64/9Yo9yHAAMAmKZ7qWQ0foUAAAAASUVORK5CYII="></a></li><!-- Home, footer_01.png -->
+        <li><a href="https://de.linkedin.com/in/nicole-rauch-807ab52b"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQZJREFUeNpifCaj4sDAwAjEzAwM/1kYGNgZGZiE/jMwCvxjYOT7z8DA9p/h/09GBoZfjAz//wDpvwwHgKoYgBoY6pn4eMGa/v38wkAIgDQxMPHxMQitXgRkMTK8i04C0p/wamJiIAOAbfr36RPDl74pDCB//fv0mYHD1ZSBkecfw+/7pxg47AMZ/n38zPDr3GmG/x+hTgcGRMMzGdX/MPBMSRfO/nXlFIJ9+dT/F+7a/1+4aDfgdR6rtinD/2+fIWwdU+L89H3rYoYvi9oRflHWIKzp58m9DD8OrkfYwM1LfuiRH+Qg8FxWE56MXprqIiUjBoZXQVqIZATVtACID5Bg0QOAAAMAnwpulQbYp5MAAAAASUVORK5CYII="></a></li><!-- LinkedIn, footer_02.png -->
+        <li><a href="https://www.xing.com/profile/Nicole_Rauch2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWdJREFUeNp8kr9LQlEUx7/X54ue+iyCINShISgk2nT2DwgSITedagiHFqeWxjantCEC+zFFELVEg9LSYg0Nibo0+QwKKnr67Pl63q43lF75+sLhnvu95wPncC5pBGYiAGHhBKgAIhGQiS7IOAXxUkCgoDoBDALKAl3kWSUYgE3YSAyGIc6GoV8XYdRqPevKiX8kTPoxlt4Gcckc6msACQE/XMsx0LYK7fyAe6546hsoFfH5UGUOsUJmXYEUX2Kwj1VTmI0KRiNR/tbc27J04Ph5aR+f8VNajMKdSPFcO8nCfFKGQw6vDPdqgudGpQxxIQSqsVYv9v/MOoDcK0kQ2YNO6ZYNKHBPLxVAW6o9ZJSraGZ28La2jtZujnu9mZzTc/bQx2UBaiaH7rsK81GBdnrIfU9ywx76rdZRls8kBkMYmQ9b3myXS5sqXtMxOKZ86NzfDHbUh/K9rzEMNJ8VmC91C8B09yXAAH5ZdidNQcyGAAAAAElFTkSuQmCC"></a></li><!-- Xing, footer_03.png -->
+        <li><a href="https://twitter.com/nicolerauch"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAS5JREFUeNpifCajksDAwKTA8J+ZgYGBhYGRm4GBUegfA6PAfwZG3n9ADiPD/19AqV9A+g8jA8M/hgUsQC5QE4M9A/HgABMuGUZuXgYOh0AGVi0zMJ9FSQMuxwJjiJ3Yw/A+uYDhz4MbYL5A/WQGVl1TuMIfezcyfOyqRtUEAsJr5jF8X7+R4efJPSgaQODbhkVwNtx5/z59Bnqch4ErLppBcOp8DOf+uXcDU9PHwkqcPv95ah8KHyUg/n/+glXT982LsGv6+/gpw+feaRgafhzcwPDryikUMXBAsFmaMQj0dTIwy0jBJf6+esbwfftChu/bFmMYBNb06/gphlcWLgzMsnIMLCrSDP++PmH49/0JPEVg1YRw4jOGf++eQZMR7iQB0lQAiksSktEFgAADACdcW9UaBfJVAAAAAElFTkSuQmCC"></a></li><!-- Twitter, footer_04.png -->
+      </ul>
+      <p>NICOLE RAUCH 2014-2016 &copy;</p>
+    </div>
+  </footer>
+</div>
+
+
+    </div><!-- end container -->
+
+    <!-- javascript -->
+<!-- build:js /js/nicole.min.js -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<!-- endbuild -->
+
+
+    </div></div>
+
+  </body>
+
+</html>
+
