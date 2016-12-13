@@ -144,7 +144,7 @@ runParser p str = case parse p &quot;&quot; str of
 <p>and define our actual parser function with its help:</p>
 <pre><code>parseCommand :: String -&gt; Command
 parseCommand = runParser commandParser</code></pre>
-<p>That’s it!</p>
+<p>That’s it! Pop in an ugly string, and out comes a beautifully structured <code>Command</code> element.</p>
 <p>You can have a look <a href="https://github.com/NicoleRauch/maexchen/blob/master/client/haskell-bot/src/MessageParser.hs">at the full parser code in my Mia bot</a>.</p>
 <p>If you have any questions, comments or suggestions for improvement, please feel free to drop me a line (see below).</p>
 <hr />

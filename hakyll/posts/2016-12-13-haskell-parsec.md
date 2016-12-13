@@ -141,7 +141,7 @@ parseCommand :: String -> Command
 parseCommand = runParser commandParser
 ```
 
-That's it!
+That's it! Pop in an ugly string, and out comes a beautifully structured `Command` element.
 
 You can have a look [at the full parser code in my Mia bot](https://github.com/NicoleRauch/maexchen/blob/master/client/haskell-bot/src/MessageParser.hs).
 
