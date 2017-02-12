@@ -334,5 +334,16 @@
         "kind": "Vortrag mit Andreas Leidig"
       }
     ]
+  },
+  {
+    "year": "2008",
+    "entries": [
+      {
+        "name": "CompArch 2008 (Industrial Experience Report Track), Karlsruhe, 15.10.2008",
+        "title": "Index-based Process and Software Quality Control in Agile Development Projects",
+        "url": "http://comparch2008.ipd.kit.edu/program/cbse_qosa_and_sid/",
+        "kind": "Vortrag"
+      }
+    ]
   }
 ]
