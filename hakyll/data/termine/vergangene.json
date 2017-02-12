@@ -1,5 +1,16 @@
 [
   {
+    "year": "2017",
+    "entries": [
+      {
+        "name": "Domain-Driven Design Europe, Amsterdam, 2.2.2017",
+        "title": "Refactoring Legacy Code: From \"Big Ball of Mud\" to Domain-Driven Design",
+        "url": "https://dddeurope.com/2017/speakers/nicole-rauch/",
+        "kind": "Workshop"
+      }
+    ]
+  },
+  {
     "year": "2016",
     "entries": [
         {
