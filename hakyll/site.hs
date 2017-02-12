@@ -42,14 +42,14 @@ main = hakyllWith siteConfig $ do
             lbs <- fmap itemBody getResourceLBS
             case A.eitherDecode lbs of
                  Left err -> fail err
-                 Right ts -> makeItem (ts::Termine) 
+                 Right ts -> makeItem (ts::Termine)
 
     match "data/termine/vergangene.json" $ do
         compile $ do
             lbs <- fmap itemBody getResourceLBS
             case A.eitherDecode lbs of
                  Left err -> fail err
-                 Right ys -> makeItem (ys::Years) 
+                 Right ys -> makeItem (ys::Years)
 
     match "posts/*" $ do
         route $ setExtension "html"
@@ -65,7 +65,7 @@ main = hakyllWith siteConfig $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll ("posts/*" .&&. hasVersion "raw")
-            let 
+            let
                 postList = return posts
                 blogCtx =
                     listField "germanPosts" postWithExcerptCtx (german postList) `mappend`
@@ -93,7 +93,7 @@ main = hakyllWith siteConfig $ do
     match "termine.html" $ do
         route idRoute
         compile $ do
-            
+
             let terminItems = do
                            Termine termine  <- loadBody "data/termine/kommende.json"
                            mapM makeItem termine
