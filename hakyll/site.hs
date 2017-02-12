@@ -158,10 +158,10 @@ instance Writable Termine
 
 -- Years containing Termine:
 
-data Year = Year {
-     yearYear :: String
-     , yearEntries :: Termine
-} deriving (Generic)
+data Year = Year
+  { yearYear :: String
+  , yearEntries :: Termine
+  } deriving (Generic)
 
 yearCtx :: Context Year
 yearCtx = mconcat
@@ -169,6 +169,7 @@ yearCtx = mconcat
     , listFieldWith "entries" terminCtx $ \yearItem -> do
         let Termine entries = yearEntries (itemBody yearItem)
         mapM makeItem entries
+    , field "count" $ \yearItem -> return . show . length . unTermine . yearEntries $ itemBody yearItem
     ]
 
 instance Binary Year
