@@ -1,20 +1,50 @@
 [
   {
-    "name": "BOBKonf, Berlin, 24.2.2017",
-    "title": "React.js and Redux",
-    "url": "http://bobkonf.de/2017/rauch.html",
-    "kind": "Tutorial"
+    "name": "Digicomp, Zürich, 10. - 11.4.2017",
+    "title": "Kurs: Domain-Driven Design",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+    "kind": "zweitägiger Workshop"
   },
   {
-    "name": "Topconf, Linz, 1.3.2017",
-    "title": "The Day After Tomorrow: Let the Machine do the Coding",
-    "url": "http://topconf.com/linz-2017/trackevent/the-day-after-tomorrow-let-the-machine-do-the-coding/",
+    "name": "Mathema Campus, Erlangen, 27.04.2017",
+    "title": "Einführung in React.js and Redux",
+    "url": "https://www.mathema.de/veranstaltungen/mathema-campus",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Entwicklertag, Karlsruhe, 22.05.2017",
+    "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
+    "url": "https://entwicklertag.de/karlsruhe/2017/",
     "kind": "Vortrag mit Michael Sperber"
+  },
+  {
+    "name": "Digicomp DevDay, Zürich, 22.6.2017",
+    "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
+    "url": "https://www.digicomp.ch/devday",
+    "kind": "Vortrag mit Michael Sperber"
+  },
+  {
+    "name": "Digicomp DevDay, Zürich, 22.6.2017",
+    "title": "Fifty Shades of Parsing",
+    "url": "https://www.digicomp.ch/devday",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp DevDay, Zürich, 22.6.2017",
+    "title": "React.js Goes Haskell",
+    "url": "https://www.digicomp.ch/devday",
+    "kind": "Vortrag"
   },
   {
     "name": "Software Craftsmanship London, London, 5. - 6.10.2017",
     "title": "The Day After Tomorrow: Let the Machine do the Coding",
     "url": "http://sc-london.com/#speakers",
     "kind": "Vortrag mit Michael Sperber"
+  },
+  {
+    "name": "Web Developer Conference, München, 11.10.2017",
+    "title": "Einführung in React.js and Redux",
+    "url": "http://www.web-developer-conference.de/",
+    "kind": "Vortrag"
   }
 ]

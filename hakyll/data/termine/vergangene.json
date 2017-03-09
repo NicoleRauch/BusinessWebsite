@@ -3,6 +3,18 @@
     "year": "2017",
     "entries": [
       {
+        "name": "Topconf, Linz, 1.3.2017",
+        "title": "The Day After Tomorrow: Let the Machine do the Coding",
+        "url": "http://topconf.com/linz-2017/trackevent/the-day-after-tomorrow-let-the-machine-do-the-coding/",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
+        "name": "BOBKonf, Berlin, 24.2.2017",
+        "title": "React.js and Redux",
+        "url": "http://bobkonf.de/2017/rauch.html",
+        "kind": "Tutorial"
+      },
+      {
         "name": "Domain-Driven Design Europe, Amsterdam, 2.2.2017",
         "title": "Refactoring Legacy Code: From \"Big Ball of Mud\" to Domain-Driven Design",
         "url": "https://dddeurope.com/2017/speakers/nicole-rauch/",
