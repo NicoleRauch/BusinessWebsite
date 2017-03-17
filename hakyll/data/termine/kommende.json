@@ -6,6 +6,12 @@
     "kind": "zweitägiger Workshop"
   },
   {
+    "name": "Digicomp, Bern, 18.4.2017",
+    "title": "Kurs: Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
+    "kind": "ganztägiger Workshop"
+  },
+  {
     "name": "Mathema Campus, Erlangen, 27.04.2017",
     "title": "Einführung in React.js and Redux",
     "url": "https://www.mathema.de/veranstaltungen/mathema-campus",
@@ -18,7 +24,7 @@
     "kind": "Vortrag mit Michael Sperber"
   },
   {
-    "name": "Digicomp DevDay, Zürich, 22.6.2017",
+    "name": "Digicomp DevDay, Zürich, 21.6.2017",
     "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
     "url": "https://www.digicomp.ch/devday",
     "kind": "Vortrag mit Michael Sperber"
@@ -36,6 +42,30 @@
     "kind": "Vortrag"
   },
   {
+    "name": "Digicomp, Zürich, 23.6.2017",
+    "title": "Kurs: Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich, 23.6.2017",
+    "title": "Workshop: Einführung in React.js und Redux",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich/Basel/Bern, 9. - 10.8.2017",
+    "title": "Kurs: Domain-Driven Design",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+    "kind": "zweitägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Bern, 15.8.2017",
+    "title": "Kurs: Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
+    "kind": "ganztägiger Workshop"
+  },
+  {
     "name": "Software Craftsmanship London, London, 5. - 6.10.2017",
     "title": "The Day After Tomorrow: Let the Machine do the Coding",
     "url": "http://sc-london.com/#speakers",
@@ -46,5 +76,17 @@
     "title": "Einführung in React.js and Redux",
     "url": "http://www.web-developer-conference.de/",
     "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp, Zürich/Basel, 7.11.2017",
+    "title": "Kurs: Einführung in die funktionale Programmierung",
+    "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
+    "kind": "ganztägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich/Basel/Bern, 6. - 7.12.2017",
+    "title": "Kurs: Domain-Driven Design",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+    "kind": "zweitägiger Workshop"
   }
 ]
