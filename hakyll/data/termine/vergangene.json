@@ -193,6 +193,18 @@
     "year": "2014",
     "entries": [
       {
+        "name": "Softwerkskammer Karlsruhe, 10.9.2014",
+        "title": "Funktionale Programmierung für Anfänger",
+        "url": "https://www.softwerkskammer.org/activities/ka-treffen-37",
+        "kind": "Vortrag / Diskussion"
+      },
+      {
+        "name": "Softwerkskammer Karlsruhe, 16.7.2014",
+        "title": "Einführung in Specification by Example",
+        "url": "https://www.softwerkskammer.org/activities/ka-treffen-35",
+        "kind": "Vortrag / Workshop"
+      },
+      {
         "name": "SPA Conference, London, 2.7.2014",
         "title": "Advanced Testing Techniques for Node.js",
         "url": "http://www.spaconference.org/spa2014/sessions/session571.html",
@@ -286,6 +298,11 @@
         "kind": "Vortrag mit Andreas Leidig"
       },
       {
+        "name": "msgGillardon Entwicklertag, Bretten, 16.10.2012",
+        "title": "Beispielhaft (Specification by Example)",
+        "kind": "Vortrag mit Steffen Eichenberg"
+      },
+      {
         "name": "Herbstcampus, Nürnberg, 5.9.2012",
         "title": "Monaden - Die nächste Herausforderung der funktionalen Welt",
         "url": "http://www.herbstcampus.de/hc12/program/sessions.html#57",
@@ -329,6 +346,11 @@
     "year": "2010",
     "entries": [
       {
+        "name": "Objektforum Karlsruhe, 6.12.2010",
+        "title": "Usus",
+        "kind": "Vortrag mit Leif Frenzel"
+      },
+      {
         "name": "XP-Days Germany, Hamburg, 26.11.2010",
         "title": "Unit Tests als Spezifikation?",
         "url": "http://www.xpdays.de/twiki/bin/view/XPDays2010/UnitTestsAlsSpezifikation",
@@ -341,9 +363,31 @@
         "kind": "Vortrag mit Andreas Leidig"
       },
       {
+        "name": "Eclipse Demo Camp Mannheim, 10.6.2010",
+        "title": "Das ist hier Usus...",
+        "url": "https://wiki.eclipse.org/Eclipse_DemoCamps_Helios_2010/Mannheim",
+        "kind": "Vortrag mit Marc Philipp"
+      },
+      {
         "name": "JAX 2010, Mainz, 5.5.2010",
         "title": "Das ist hier Usus...",
         "kind": "Vortrag mit Andreas Leidig"
+      }
+    ]
+  },
+  {
+    "year": "2009",
+    "entries": [
+      {
+        "name": "Objektforum Karlsruhe, 7.12.2009",
+        "title": "Einsicht und Handeln",
+        "kind": "Vortrag mit Leif Frenzel und Stefan Schürle"
+      },
+      {
+        "name": "Eclipse Demo Camp Karlsruhe, 3.12.2009",
+        "title": "Das ist hier so Usus...",
+        "url": "https://wiki.eclipse.org/Eclipse_DemoCamps_November_2009/Karlsruhe",
+        "kind": "Vortrag mit Leif Frenzel und Stefan Schürle"
       }
     ]
   },
@@ -354,6 +398,17 @@
         "name": "CompArch 2008 (Industrial Experience Report Track), Karlsruhe, 15.10.2008",
         "title": "Index-based Process and Software Quality Control in Agile Development Projects",
         "url": "http://comparch2008.ipd.kit.edu/program/cbse_qosa_and_sid/",
+        "kind": "Vortrag"
+      }
+    ]
+  },
+  {
+    "year": "2003",
+    "entries": [
+      {
+        "name": "8th International Workshop on Formal Methods for Industrial Critical Systems, Trondheim, Norwegen, 5.6.2003",
+        "title": "Formalizing Java's Two's-Complement Integral Type in Isabelle/HOL",
+        "url": "http://fmics.inria.fr/workshop-8/program.html",
         "kind": "Vortrag"
       }
     ]
