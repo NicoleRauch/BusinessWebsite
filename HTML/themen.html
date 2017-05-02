@@ -69,9 +69,9 @@
 
         <div class="row">
 
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-md-3 col-md-offset-1">
     <p><img class="img-responsive center-block" src="img/banner4.png" id="banner"></p>
-    <p>Mein Repertoire an Vorträgen und Workshops umfasst die
+    <p>Mein Repertoire an Vorträgen, Schulungen, Trainings und Workshops umfasst die
         Themenbereiche Softwareentwicklung, Softwarequalität,
         Software Craftsmanship und Funktionale Programmierung.</p>
 
@@ -81,75 +81,295 @@
 </div>
 
 
-<div class="col-md-4 col-sm-12 col-xs-12 col-md-offset-1 workshop">
+<div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-1 workshop">
 
-    <h3>Softwareentwicklung und Softwarequalität</h3>
+    <h2>Softwareentwicklung und Softwarequalität</h2>
 
-    <a data-toggle="collapse" href="#workshop1" data-parent="#workshop"><h4>Vortrag: Specification by Example</h4></a>
-    <div id="workshop1" class="collapse in">
-        Ein Überblick über die Kernideen hinter Specification by Example, gefolgt von einem kurzen Workshop, in dem
-        die Teilnehmer anhand eines Beispiels die Unterschiede zu konventionellen Tests hautnah erfahren können.
+    <a data-toggle="collapse" href="#workshop1" data-parent="#workshop"><h3>Specification by Example</h3></a>
+    <div id="workshop1" class="collapse">
+        <div>
+            Ein Überblick über die Kernideen hinter Specification by Example, gefolgt von einem kurzen Workshop, in dem
+            die Teilnehmer anhand eines Beispiels die Unterschiede zu konventionellen Tests hautnah erfahren können.
+        </div>
+
+        <div><b>Art</b>: Vortrag oder Kurzworkshop (2 - 3 Stunden)</div>
     </div>
 
-    <a data-toggle="collapse" href="#workshop2" data-parent="#workshop"><h4>Vortrag: Einführung in Domain-Driven Design</h4></a>
-    <div id="workshop2" class="collapse">
-        In einem unterhaltsamen Dialog wird in das Thema Domain-Driven Design eingeführt, und die verschiedenen
-        Aspekte werden vorgestellt.
+    <a data-toggle="collapse" href="#workshop2" data-parent="#workshop"><h3>Domain-Driven Design - Fachlichkeit im
+        Mittelpunkt der Software und ihrer Entwicklung</h3></a>
+    <div id="workshop2" class="collapse in">
+        <div>
+            <p>
+                Das zentrale und kennzeichnende Merkmal einer jeden Software ist ihre Domäne, also ihre Fachlichkeit.
+                Daher ist es essentiell für den Erfolg des Projektes, diese während des gesamten Entwicklungsprozesses
+                in den Mittelpunkt zu stellen.
+            </p>
+            <p>
+                Domain-Driven Design hat genau dies zum Ziel: Hier lernt das gesamte Team (einschließlich der
+                Entwickler) von Anfang an gemeinsam alle relevanten Aspekte der Domäne (und damit der entstehenden
+                Software) kennen. Eine gemeinsame Sprache von Fachbereich und Entwicklern bildet sich dabei fast schon
+                von selbst heraus und wird stetig weiterentwickelt.
+            </p>
+            <p>
+                Das im Zuge des domänengetriebenen Designs enstandene Modell zeigt üblicherweise abgegrenzte Bereiche im
+                entstehenden Softwaresystem auf, die für die Modularisierung des Codes genutzt werden können. Die
+                Beziehungen zwischen diesen Modulen werden genauso betrachtet wie die Abläufe innerhalb eines Moduls.
+                Zur Implementierung der Module bietet Domain-Driven Design eine Reihe von taktischen Patterns an, die je
+                nach Bedarf zum Einsatz kommen können.
+            </p>
+            <p>
+                Im Kurs werden wir diese Stufen gemeinsam anhand eines größeren Beispiels durchlaufen und nach und nach
+                ein detailliertes Domänenmodell entwickeln. Auch mögliche Vorgehensweisen bei der Implementierung werden
+                wir beleuchten -- allerdings nur theoretisch, um den Rahmen des Kurses nicht zu sprengen.
+            </p>
+            <p>
+                Da nicht jedes Projekt auf der grünen Wiese beginnt, schauen wir uns zum Abschluss des Kurses noch an,
+                wie wir mit bestehenden Codebasen umgehen können und welche Möglichkeiten es gibt, die Domäne aus
+                existierendem (Legacy-)Code herauszuarbeiten und sichtbar zu machen.
+            </p>
+        </div>
+
+        <div><b>Art</b>: Vortrag oder Workshop (2 Tage)</div>
+
+        <table class="workshopinhalt">
+            <thead>
+            <tr>
+                <th>Inhalt</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Einführung</li>
+                        <li> Event Storming - Was passiert eigentlich genau in meiner Domäne?</li>
+                        <li> Strategic Design - Wie kann ich die Domäne gut strukturieren?</li>
+                        <li> Context Mapping - Was passiert zwischen den einzelnen Teilen?</li>
+                        <li> Tactical Design - Wie kann ich die Domäne sinnvoll implementieren?</li>
+                        <li> DDD im Legacy Umfeld</li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
 
-    <a data-toggle="collapse" href="#workshop3" data-parent="#workshop"><h4>Workshop: „From Push to Pull“</h4></a>
+    <a data-toggle="collapse" href="#workshop_rr" data-parent="#workshop"><h3>React.js und Redux - Webapplikationen
+        deklarativ erstellen</h3></a>
+    <div id="workshop_rr" class="collapse">
+        <div>
+            <p>
+                Die zunehmende Leistungsfähigkeit von Browsern erlaubt es, mehr und mehr Applikationslogik ins Frontend
+                zu verlagern. Diese sogenannten Single-Page-Apps ermöglichen eine deutlich kürzere Antwortzeit auf
+                Benutzeraktionen, da die jeweiligen Berechnungen und Anzeigen auf dem Computer des Benutzers stattfinden
+                und die Ladezeiten der Seiten über das Netzwerk wegfallen. In den letzten Jahren sind einige Frameworks
+                für die Entwicklung von Single-Page-Applikationen entstanden und teilweise auch schon wieder in
+                Vergessenheit geraten. React.js gehört zu den jüngeren Vertretern dieser Gattung und besticht vor allem
+                durch seine Leichtgewichtigkeit, da es sich ganz gezielt auf die Benutzeroberfläche konzentriert. Genau
+                genommen handelt es sich noch nicht einmal um ein Framework, sondern um eine Library, was dem Entwickler
+                viel Freiraum lässt. Auch die technische Umsetzung von React.js, die eine deklarative Beschreibung der
+                Webapplikation erlaubt und die quasi ohne die sonst allgegenwärtigen Events und Listener auskommt, sorgt
+                für Leichtgewichtigkeit. Redux kümmert sich um die Verwaltung des Zustands und das Bearbeiten von
+                Aktionen und ist ein perfekter Partner für React.js.
+            </p>
+            <p>
+                Der Workshop bietet eine Einführung in die Entwicklung (und im zweitägigen Workshop auch in das Testen)
+                von Single-Page-Applikationen mit React.js und Redux.
+            </p>
+        </div>
+
+        <div><b>Art</b>: Vortrag oder Workshop (1 oder 2 Tage)</div>
+
+        <table class="workshopinhalt">
+            <thead>
+            <tr>
+                <th>Inhalt für 1 Tag</th>
+                <th>Inhalt für 2 Tage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Einführung in ECMAScript 6, Babel und Webpack</li>
+                        <li>React.js Komponenten</li>
+                        <ul>
+                            <li>Class Components</li>
+                            <li>Functional Components</li>
+                            <li>Strukturierung der Komponenten</li>
+                            <li>Verwaltung von Zustand in React.js</li>
+                        </ul>
+                        <li>Redux Store</li>
+                        <ul>
+                            <li>Verwaltung von Zustand mit Redux</li>
+                            <li>Actions und Reducers</li>
+                            <li>Asynchrone Actions und Thunks</li>
+                        </ul>
+                        <li>Nützliche Werkzeuge</li>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Einführung in ECMAScript 6, Babel und Webpack</li>
+                        <li>React.js Komponenten</li>
+                        <ul>
+                            <li>Class Components</li>
+                            <li>Functional Components</li>
+                            <li>Strukturierung der Komponenten</li>
+                            <li>Verwaltung von Zustand in React.js</li>
+                            <li>Inline Styles</li>
+                        </ul>
+                        <li>Redux Store</li>
+                        <ul>
+                            <li>Verwaltung von Zustand mit Redux</li>
+                            <li>Actions und Reducers</li>
+                            <li>Asynchrone Actions und Thunks</li>
+                            <li>Strukturierung der Actions und Reducers</li>
+                        </ul>
+                        <li>Nützliche Werkzeuge</li>
+                        <li>Tests</li>
+                        <ul>
+                            <li>Shallow Rendering</li>
+                            <li>Mocha und Must.js</li>
+                            <li>Enzyme Testbibliothek</li>
+                            <li>Mounted Rendering mit jsdom</li>
+                            <li>Integrationstests mit Sinon</li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a data-toggle="collapse" href="#workshop3" data-parent="#workshop"><h3>Refactoring Legacy Code - &bdquo;From Push
+        to Pull&ldquo;</h3></a>
     <div id="workshop3" class="collapse">
-        In betriebswirtschaftlicher Software trifft man häufig auf ein Entwicklungsmuster, das wir „Push“ getauft
-        haben: Ergebnisse werden irgendwo berechnet und in eine Ergebnisstruktur hineingeschoben („push“), dort
-        häufig auch im weiteren Verlauf nachbearbeitet, ohne dass später nachvollziehbar ist, auf welchem Weg ein
-        bestimmter Ergebniswert entstanden ist. Der Workshop, der aus einer realen Codebasis entstanden ist, zeigt
-        den Teilnehmern, welche Probleme mit „Push“-Code verbunden sind. In kleinen, nachvollziehbaren Schritten
-        werden die Teilnehmer angeleitet, die Codebasis in eine „Pull“-Struktur umzubauen. Diese zeichnet sich
-        dadurch aus, dass die Berechnung von Ergebniswerten isoliert und lokal erfolgt. Zum Weiterverarbeiten der
-        Ergebniswerte werden diese aus den Berechnungsobjekten herausgezogen („pull“). Auf diese Weise sind die
-        einzelnen Berechnungen klar nachvollziehbar und isoliert testbar.
+        <div>
+            In betriebswirtschaftlicher Software trifft man häufig auf ein Entwicklungsmuster, das wir &bdquo;Push&ldquo;
+            getauft haben: Ergebnisse werden irgendwo berechnet und in eine Ergebnisstruktur hineingeschoben (&bdquo;push&ldquo;),
+            dort häufig auch im weiteren Verlauf nachbearbeitet, ohne dass später nachvollziehbar ist, auf welchem Weg
+            ein bestimmter Ergebniswert entstanden ist. Der Workshop, der aus einer realen Codebasis entstanden ist,
+            zeigt den Teilnehmern, welche Probleme mit &bdquo;Push&ldquo;-Code verbunden sind. In kleinen,
+            nachvollziehbaren Schritten werden die Teilnehmer angeleitet, die Codebasis in eine &bdquo;Pull&ldquo;-Struktur
+            umzubauen. Diese zeichnet sich dadurch aus, dass die Berechnung von Ergebniswerten isoliert und lokal
+            erfolgt. Zum Weiterverarbeiten der Ergebniswerte werden diese aus den Berechnungsobjekten herausgezogen (&bdquo;pull&ldquo;).
+            Auf diese Weise sind die einzelnen Berechnungen klar nachvollziehbar und isoliert testbar.
+        </div>
+
+        <div><b>Art</b>: Workshop (1/2 Tag)</div>
+
     </div>
 
-    <h3>Funktionale Programmierung</h3>
+    <h2>Funktionale Programmierung</h2>
 
-    <a data-toggle="collapse" href="#workshop4" data-parent="#workshop"><h4>Vortrag: Einführung in die Funktionale Programmierung</h4></a>
+    <a data-toggle="collapse" href="#workshop4" data-parent="#workshop"><h3>Einführung in die Funktionale
+        Programmierung</h3></a>
     <div id="workshop4" class="collapse">
-        Der Vortrag bietet einen kurzen Überblick über wichtige Aspekte der funktionalen Programmierung und
-        demonstriert diese anhand der Programmiersprachen JavaScript und Haskell bzw. Java 8 und Haskell.
+        <div>
+            Funktionale Programmierung ist derzeit in aller Munde. Nicht nur die klassischen funktionalen
+            Programmiersprachen erleben einen Aufschwung, auch viele andere Sprachen erweitern ihren Sprachumfang um
+            funktionale Bestandteile. In diesem Workshop wollen wir herausfinden, warum dies so ist und was die
+            funktionale Programmierung so besonders macht. Dabei werden wir ganz praktisch vorgehen und unsere
+            Erfahrungen hauptsächlich durch Programmieren gewinnen. (Im zweitägigen Workshop soll auch das
+            automatisierte Testen nicht zu kurz kommen.) Zu guter Letzt schlagen wir eine Brücke zurück zu
+            Ihrer alltäglichen Arbeit und versuchen herauszufinden, wie sich Aspekte der funktionalen Programmierung in
+            das Arbeiten mit nicht-funktionalen Sprachen wie Java, C# oder C++ einbringen lassen.
+        </div>
+
+        <div><b>Art</b>: Vortrag oder Workshop (1 oder 2 Tage)</div>
+
+        <table class="workshopinhalt">
+            <thead>
+            <tr>
+                <th>Inhalt für 1 Tag</th>
+                <th>Inhalt für 2 Tage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Einführung</li>
+                        <li>Warum eigentlich funktionale Programmierung?</li>
+                        <li>Erste Schritte in einer funktionalen Programmiersprache</li>
+                        <li>Funktionen, Currying</li>
+                        <li>Listen, Tupel</li>
+                        <li>Typinferenz</li>
+                        <li>Polymorphe Typen</li>
+                        <li>Pattern Matching</li>
+                        <li>Lambda Expressions</li>
+                        <li>Algebraische Datentypen</li>
+                        <li>Rekursive Funktionen</li>
+                        <li>Rekursive Datentypen, Zusammenhang mit rekursiven Funktionen</li>
+                        <li>Bibliotheksfunktionen: filter, map, fold/reduce, ...</li>
+                        <li>Funktionale Programmierung in nichtfunktionalen Sprachen</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Einführung</li>
+                        <li>Warum eigentlich funktionale Programmierung?</li>
+                        <li>Erste Schritte in einer funktionalen Programmiersprache</li>
+                        <li>Funktionen, Currying</li>
+                        <li>Listen, Tupel</li>
+                        <li>Typinferenz</li>
+                        <li>Polymorphe Typen, Typklassen</li>
+                        <li>Pattern Matching</li>
+                        <li>Lambda Expressions</li>
+                        <li>Algebraische Datentypen</li>
+                        <li>Rekursive Funktionen</li>
+                        <li>Rekursive Datentypen, Zusammenhang mit rekursiven Funktionen</li>
+                        <li>Bibliotheksfunktionen: filter, map, fold/reduce, ...</li>
+                        <li>Ein- und Ausgaben (Konsole, Dateien)</li>
+                        <li>Automatisiertes Testen</li>
+                        <li>Property-Based Testing mit QuickCheck</li>
+                        <li>Funktionale Programmierung in nichtfunktionalen Sprachen</li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
 
-    <a data-toggle="collapse" href="#workshop5" data-parent="#workshop"><h4>Workshop: Einführung in die Funktionale Programmierung</h4></a>
-    <div id="workshop5" class="collapse">
-        In diesem ganztägigen Workshop wollen wir herausfinden, was die funktionale Programmierung so besonders macht.
-        Dabei werden wir praktisch vorgehen und das erlernte Wissen sofort in kleinen Programmierübungen umsetzen.
-        Auch das automatisierte Testen soll nicht zu kurz kommen.
-        Zu guter Letzt schlagen wir eine Brücke zurück zu Ihrer täglichen Arbeit und versuchen herauszufinden,
-        wie sich Aspekte der funktionalen Programmierung in das Arbeiten mit nicht-funktionalen Sprachen wie Java, C# oder C++ einbringen lassen.
-    </div>
-
-    <a data-toggle="collapse" href="#workshop6" data-parent="#workshop"><h4>Vortrag: Monaden</h4></a>
+    <a data-toggle="collapse" href="#workshop6" data-parent="#workshop"><h3>Monaden</h3></a>
     <div id="workshop6" class="collapse">
-        Ein Ausflug in die höheren Weihen der funktionalen Programmierung. Monaden sind ein wichtiges Konzept, das
-        hier anschaulich erklärt wird.
+        <div>
+            Ein Ausflug in die höheren Weihen der funktionalen Programmierung. Monaden sind ein wichtiges Konzept, das
+            hier anschaulich erklärt wird.
+        </div>
+
+        <div><b>Art</b>: Vortrag</div>
     </div>
 
-    <h3>Software Craftsmanship</h3>
+    <h2>Clean Code / Software Craftsmanship</h2>
 
-    <a data-toggle="collapse" href="#workshop7" data-parent="#workshop"><h4>Code Retreat / Legacy Code Retreat</h4></a>
+    <a data-toggle="collapse" href="#workshop7" data-parent="#workshop"><h3>Code Retreat / Legacy Code Retreat</h3></a>
     <div id="workshop7" class="collapse">
-        Ein Code Retreat ist eine Übungsform, die darauf abzielt, sich durch wiederholte Implementierung desselben
-        Problems diesem von verschiedenen Richtungen zu nähern und sich gleichzeitig auf das Einüben hilfreicher
-        Vorgehensweisen zu konzentrieren. Während man bei einem Code Retreat ein Problem immer wieder „von Null auf“
-        löst, bearbeitet man bei einem Legacy Code Retreat immer wieder dieselbe Codebasis und lernt so, wie man mit
-        Legacy Code geeignet umgehen kann.
+        <div>
+            Ein Code Retreat ist eine Übungsform, die darauf abzielt, sich durch wiederholte Implementierung desselben
+            Problems diesem von verschiedenen Richtungen zu nähern und sich gleichzeitig auf das Einüben hilfreicher
+            Vorgehensweisen zu konzentrieren. Während man bei einem Code Retreat ein Problem immer wieder „von Null auf“
+            löst, bearbeitet man bei einem Legacy Code Retreat immer wieder dieselbe Codebasis und lernt so, wie man mit
+            Legacy Code geeignet umgehen kann.
+        </div>
+
+        <div><b>Art</b>: 1 Tag</div>
     </div>
 
-    <a data-toggle="collapse" href="#workshop8" data-parent="#workshop"><h4>Vortrag: Craftsman Swaps</h4></a>
+    <a data-toggle="collapse" href="#workshop8" data-parent="#workshop"><h3>Craftsman Swaps</h3></a>
     <div id="workshop8" class="collapse">
-        Ein aus der Software Craftsmanship-Bewegung stammender Terminus, der die aktive Mitarbeit eines Entwicklers
-        in einer anderen Firma über einen begrenzten Zeitraum bezeichnet. Die verschiedenen Möglichkeiten für einen
-        solchen Austausch sowie die sich daraus ergebenden Vorteile werden kurz vorgestellt. Im Anschluss ist Raum
-        für Diskussionen sowie den Austausch der Teilnehmer gegeben.
+        <div>
+            Ein aus der Software Craftsmanship-Bewegung stammender Terminus, der die aktive Mitarbeit eines Entwicklers
+            in einer anderen Firma über einen begrenzten Zeitraum bezeichnet. Die verschiedenen Möglichkeiten für einen
+            solchen Austausch sowie die sich daraus ergebenden Vorteile werden kurz vorgestellt. Im Anschluss ist Raum
+            für Diskussionen sowie den Austausch der Teilnehmer gegeben.
+        </div>
+
+        <div><b>Art</b>: Vortrag</div>
     </div>
 
 </div>

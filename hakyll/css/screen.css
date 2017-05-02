@@ -6902,6 +6902,29 @@ ul.clean {
   font-weight: normal;
   color: grey;
 }
+.workshop div {
+  padding-bottom: 10px;
+}
+table.workshopinhalt {
+  width: 100%;
+}
+.workshopinhalt td {
+  width: 50%;
+  vertical-align: top;
+}
+.workshopinhalt ul li {
+  color: grey;
+  margin-left: -25px;
+  padding-left: 1em;
+  text-indent: -0.84em;
+}
+.workshopinhalt td > ul > li:before {
+  content: '\25B0 \A0 ';
+}
+.workshopinhalt ul > ul > li {
+  font-size: 13px;
+  margin-left: -35px;
+}
 .italic {
   font-style: italic;
   font-weight: 300;
