@@ -3,6 +3,12 @@
     "year": "2017",
     "entries": [
       {
+        "name": "Entwicklertag, Karlsruhe, 22.05.2017",
+        "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
+        "url": "https://entwicklertag.de/karlsruhe/2017/programmierpraxis",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
         "name": "Mathema Campus, Erlangen, 27.04.2017",
         "title": "Einführung in React.js and Redux",
         "url": "https://www.mathema.de/veranstaltungen/mathema-campus",

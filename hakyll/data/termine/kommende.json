@@ -1,45 +1,9 @@
 [
   {
-    "name": "Entwicklertag, Karlsruhe, 22.05.2017",
-    "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
-    "url": "https://entwicklertag.de/karlsruhe/2017/programmierpraxis",
-    "kind": "Vortrag mit Michael Sperber"
-  },
-  {
-    "name": "Digicomp, Zürich / Basel / Bern, 19.-20.6.2017 / 9.-10.8.2017 / 2.-3.10.2017 / 6.-7.12.2017",
+    "name": "Digicomp, Zürich / Basel / Bern, 9.-10.8.2017 / 2.-3.10.2017 / 6.-7.12.2017",
     "title": "Kurs: Domain-Driven Design",
     "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
     "kind": "zweitägiger Workshop"
-  },
-  {
-    "name": "Digicomp DevDay, Zürich, 21.6.2017",
-    "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
-    "url": "https://www.digicomp.ch/devday",
-    "kind": "Vortrag mit Michael Sperber"
-  },
-  {
-    "name": "Digicomp DevDay, Zürich, 22.6.2017",
-    "title": "Fifty Shades of Parsing",
-    "url": "https://www.digicomp.ch/devday",
-    "kind": "Vortrag"
-  },
-  {
-    "name": "Digicomp DevDay, Zürich, 22.6.2017",
-    "title": "React.js Goes Haskell",
-    "url": "https://www.digicomp.ch/devday",
-    "kind": "Vortrag"
-  },
-  {
-    "name": "Digicomp, Zürich, 23.6.2017",
-    "title": "Kurs: Einführung in die funktionale Programmierung",
-    "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
-    "kind": "ganztägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich, 23.6.2017",
-    "title": "Workshop: Einführung in React.js und Redux",
-    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
-    "kind": "ganztägiger Workshop"
   },
   {
     "name": "Digicomp, Zürich / Basel / Bern, 7.-8.08.2017 / 4.-5.12.2017 / 21.-22.02.2018 / 11.-12.6.2018 / 18.-19.9.2018",
@@ -48,7 +12,7 @@
     "kind": "zweitägiger Workshop"
   },
   {
-    "name": "Digicomp, Zürich / Basel / Bern, 15.8.2017 / 7.11.2017",
+    "name": "Digicomp, Zürich / Basel / Bern, 15.8.2017 / 7.11.2017 / 8.12.2017",
     "title": "Kurs: Einführung in die funktionale Programmierung",
     "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
     "kind": "ganztägiger Workshop"
