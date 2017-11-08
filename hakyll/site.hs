@@ -33,6 +33,10 @@ main = hakyllWith siteConfig $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "keybase.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler

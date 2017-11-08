@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/nicolerauch
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.nicole-rauch.de
+  * I am nicolerauch (https://keybase.io/nicolerauch) on keybase.
+  * I have a public key ASBmiJKelgsETnFe_grtkxXnY0_FzgkXUD-d_9_lcvRTrwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01206688929e960b044e715efe0aed9315e7634fc5ce0917503f9dffdfe572f453af0a",
+      "host": "keybase.io",
+      "kid": "01206688929e960b044e715efe0aed9315e7634fc5ce0917503f9dffdfe572f453af0a",
+      "uid": "f9f458daf2eaa7068556dc9936431419",
+      "username": "nicolerauch"
+    },
+    "merkle_root": {
+      "ctime": 1510173683,
+      "hash": "1bc5773478c86505871041c2104e93550eab99184925a28bd5ed9a95b61764ee25040baf0542c42bc4a462ab514fa77f4f22d30c25cf8517ea7b0793619c9cf3",
+      "hash_meta": "04718b55314245c1a68c320c1817248eebcf0d97fd6efdf8d83edb7df5c95e7a",
+      "seqno": 1681797
+    },
+    "service": {
+      "hostname": "www.nicole-rauch.de",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.34"
+  },
+  "ctime": 1510173716,
+  "expire_in": 504576000,
+  "prev": "c53e7471ef5383219f49ecb5e06b9848f474a3325badba88fa6508579756a5df",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgZoiSnpYLBE5xXv4K7ZMV52NPxc4JF1A/nf/f5XL0U68Kp3BheWxvYWTFA057ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNjY4ODkyOWU5NjBiMDQ0ZTcxNWVmZTBhZWQ5MzE1ZTc2MzRmYzVjZTA5MTc1MDNmOWRmZmRmZTU3MmY0NTNhZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNjY4ODkyOWU5NjBiMDQ0ZTcxNWVmZTBhZWQ5MzE1ZTc2MzRmYzVjZTA5MTc1MDNmOWRmZmRmZTU3MmY0NTNhZjBhIiwidWlkIjoiZjlmNDU4ZGFmMmVhYTcwNjg1NTZkYzk5MzY0MzE0MTkiLCJ1c2VybmFtZSI6Im5pY29sZXJhdWNoIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTEwMTczNjgzLCJoYXNoIjoiMWJjNTc3MzQ3OGM4NjUwNTg3MTA0MWMyMTA0ZTkzNTUwZWFiOTkxODQ5MjVhMjhiZDVlZDlhOTViNjE3NjRlZTI1MDQwYmFmMDU0MmM0MmJjNGE0NjJhYjUxNGZhNzdmNGYyMmQzMGMyNWNmODUxN2VhN2IwNzkzNjE5YzljZjMiLCJoYXNoX21ldGEiOiIwNDcxOGI1NTMxNDI0NWMxYTY4YzMyMGMxODE3MjQ4ZWViY2YwZDk3ZmQ2ZWZkZjhkODNlZGI3ZGY1Yzk1ZTdhIiwic2Vxbm8iOjE2ODE3OTd9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoid3d3Lm5pY29sZS1yYXVjaC5kZSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM0In0sImN0aW1lIjoxNTEwMTczNzE2LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6ImM1M2U3NDcxZWY1MzgzMjE5ZjQ5ZWNiNWUwNmI5ODQ4ZjQ3NGEzMzI1YmFkYmE4OGZhNjUwODU3OTc1NmE1ZGYiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDi8vvP0eLKmPzfGlO05t+AwxNdFpPS4b5qBkHo4FG7ZoRjrAB5xUJ9MXS2W6cZnoE4euN9hEIEY5h1YJwrUlsIqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgIjeCHkW7SGOVLuICRGiQ3IByeY7aedHRvtQ0rwFNH4ijdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nicolerauch
+
+==================================================================
