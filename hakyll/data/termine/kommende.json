@@ -1,50 +1,44 @@
 [
   {
-    "name": "Mathema, Erlangen, 6.-7.7.2017 / 22.-23.11.2017",
+    "name": "Mathema, Erlangen, 22.-23.11.2017",
     "title": "React.js und Redux - Webapplikationen deklarativ erstellen",
     "url": "http://mathema.de/training/katalog/w-react",
     "kind": "zweitägiger Workshop"
   },
   {
-    "name": "Mathema, Erlangen, 24.-25.7.2017 / 29.-30.11.2017",
+    "name": "Mathema, Erlangen, 29.-30.11.2017",
     "title": "Domain-Driven Design (DDD) - Fachlichkeit im Mittelpunkt der Software und ihrer Entwicklung",
     "url": "http://mathema.de/training/katalog/j-ddd",
     "kind": "zweitägiger Workshop"
   },
   {
-    "name": "Mathema, Erlangen, 31.7.-1.8.2017 / 11.-12.12.2017",
-    "title": "Einführung in die Funktionale Programmierung",
-    "url": "http://mathema.de/training/katalog/j-funkprog",
-    "kind": "zweitägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Basel / Bern, 9.-10.8.2017 / 2.-3.10.2017 / 6.-7.12.2017",
-    "title": "Kurs: Domain-Driven Design",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
-    "kind": "zweitägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Basel / Bern, 7.-8.08.2017 / 4.-5.12.2017 / 21.-22.02.2018 / 11.-12.6.2018 / 18.-19.9.2018",
+    "name": "Digicomp, Zürich / Basel / Bern, 4.-5.12.2017 / 21.-22.02.2018 / 11.-12.6.2018 / 18.-19.9.2018",
     "title": "Workshop: Einführung in React.js und Redux",
     "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
     "kind": "zweitägiger Workshop"
   },
   {
-    "name": "Digicomp, Zürich / Basel / Bern, 15.8.2017 / 7.11.2017 / 8.12.2017",
+    "name": "Digicomp, Zürich / Basel / Bern, 6.-7.12.2017",
+    "title": "Kurs: Domain-Driven Design",
+    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+    "kind": "zweitägiger Workshop"
+  },
+  {
+    "name": "Digicomp, Zürich / Basel / Bern, 8.12.2017",
     "title": "Kurs: Einführung in die funktionale Programmierung",
     "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
     "kind": "ganztägiger Workshop"
   },
   {
-    "name": "Software Craftsmanship London, London, 6.10.2017",
-    "title": "The Day After Tomorrow: Let the Machine do the Coding",
-    "url": "http://sc-london.com/#speakers",
-    "kind": "Vortrag mit Michael Sperber"
+    "name": "NewCrafts Bordeaux, Bordeaux, 7.-8.12.2017",
+    "title": "",
+    "url": "http://bordeaux.ncrafts.io",
+    "kind": "Vortrag mit Arnaud Bailly"
   },
   {
-    "name": "Web Developer Conference, München, 11.10.2017",
-    "title": "Einführung in React.js and Redux",
-    "url": "http://www.web-developer-conference.de/einfuehrung-in-react-und-redux/",
-    "kind": "Vortrag"
+    "name": "Mathema, Erlangen, 11.-12.12.2017",
+    "title": "Einführung in die Funktionale Programmierung",
+    "url": "http://mathema.de/training/katalog/j-funkprog",
+    "kind": "zweitägiger Workshop"
   }
 ]

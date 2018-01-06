@@ -3,6 +3,18 @@
     "year": "2017",
     "entries": [
       {
+        "name": "Web Developer Conference, München, 11.10.2017",
+        "title": "Einführung in React.js and Redux",
+        "url": "http://www.web-developer-conference.de/einfuehrung-in-react-und-redux/",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Software Craftsmanship London, London, 6.10.2017",
+        "title": "The Day After Tomorrow: Let the Machine do the Coding",
+        "url": "http://sc-london.com/#speakers",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
         "name": "Entwicklertag, Karlsruhe, 22.05.2017",
         "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
         "url": "https://entwicklertag.de/karlsruhe/2017/programmierpraxis",
