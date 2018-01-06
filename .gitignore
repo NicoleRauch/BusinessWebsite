@@ -15,3 +15,5 @@ node_modules
 HTML.jekyll
 _hakyll_cache
 _build
+.stack-work
+.tmp
