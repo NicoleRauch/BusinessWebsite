@@ -2,6 +2,24 @@
   {
     "year": "2017",
     "entries": [
+  {
+    "name": "Digicomp, Zürich, 4. - 5.12.2017“,
+    "title": "Workshop: Einführung in React.js und Redux",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
+    "kind": "zweitägiger Workshop"
+  },
+  {
+    "name": "NewCrafts Bordeaux, Bordeaux, 7.12.2017",
+    "title": "From Front to Back: Homomorphic Event Sourcing",
+    "url": "http://bordeaux.ncrafts.io",
+    "kind": "Vortrag mit Arnaud Bailly"
+  },
+  {
+    "name": "NewCrafts Bordeaux, Bordeaux, 7.12.2017",
+    "title": "The day after tomorrow: Let the machine do the coding",
+    "url": "http://bordeaux.ncrafts.io",
+    "kind": "Vortrag mit Michael Sperber"
+  },
       {
         "name": "Web Developer Conference, München, 11.10.2017",
         "title": "Einführung in React.js and Redux",

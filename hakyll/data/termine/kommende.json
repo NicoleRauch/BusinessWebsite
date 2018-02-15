@@ -1,50 +1,8 @@
 [
   {
-    "name": "Mathema, Erlangen, 22.-23.11.2017",
-    "title": "React.js und Redux - Webapplikationen deklarativ erstellen",
-    "url": "http://mathema.de/training/katalog/w-react",
-    "kind": "zweitägiger Workshop"
-  },
-  {
-    "name": "Mathema, Erlangen, 29.-30.11.2017",
-    "title": "Domain-Driven Design (DDD) - Fachlichkeit im Mittelpunkt der Software und ihrer Entwicklung",
-    "url": "http://mathema.de/training/katalog/j-ddd",
-    "kind": "zweitägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Basel / Bern, 4.-5.12.2017 / 21.-22.02.2018 / 11.-12.6.2018 / 18.-19.9.2018",
+    "name": "Digicomp, Zürich / Basel / Bern, 21.-22.02.2018 / 11.-12.6.2018 / 18.-19.9.2018",
     "title": "Workshop: Einführung in React.js und Redux",
     "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
     "kind": "zweitägiger Workshop"
   },
-  {
-    "name": "Digicomp, Zürich / Basel / Bern, 6.-7.12.2017",
-    "title": "Kurs: Domain-Driven Design",
-    "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
-    "kind": "zweitägiger Workshop"
-  },
-  {
-    "name": "Digicomp, Zürich / Basel / Bern, 8.12.2017",
-    "title": "Kurs: Einführung in die funktionale Programmierung",
-    "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
-    "kind": "ganztägiger Workshop"
-  },
-  {
-    "name": "NewCrafts Bordeaux, Bordeaux, 7.12.2017",
-    "title": "From Front to Back: Homomorphic Event Sourcing",
-    "url": "http://bordeaux.ncrafts.io",
-    "kind": "Vortrag mit Arnaud Bailly"
-  },
-  {
-    "name": "NewCrafts Bordeaux, Bordeaux, 7.12.2017",
-    "title": "The day after tomorrow: Let the machine do the coding",
-    "url": "http://bordeaux.ncrafts.io",
-    "kind": "Vortrag mit Michael Sperber"
-  },
-  {
-    "name": "Mathema, Erlangen, 11.-12.12.2017",
-    "title": "Einführung in die Funktionale Programmierung",
-    "url": "http://mathema.de/training/katalog/j-funkprog",
-    "kind": "zweitägiger Workshop"
-  }
 ]
