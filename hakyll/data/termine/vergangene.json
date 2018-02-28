@@ -20,29 +20,29 @@
         "url": "https://dddeurope.com/2018/speakers/nicole-rauch/#talk",
         "kind": "Vortrag mit Arnaud Bailly"
       }
-      ]
+    ]
   },
   {
     "year": "2017",
     "entries": [
-    {
+      {
         "name": "NewCrafts Bordeaux, Bordeaux, 7.12.2017",
         "title": "From Front to Back: Homomorphic Event Sourcing",
         "url": "http://bordeaux.ncrafts.io",
         "kind": "Vortrag mit Arnaud Bailly"
-    },
-    {
+      },
+      {
         "name": "NewCrafts Bordeaux, Bordeaux, 7.12.2017",
         "title": "The day after tomorrow: Let the machine do the coding",
         "url": "http://bordeaux.ncrafts.io",
         "kind": "Vortrag mit Michael Sperber"
-    },
-    {
+      },
+      {
         "name": "Digicomp, Zürich, 4. - 5.12.2017",
         "title": "Workshop: Einführung in React.js und Redux",
         "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
         "kind": "zweitägiger Workshop"
-    },
+      },
       {
         "name": "Digicomp, Bern, 29.11.2017",
         "title": "Kurs: Einführung in die funktionale Programmierung",
@@ -114,75 +114,75 @@
   {
     "year": "2016",
     "entries": [
-        {
-          "name": "XP-Days, Hamburg, 21.11.2016",
-          "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
-          "url": "http://www.xpdays.de/2016/sessions/025-programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert.html",
-          "kind": "Vortrag mit Michael Sperber"
-        },
-        {
-          "name": "NordicJS, Stockholm, 8.9.2016",
-          "title": "Event Sourcing a Node.js Application",
-          "url": "http://nordicjs.com/speakers#1600-Nicole-Rauch",
-          "videoUrl": "https://www.youtube.com/watch?v=tWH-K2E3EIo&feature=youtu.be",
-          "kind": "Vortrag"
-        },
-        {
-          "name": "Digicomp, Zürich, 23.6.2016",
-          "title": "Workshop: Einführung in React.js and Redux",
-          "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/web-und-mobile-app-entwicklung/webentwicklung/einfuehrung-in-react-js-and-redux",
-          "kind": "ganztägiger Workshop"
-        },
-        {
-          "name": "Digicomp DevDay, Zürich, 22.6.2016",
-          "title": "Einführung in die funktionale Programmierung",
-          "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folmMAAQ",
-          "kind": "Vortrag"
-        },
-        {
-          "name": "Digicomp DevDay, Zürich, 22.6.2016",
-          "title": "Schnelle Reaktion: Einführung in React.js und Redux",
-          "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folqdAAA",
-          "kind": "Vortrag"
-        },
-        {
-          "name": "Entwicklertag Karlsruhe, 15.6.2016",
-          "title": "Schnelle Reaktion - mit React und Redux",
-          "url": "https://entwicklertag.de/karlsruhe/2016/schnelle-reaktion-mit",
-          "videoUrl": "https://www.youtube.com/watch?v=hSc6ondDio8&index=6&list=PL2Uj9yB00BoFm3faM8z4iplzA-D_oGYA9",
-          "kind": "Vortrag"
-        },
-        {
-          "name": "React Europe, Paris, 3.6.2016",
-          "title": "Shallow Rendering All the Way Down",
-          "url": "https://www.react-europe.org/#schedule",
-          "videoUrl": "https://www.youtube.com/watch?v=EJDqzTKllFA",
-          "kind": "Lightning Talk"
-        },
-        {
-          "name": "JAX, Mainz, 18.4.2016",
-          "title": "Eine \"Grand Unified Theory\" der Softwareentwicklung",
-          "url": "https://jax.de/session/eine-grand-unified-theory-der-softwareentwicklung/",
-          "videoUrl": "https://vimeo.com/jaxtv/review/167721588/2014c48aae",
-          "kind": "Vortrag"
-        },
-        {
-          "name": "Mathema Campus, Erlangen, 9.4.2016",
-          "title": "Wenn die Domäne treibt - Einführung in Domain-Driven Design",
-          "kind": "Vortrag"
-        },
-        {
-          "name": "Digicomp, Zürich, 2.3.2016",
-          "title": "Referat: Domain-Driven Design (\"DDD\")",
-          "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen",
-          "kind": "Vortrag mit Arif Chughtai"
-        },
-        {
-          "name": "BOB Konferenz, Berlin, 19.2.2016",
-          "title": "Specification by Example",
-          "url": "http://bobkonf.de/2016/rauch.html",
-          "kind": "Tutorial"
-        }
+      {
+        "name": "XP-Days, Hamburg, 21.11.2016",
+        "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
+        "url": "http://www.xpdays.de/2016/sessions/025-programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert.html",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
+        "name": "NordicJS, Stockholm, 8.9.2016",
+        "title": "Event Sourcing a Node.js Application",
+        "url": "http://nordicjs.com/speakers#1600-Nicole-Rauch",
+        "videoUrl": "https://www.youtube.com/watch?v=tWH-K2E3EIo&feature=youtu.be",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Digicomp, Zürich, 23.6.2016",
+        "title": "Workshop: Einführung in React.js and Redux",
+        "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/web-und-mobile-app-entwicklung/webentwicklung/einfuehrung-in-react-js-and-redux",
+        "kind": "ganztägiger Workshop"
+      },
+      {
+        "name": "Digicomp DevDay, Zürich, 22.6.2016",
+        "title": "Einführung in die funktionale Programmierung",
+        "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folmMAAQ",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Digicomp DevDay, Zürich, 22.6.2016",
+        "title": "Schnelle Reaktion: Einführung in React.js und Redux",
+        "url": "https://www.digicomp.ch/events/softwareentwicklung-events/devday-zuerich-2016#a005700000folqdAAA",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Entwicklertag Karlsruhe, 15.6.2016",
+        "title": "Schnelle Reaktion - mit React und Redux",
+        "url": "https://entwicklertag.de/karlsruhe/2016/schnelle-reaktion-mit",
+        "videoUrl": "https://www.youtube.com/watch?v=hSc6ondDio8&index=6&list=PL2Uj9yB00BoFm3faM8z4iplzA-D_oGYA9",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "React Europe, Paris, 3.6.2016",
+        "title": "Shallow Rendering All the Way Down",
+        "url": "https://www.react-europe.org/#schedule",
+        "videoUrl": "https://www.youtube.com/watch?v=EJDqzTKllFA",
+        "kind": "Lightning Talk"
+      },
+      {
+        "name": "JAX, Mainz, 18.4.2016",
+        "title": "Eine \"Grand Unified Theory\" der Softwareentwicklung",
+        "url": "https://jax.de/session/eine-grand-unified-theory-der-softwareentwicklung/",
+        "videoUrl": "https://vimeo.com/jaxtv/review/167721588/2014c48aae",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 9.4.2016",
+        "title": "Wenn die Domäne treibt - Einführung in Domain-Driven Design",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Digicomp, Zürich, 2.3.2016",
+        "title": "Referat: Domain-Driven Design (\"DDD\")",
+        "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/methodikenprozesse/mit-domain-driven-design-ddd-nuetzliche-und-flexibel-software-bauen",
+        "kind": "Vortrag mit Arif Chughtai"
+      },
+      {
+        "name": "BOB Konferenz, Berlin, 19.2.2016",
+        "title": "Specification by Example",
+        "url": "http://bobkonf.de/2016/rauch.html",
+        "kind": "Tutorial"
+      }
     ]
   },
   {
