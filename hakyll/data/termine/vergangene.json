@@ -1,5 +1,28 @@
 [
   {
+    "year": "2018",
+    "entries": [
+      {
+        "name": "BOBKonf, Berlin, 23.2.18",
+        "title": "EventStorming für Domain-Driven Design",
+        "url": "http://bobkonf.de/2018/rauch.html",
+        "kind": "Workshop"
+      },
+      {
+        "name": "DDD Europe, Amsterdam, 2.2.18",
+        "title": "Front to Back Event Sourcing",
+        "url": "https://dddeurope.com/2018/speakers/nicole-rauch/#handson",
+        "kind": "Workshop mit Arnaud Bailly"
+      },
+      {
+        "name": "DDD Europe, Amsterdam, 1.2.18",
+        "title": "From Front to Back: Homomorphic Event Sourcing",
+        "url": "https://dddeurope.com/2018/speakers/nicole-rauch/#talk",
+        "kind": "Vortrag mit Arnaud Bailly"
+      }
+      ]
+  },
+  {
     "year": "2017",
     "entries": [
     {
@@ -20,12 +43,24 @@
         "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
         "kind": "zweitägiger Workshop"
     },
-    {
+      {
         "name": "Digicomp, Bern, 29.11.2017",
         "title": "Kurs: Einführung in die funktionale Programmierung",
         "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
         "kind": "ganztägiger Workshop"
-    },
+      },
+      {
+        "name": "W-JAX, München, 7.11.2017",
+        "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
+        "url": "https://jax.de/agile-culture/programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert/",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
+        "name": "KanDDDinsky, Berlin, 21.10.2017",
+        "title": "Refactoring Legacy Code: From 'Big Ball of Mud' to Domain-Driven Design",
+        "url": "https://kandddinsky.de/archive/2017/20.html",
+        "kind": "Workshop"
+      },
       {
         "name": "Web Developer Conference, München, 11.10.2017",
         "title": "Einführung in React.js and Redux",
