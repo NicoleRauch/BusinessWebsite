@@ -1,12 +1,6 @@
 [
     {
-        "name": "Digicomp, Zürich / Basel / Bern, 21. - 22.02.2018 / 11. - 12.6.2018 / 1. - 2.10.2018",
-        "title": "Workshop: Einführung in React.js und Redux",
-        "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
-        "kind": "zweitägiger Workshop"
-    },
-    {
-        "name": "Software Architecture Summit, München, 12. - 14.3.2018",
+        "name": "Software Architecture Summit, München, 12.3.2018",
         "title": "Eventstorming und Domain-Driven Design",
         "url": "https://software-architecture-summit.de/softwarearchitektur/nicole-rauch-eventstorming-und-domain-driven-design/",
         "kind": "Vortrag"
@@ -30,7 +24,7 @@
         "kind": "Vortrag"
     },
     {
-        "name": "DDD eXchange, London, 26. - 27.4.2018",
+        "name": "DDD eXchange, London, 26.4.2018",
         "title": "Beyond Consumer-Driven Contract Testing",
         "url": "https://skillsmatter.com/conferences/9396-ddd-exchange-2018#program",
         "kind": "Vortrag"
@@ -48,15 +42,21 @@
         "kind": "ganztägiger Workshop"
     },
     {
-        "name": "Digicomp, Zürich / Basel / Bern, 14. - 15.5.2018 / 2. - 3.7.2018",
-        "title": "Kurs: Domain-Driven Design",
-        "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
-        "kind": "zweitägiger Workshop"
-    },
-    {
         "name": "NewCrafts Paris, Paris, 17. - 18.5.2018",
         "title": "End the Software Crisis!",
         "url": "",
         "kind": "Vortrag mit Michael Sperber"
+    },
+    {
+        "name": "Digicomp, Zürich / Basel / Bern, 11. - 12.6.2018 / 1. - 2.10.2018",
+        "title": "Workshop: Einführung in React.js und Redux",
+        "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
+        "kind": "zweitägiger Workshop"
+    },
+    {
+        "name": "Digicomp, Zürich / Basel / Bern, 2. - 3.7.2018",
+        "title": "Kurs: Domain-Driven Design",
+        "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
+        "kind": "zweitägiger Workshop"
     }
 ]
