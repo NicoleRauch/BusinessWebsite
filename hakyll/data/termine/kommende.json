@@ -9,31 +9,31 @@
         "name": "Software Architecture Summit, München, 12. - 14.3.2018",
         "title": "Eventstorming und Domain-Driven Design",
         "url": "https://software-architecture-summit.de/softwarearchitektur/nicole-rauch-eventstorming-und-domain-driven-design/",
-        "kind": "Vortrag",
+        "kind": "Vortrag"
     },
     {
         "name": "JavaLand, Brühl, 14.3.2018",
         "title": "Event Storming für Domain-Driven Design",
         "url": "https://programm.javaland.eu/2018/#/schedule",
-        "kind": "Vortrag",
-    }, 
+        "kind": "Vortrag"
+    },
     {
         "name": "Mathema Campus, Erlangen, 20.4.2018",
         "title": "Event Storming für Domain-Driven Design",
         "url": "",
-        "kind": "Vortrag",
+        "kind": "Vortrag"
     },
     {
         "name": "Mathema Campus, Erlangen, 21.4.2018",
         "title": "Consumer-Driven Contract Testing - and Beyond",
         "url": "",
-        "kind": "Vortrag",
+        "kind": "Vortrag"
     },
     {
         "name": "DDD eXchange, London, 26. - 27.4.2018",
         "title": "Beyond Consumer-Driven Contract Testing",
         "url": "https://skillsmatter.com/conferences/9396-ddd-exchange-2018#program",
-        "kind": "Vortrag",
+        "kind": "Vortrag"
     },
     {
         "name": "Digicomp, Zürich / Basel / Bern, 7.5.2018 / 31.7.2018 / 22.11.2018",
@@ -57,6 +57,6 @@
         "name": "NewCrafts Paris, Paris, 17. - 18.5.2018",
         "title": "End the Software Crisis!",
         "url": "",
-        "kind": "Vortrag mit Michael Sperber",
-    },  
+        "kind": "Vortrag mit Michael Sperber"
+    }
 ]
