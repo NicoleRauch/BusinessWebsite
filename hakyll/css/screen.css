@@ -6960,3 +6960,15 @@ table.workshopinhalt {
 .impressum ul > li:nth-child(4) {
   font-style: italic;
 }
+.post-content ul {
+  list-style: disc;
+}
+.post-content ul li {
+  margin-top: 10px;
+}
+.post-content ul ul {
+  list-style: circle;
+}
+.post-content ul ul li {
+  margin-top: 0px;
+}

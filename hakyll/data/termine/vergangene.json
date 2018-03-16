@@ -3,6 +3,18 @@
     "year": "2018",
     "entries": [
       {
+        "name": "JavaLand, Brühl, 14.3.2018",
+        "title": "Event Storming für Domain-Driven Design",
+        "url": "https://programm.javaland.eu/2018/#/scheduledEvent/550325",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Software Architecture Summit, München, 12.3.2018",
+        "title": "Eventstorming und Domain-Driven Design",
+        "url": "https://software-architecture-summit.de/softwarearchitektur/nicole-rauch-eventstorming-und-domain-driven-design/",
+        "kind": "halbtägiger Workshop"
+      },
+      {
         "name": "BOBKonf, Berlin, 23.2.18",
         "title": "EventStorming für Domain-Driven Design",
         "url": "http://bobkonf.de/2018/rauch.html",

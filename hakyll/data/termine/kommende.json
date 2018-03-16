@@ -1,17 +1,5 @@
 [
     {
-        "name": "Software Architecture Summit, München, 12.3.2018",
-        "title": "Eventstorming und Domain-Driven Design",
-        "url": "https://software-architecture-summit.de/softwarearchitektur/nicole-rauch-eventstorming-und-domain-driven-design/",
-        "kind": "Vortrag"
-    },
-    {
-        "name": "JavaLand, Brühl, 14.3.2018",
-        "title": "Event Storming für Domain-Driven Design",
-        "url": "https://programm.javaland.eu/2018/#/scheduledEvent/550325",
-        "kind": "Vortrag"
-    },
-    {
         "name": "Mathema Campus, Erlangen, 20.4.2018",
         "title": "Event Storming für Domain-Driven Design",
         "url": "",
@@ -42,6 +30,12 @@
         "kind": "ganztägiger Workshop"
     },
     {
+        "name": "Digicomp, 11.5.2018, 14:00 - 15:00",
+        "title": "EventStorming für Domain-Driven Design",
+        "url": "https://www.digicomp.ch/events/webinare/eventstorming-fuer-domain-driven-design",
+        "kind": "Online-Webinar"
+    },
+    {
         "name": "NewCrafts Paris, Paris, 17. - 18.5.2018",
         "title": "End the Software Crisis!",
         "url": "",
@@ -52,6 +46,12 @@
         "title": "Workshop: Einführung in React.js und Redux",
         "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
         "kind": "zweitägiger Workshop"
+    },
+    {
+        "name": "Entwicklertag Karlsruhe, Karlsruhe, 21.6.2018",
+        "title": "Beendet die Software-Krise!",
+        "url": "https://entwicklertag.de/karlsruhe/2018/",
+        "kind": "Vortrag mit Michael Sperber"
     },
     {
         "name": "Digicomp, Zürich / Basel / Bern, 2. - 3.7.2018",
