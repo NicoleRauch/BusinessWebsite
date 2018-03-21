@@ -57,3 +57,14 @@ Community-Building. Vielleicht könnt Ihr auch einen
 Kontakt herstellen zu den Hauptpersonen (ich vermittle gern, wenn ich kann). 
 Dann könnt Ihr sie einfach mal vor Ort besuchen oder sie vielleicht sogar zu Euch einladen?
  
+## Für die Umstehenden
+
+Oft werde ich gefragt, wie man die Entwicklerschaft motivieren kann, ein solches Unterfangen
+anzugehen. In diesem Zusammenhang habe ich eine große Bitte: Einfach mal aufhören mit Motivierungsversuchen.
+Und, was noch viel wichtiger ist: Bitte auch aufhören zu *de*motivieren! Damit wird viel mehr
+kaputtgemacht als man hinterher wieder reparieren kann. Einfach mal einen Schritt zurücktreten
+und die Entwickler machen lassen. Pluspunkte gibt es für sinnvolle Unterstützung, wie z. B. die
+oben erwähnte Zeitregelung (die Firma gibt 50% der Lernzeit dazu). Oder einfach mal
+spontan ne Runde Pizza schmeißen für die Lernenden. Aber am allerbesten: Fragen stellen!
+Wie zum Beispiel: "Was braucht Ihr? Womit können wir Euch sinnvoll unterstützen (in der Community und im Alltag)?" 
+Die Antworten können sehr überraschend sein.
