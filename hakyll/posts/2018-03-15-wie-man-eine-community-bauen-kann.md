@@ -68,3 +68,10 @@ oben erwähnte Zeitregelung (die Firma gibt 50% der Lernzeit dazu). Oder einfach
 spontan ne Runde Pizza schmeißen für die Lernenden. Aber am allerbesten: Fragen stellen!
 Wie zum Beispiel: "Was braucht Ihr? Womit können wir Euch sinnvoll unterstützen (in der Community und im Alltag)?" 
 Die Antworten können sehr überraschend sein.
+
+---
+
+Interessanterweise ist am gleichen Tag der Artikel [Rewarding Moments During Lunch & Learn...](http://draptik.github.io/blog/2018/03/15/that-moment/) veröffentlicht worden.
+Scheint was dran zu sein an dem Thema ;-)
+
+Im Nachgang wurde ich gefragt, was ich eigentlich mit "Demotivieren" meine. Dazu habe ich [einen eigenen Blogpost geschrieben](./2018-03-28-hoer-auf-zu-demotivieren.html).
