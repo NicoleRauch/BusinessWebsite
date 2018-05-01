@@ -3,6 +3,30 @@
     "year": "2018",
     "entries": [
       {
+        "name": "DDD eXchange, London, 26.4.2018",
+        "title": "Beyond Consumer-Driven Contract Testing",
+        "url": "https://skillsmatter.com/conferences/9396-ddd-exchange-2018#program",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 21.4.2018",
+        "title": "Consumer-Driven Contract Testing - and Beyond",
+        "url": "",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Mathema Campus, Erlangen, 20.4.2018",
+        "title": "Event Storming für Domain-Driven Design",
+        "url": "",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Softwerkskammer, Karlsruhe, 10.4.2018",
+        "title": "Beyond Consumer-Driven Contract Tests",
+        "url": "https://www.softwerkskammer.org/activities/ka-treffen-79",
+        "kind": "Vortrag"
+      },
+      {
         "name": "JavaLand, Brühl, 14.3.2018",
         "title": "Event Storming für Domain-Driven Design",
         "url": "https://programm.javaland.eu/2018/#/scheduledEvent/550325",
@@ -83,6 +107,7 @@
         "name": "Software Craftsmanship London, London, 6.10.2017",
         "title": "The Day After Tomorrow: Let the Machine do the Coding",
         "url": "http://sc-london.com/#speakers",
+        "videoUrl": "https://www.youtube.com/watch?v=CO95FShDySA",
         "kind": "Vortrag mit Michael Sperber"
       },
       {
@@ -170,6 +195,12 @@
         "url": "https://www.react-europe.org/#schedule",
         "videoUrl": "https://www.youtube.com/watch?v=EJDqzTKllFA",
         "kind": "Lightning Talk"
+      },
+      {
+        "name": "Tim Bourguignon: DevJourney (www.devjourney.info), 8.5.2016",
+        "title": "DevJourney Interview #11 Nicole Rauch",
+        "url": "http://www.timbourguignon.fr/devjourney-interview-11-nicole-rauch/",
+        "kind": "Interview"
       },
       {
         "name": "JAX, Mainz, 18.4.2016",

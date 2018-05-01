@@ -1,48 +1,36 @@
 [
     {
-        "name": "Mathema Campus, Erlangen, 20.4.2018",
-        "title": "Event Storming für Domain-Driven Design",
-        "url": "",
-        "kind": "Vortrag"
-    },
-    {
-        "name": "Mathema Campus, Erlangen, 21.4.2018",
-        "title": "Consumer-Driven Contract Testing - and Beyond",
-        "url": "",
-        "kind": "Vortrag"
-    },
-    {
-        "name": "DDD eXchange, London, 26.4.2018",
-        "title": "Beyond Consumer-Driven Contract Testing",
-        "url": "https://skillsmatter.com/conferences/9396-ddd-exchange-2018#program",
-        "kind": "Vortrag"
-    },
-    {
-        "name": "Digicomp, Zürich / Basel / Bern, 7.5.2018 / 31.7.2018 / 22.11.2018",
-        "title": "Kurs: Einführung in die funktionale Programmierung",
-        "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
-        "kind": "ganztägiger Workshop"
-    },
-    {
-        "name": "Digicomp, Zürich / Basel / Bern, 8.5.2018 / 30.7.2018 / 1.11.2018",
-        "title": "Kurs: Specification by Example",
-        "url": "https://www.digicomp.ch/weiterbildung/web-und-softwareentwicklungs-trainings/software-engineering/anforderungsanalyse/specification-by-example",
-        "kind": "ganztägiger Workshop"
-    },
-    {
         "name": "Digicomp, 11.5.2018, 14:00 - 15:00",
         "title": "EventStorming für Domain-Driven Design",
         "url": "https://www.digicomp.ch/events/webinare/eventstorming-fuer-domain-driven-design",
         "kind": "Online-Webinar"
     },
     {
-        "name": "NewCrafts Paris, Paris, 17. - 18.5.2018",
+        "name": "NewCrafts Paris, Paris, 17.5.2018",
         "title": "End the Software Crisis!",
-        "url": "",
+        "url": "http://ncrafts.io/speaker/nicolerauch#nc18-nra01",
         "kind": "Vortrag mit Michael Sperber"
     },
     {
-        "name": "Digicomp, Zürich / Basel / Bern, 11. - 12.6.2018 / 1. - 2.10.2018",
+      "name": "msgGillardon Entwicklertag, Passau, 6.6.2018",
+      "title": "EventStorming für Domain-Driven Design",
+      "url": "",
+      "kind": "Vortrag"
+    },
+    {
+      "name": "Microservices Summit & API Summit, München, 11.6.2018",
+      "title": "Beyond Consumer-Driven Contract Testing",
+      "url": "https://microservices-summit.de/microservices/jenseits-von-consumer-driven-contract-testing/",
+      "kind": "Vortrag"
+    },
+    {
+      "name": "Microservices Summit & API Summit, München, 13.6.2018",
+      "title": "Event-Storming für Domain-Driven Design",
+      "url": "https://microservices-summit.de/microservices/eventstorming-fuer-domain-driven-design/",
+      "kind": "ganztägiger Workshop"
+    },
+    {
+        "name": "Digicomp, Zürich / Basel / Bern, 14. - 15.6.2018 / 1. - 2.10.2018",
         "title": "Workshop: Einführung in React.js und Redux",
         "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
         "kind": "zweitägiger Workshop"
@@ -58,5 +46,29 @@
         "title": "Kurs: Domain-Driven Design",
         "url": "https://www.digicomp.ch/weiterbildung/softwareentwicklungs-trainings/software-engineering/softwarearchitektur/domain-driven-design",
         "kind": "zweitägiger Workshop"
-    }
+    },
+  {
+    "name": "Java Forum Stuttgart, 5.7.2018",
+    "title": "Beendet die Software-Krise!",
+    "url": "https://www.java-forum-stuttgart.de/de/Slot+6+2018.html#D6",
+    "kind": "Vortrag mit Michael Sperber"
+  },
+    {
+      "name": "Digicomp, Zürich / Basel / Bern, 30.7.2018 / 1.11.2018",
+      "title": "Kurs: Specification by Example",
+      "url": "https://www.digicomp.ch/weiterbildung/web-und-softwareentwicklungs-trainings/software-engineering/anforderungsanalyse/specification-by-example",
+      "kind": "ganztägiger Workshop"
+    },
+    {
+      "name": "Digicomp, Zürich / Basel / Bern, 31.7.2018 / 22.11.2018",
+      "title": "Kurs: Einführung in die funktionale Programmierung",
+      "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
+      "kind": "ganztägiger Workshop"
+    },
+  {
+    "name": "KanDDDinsky, Berlin, 19.10.2018",
+    "title": "Beyond Consumer-Driven Contract Testing",
+    "url": "",
+    "kind": "Vortrag"
+  }
 ]
