@@ -3,6 +3,12 @@
     "year": "2018",
     "entries": [
       {
+        "name": "Software Crafters Meetup, Paris, 14.5.2018",
+        "title": "EventStorming for Domain-Driven Design",
+        "url": "https://www.meetup.com/de-DE/paris-software-craftsmanship/events/250541349/",
+        "kind": "Vortrag"
+      },
+      {
         "name": "DDD eXchange, London, 26.4.2018",
         "title": "Beyond Consumer-Driven Contract Testing",
         "url": "https://skillsmatter.com/conferences/9396-ddd-exchange-2018#program",

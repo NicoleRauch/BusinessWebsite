@@ -1,11 +1,5 @@
 [
     {
-        "name": "Software Crafters Meetup, Paris, 14.5.2018",
-        "title": "EventStorming for Domain-Driven Design",
-        "url": "https://www.meetup.com/de-DE/paris-software-craftsmanship/events/250541349/",
-        "kind": "Vortrag"
-    },
-    {
         "name": "NewCrafts, Paris, 17.5.2018",
         "title": "End the Software Crisis!",
         "url": "http://ncrafts.io/speaker/nicolerauch#nc18-nra01",
@@ -65,10 +59,23 @@
       "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
       "kind": "ganztägiger Workshop"
     },
-  {
-    "name": "KanDDDinsky, Berlin, 19.10.2018",
-    "title": "Beyond Consumer-Driven Contract Testing",
-    "url": "",
-    "kind": "Vortrag"
-  }
+    {
+      "name": "API Conference, Berlin, 26.09.2018",
+      "title": "Beyond Consumer-Driven Contract Testing",
+      "url": "",
+      "kind": "Vortrag"
+    },
+    {
+      "name": "KanDDDinsky, Berlin, 19.10.2018",
+      "title": "Beyond Consumer-Driven Contract Testing",
+      "url": "",
+      "kind": "Vortrag"
+    },
+    {
+      "name": "W-JAX, München, 6.11.2018",
+      "title": "Event-Storming für Domain-Driven Design",
+      "url": "",
+      "kind": "Vortrag"
+    }
+
 ]
