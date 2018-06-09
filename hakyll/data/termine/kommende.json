@@ -1,17 +1,5 @@
 [
     {
-        "name": "NewCrafts, Paris, 17.5.2018",
-        "title": "End the Software Crisis!",
-        "url": "http://ncrafts.io/speaker/nicolerauch#nc18-nra01",
-        "kind": "Vortrag mit Michael Sperber"
-    },
-    {
-      "name": "msgGillardon Entwicklertag, Passau, 6.6.2018",
-      "title": "EventStorming für Domain-Driven Design",
-      "url": "",
-      "kind": "Vortrag"
-    },
-    {
       "name": "Microservices Summit & API Summit, München, 11.6.2018",
       "title": "Beyond Consumer-Driven Contract Testing",
       "url": "https://microservices-summit.de/microservices/jenseits-von-consumer-driven-contract-testing/",
@@ -34,6 +22,12 @@
         "title": "Beendet die Software-Krise!",
         "url": "https://entwicklertag.de/karlsruhe/2018/",
         "kind": "Vortrag mit Michael Sperber"
+    },
+    {
+      "name": "Softwerkskammer Rheinland-Pfalz, Kaiserslautern, 26.6.2018",
+      "title": "Softwerkskammer Gestern - Heute - Morgen",
+      "url": "",
+      "kind": "Vortrag"
     },
     {
         "name": "Digicomp, Zürich / Basel / Bern, 2. - 3.7.2018",
@@ -62,19 +56,25 @@
     {
       "name": "API Conference, Berlin, 26.09.2018",
       "title": "Beyond Consumer-Driven Contract Testing",
-      "url": "",
+      "url": "https://apiconference.net/api-development/beyond-consumer-driven-contract-testing/",
       "kind": "Vortrag"
     },
+  {
+    "name": "JUG Saxony Day, Dresden, 28.09.2018",
+    "title": "Beyond Consumer-Driven Contract Testing",
+    "url": "https://jug-saxony-day.org/",
+    "kind": "Vortrag"
+  },
     {
       "name": "KanDDDinsky, Berlin, 19.10.2018",
       "title": "Beyond Consumer-Driven Contract Testing",
-      "url": "",
+      "url": "https://kandddinsky.de/index.html#schedule",
       "kind": "Vortrag"
     },
     {
       "name": "W-JAX, München, 6.11.2018",
       "title": "Event-Storming für Domain-Driven Design",
-      "url": "",
+      "url": "https://jax.de/software-architecture/event-storming-fuer-domain-driven-design/",
       "kind": "Vortrag"
     }
 

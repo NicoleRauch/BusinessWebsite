@@ -3,6 +3,18 @@
     "year": "2018",
     "entries": [
       {
+        "name": "msgGillardon Entwicklertag, Passau, 6.6.2018",
+        "title": "EventStorming für Domain-Driven Design",
+        "url": "",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "NewCrafts, Paris, 17.5.2018",
+        "title": "End the Software Crisis!",
+        "url": "http://ncrafts.io/speaker/nicolerauch#nc18-nra01",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
         "name": "Software Crafters Meetup, Paris, 14.5.2018",
         "title": "EventStorming for Domain-Driven Design",
         "url": "https://www.meetup.com/de-DE/paris-software-craftsmanship/events/250541349/",
