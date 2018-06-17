@@ -1,23 +1,5 @@
 [
     {
-      "name": "Microservices Summit & API Summit, München, 11.6.2018",
-      "title": "Beyond Consumer-Driven Contract Testing",
-      "url": "https://microservices-summit.de/microservices/jenseits-von-consumer-driven-contract-testing/",
-      "kind": "Vortrag"
-    },
-    {
-      "name": "Microservices Summit & API Summit, München, 13.6.2018",
-      "title": "Event-Storming für Domain-Driven Design",
-      "url": "https://microservices-summit.de/microservices/eventstorming-fuer-domain-driven-design/",
-      "kind": "ganztägiger Workshop"
-    },
-    {
-        "name": "Digicomp, Zürich / Basel / Bern, 14. - 15.6.2018 / 1. - 2.10.2018",
-        "title": "Workshop: Einführung in React.js und Redux",
-        "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
-        "kind": "zweitägiger Workshop"
-    },
-    {
         "name": "Entwicklertag Karlsruhe, Karlsruhe, 21.6.2018",
         "title": "Beendet die Software-Krise!",
         "url": "https://entwicklertag.de/karlsruhe/2018/",
@@ -64,6 +46,12 @@
     "title": "Beyond Consumer-Driven Contract Testing",
     "url": "https://jug-saxony-day.org/",
     "kind": "Vortrag"
+  },
+  {
+    "name": "Digicomp, Zürich / Basel / Bern, 1. - 2.10.2018",
+    "title": "Workshop: Einführung in React.js und Redux",
+    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
+    "kind": "zweitägiger Workshop"
   },
   {
     "name": "Architecture Gathering, München, 11.10.2018",

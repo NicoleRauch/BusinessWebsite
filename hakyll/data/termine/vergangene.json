@@ -3,6 +3,24 @@
     "year": "2018",
     "entries": [
       {
+        "name": "Digicomp, Zürich, 14. - 15.6.2018",
+        "title": "Workshop: Einführung in React.js und Redux",
+        "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
+        "kind": "zweitägiger Workshop"
+      },
+      {
+        "name": "Microservices Summit & API Summit, München, 13.6.2018",
+        "title": "Event-Storming für Domain-Driven Design",
+        "url": "https://microservices-summit.de/microservices/eventstorming-fuer-domain-driven-design/",
+        "kind": "ganztägiger Workshop"
+      },
+      {
+        "name": "Microservices Summit & API Summit, München, 11.6.2018",
+        "title": "Beyond Consumer-Driven Contract Testing",
+        "url": "https://microservices-summit.de/microservices/jenseits-von-consumer-driven-contract-testing/",
+        "kind": "Vortrag"
+      },
+      {
         "name": "msgGillardon Entwicklertag, Passau, 6.6.2018",
         "title": "EventStorming für Domain-Driven Design",
         "kind": "Vortrag"
