@@ -1,6 +1,6 @@
 [
     {
-      "name": "Digicomp, Zürich / Basel / Bern, 30.7.2018 / 1.11.2018",
+      "name": "Digicomp, Zürich / Basel / Bern, 30.7.2018 / 1.11.2018 / 28.2.2019",
       "title": "Kurs: Specification by Example",
       "url": "https://www.digicomp.ch/weiterbildung/web-und-softwareentwicklungs-trainings/software-engineering/anforderungsanalyse/specification-by-example",
       "kind": "ganztägiger Workshop"
@@ -12,13 +12,13 @@
       "kind": "ganztägiger Workshop"
     },
     {
-      "name": "API Conference, Berlin, 26.09.2018",
+      "name": "API Conference, Berlin, 26.9.2018",
       "title": "Beyond Consumer-Driven Contract Testing",
       "url": "https://apiconference.net/api-development/beyond-consumer-driven-contract-testing/",
       "kind": "Vortrag"
     },
   {
-    "name": "JUG Saxony Day, Dresden, 28.09.2018",
+    "name": "JUG Saxony Day, Dresden, 28.9.2018",
     "title": "Beyond Consumer-Driven Contract Testing",
     "url": "https://jug-saxony-day.org/",
     "kind": "Vortrag"
@@ -47,5 +47,11 @@
       "url": "https://jax.de/software-architecture/event-storming-fuer-domain-driven-design/",
       "kind": "Vortrag"
     }
+    {
+      "name": "Digicomp, Zürich, 28.2.2019",
+      "title": "Kurs: Specification by Example",
+      "url": "https://www.digicomp.ch/weiterbildung/web-und-softwareentwicklungs-trainings/software-engineering/anforderungsanalyse/specification-by-example",
+      "kind": "ganztägiger Workshop"
+    },
 
 ]
