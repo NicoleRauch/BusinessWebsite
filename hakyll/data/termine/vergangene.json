@@ -3,6 +3,24 @@
     "year": "2018",
     "entries": [
       {
+        "name": "Java Forum Stuttgart, 5.7.2018",
+        "title": "Beendet die Software-Krise!",
+        "url": "https://www.java-forum-stuttgart.de/de/Slot+6+2018.html#D6",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
+        "name": "Softwerkskammer Rheinland-Pfalz, Kaiserslautern, 26.6.2018",
+        "title": "Softwerkskammer Gestern - Heute - Morgen",
+        "url": "https://www.softwerkskammer.org/activities/softwerkskammerrlp",
+        "kind": "Vortrag"
+      },
+      {
+        "name": "Entwicklertag Karlsruhe, Karlsruhe, 21.6.2018",
+        "title": "Beendet die Software-Krise!",
+        "url": "https://entwicklertag.de/karlsruhe/2018/",
+        "kind": "Vortrag mit Michael Sperber"
+      },
+      {
         "name": "Digicomp, Zürich, 14. - 15.6.2018",
         "title": "Workshop: Einführung in React.js und Redux",
         "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
