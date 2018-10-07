@@ -2,7 +2,19 @@
   {
     "year": "2018",
     "entries": [
-      {
+  {
+    "name": "JUG Saxony Day, Dresden, 28.9.2018",
+    "title": "Beyond Consumer-Driven Contract Testing",
+    "url": "https://jug-saxony-day.org/",
+    "kind": "Vortrag"
+  },
+     {
+      "name": "API Conference, Berlin, 26.9.2018",
+      "title": "Beyond Consumer-Driven Contract Testing",
+      "url": "https://apiconference.net/api-development/beyond-consumer-driven-contract-testing/",
+      "kind": "Vortrag"
+    },
+     {
         "name": "Java Forum Stuttgart, 5.7.2018",
         "title": "Beendet die Software-Krise!",
         "url": "https://www.java-forum-stuttgart.de/de/Slot+6+2018.html#D6",

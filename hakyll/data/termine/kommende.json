@@ -1,34 +1,4 @@
 [
-    {
-      "name": "Digicomp, Zürich / Basel / Bern, 30.7.2018 / 1.11.2018 / 28.2.2019",
-      "title": "Kurs: Specification by Example",
-      "url": "https://www.digicomp.ch/weiterbildung/web-und-softwareentwicklungs-trainings/software-engineering/anforderungsanalyse/specification-by-example",
-      "kind": "ganztägiger Workshop"
-    },
-    {
-      "name": "Digicomp, Zürich / Basel / Bern, 31.7.2018 / 22.11.2018",
-      "title": "Kurs: Einführung in die funktionale Programmierung",
-      "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
-      "kind": "ganztägiger Workshop"
-    },
-    {
-      "name": "API Conference, Berlin, 26.9.2018",
-      "title": "Beyond Consumer-Driven Contract Testing",
-      "url": "https://apiconference.net/api-development/beyond-consumer-driven-contract-testing/",
-      "kind": "Vortrag"
-    },
-  {
-    "name": "JUG Saxony Day, Dresden, 28.9.2018",
-    "title": "Beyond Consumer-Driven Contract Testing",
-    "url": "https://jug-saxony-day.org/",
-    "kind": "Vortrag"
-  },
-  {
-    "name": "Digicomp, Zürich / Basel / Bern, 1. - 2.10.2018",
-    "title": "Workshop: Einführung in React.js und Redux",
-    "url": "https://www.digicomp.ch/events/softwareentwicklung-events/einfuehrung-in-react-js-and-redux",
-    "kind": "zweitägiger Workshop"
-  },
   {
     "name": "Architecture Gathering, München, 11.10.2018",
     "title": "Funktionale Software-Architektur goes iSAQB",
@@ -42,11 +12,23 @@
       "kind": "Vortrag"
     },
     {
+      "name": "Digicomp, Zürich / Basel / Bern, 1.11.2018",
+      "title": "Kurs: Specification by Example",
+      "url": "https://www.digicomp.ch/weiterbildung/web-und-softwareentwicklungs-trainings/software-engineering/anforderungsanalyse/specification-by-example",
+      "kind": "ganztägiger Workshop"
+    },
+    {
       "name": "W-JAX, München, 6.11.2018",
       "title": "Event-Storming für Domain-Driven Design",
       "url": "https://jax.de/software-architecture/event-storming-fuer-domain-driven-design/",
       "kind": "Vortrag"
     }
+    {
+      "name": "Digicomp, Zürich / Basel / Bern, 22.11.2018",
+      "title": "Kurs: Einführung in die funktionale Programmierung",
+      "url": "https://www.digicomp.ch/trends/developer-trends/einfuehrung-in-die-funktionale-programmierung",
+      "kind": "ganztägiger Workshop"
+    },
     {
       "name": "Digicomp, Zürich, 28.2.2019",
       "title": "Kurs: Specification by Example",
