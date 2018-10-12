@@ -22,7 +22,7 @@
       "title": "Event-Storming für Domain-Driven Design",
       "url": "https://jax.de/software-architecture/event-storming-fuer-domain-driven-design/",
       "kind": "Vortrag"
-    }
+    },
   {
     "name": "EKON 22, Düsseldorf, 7.11.2018",
     "title": "Event Storming für Domain-Driven Design",
@@ -58,12 +58,5 @@
     "title": "Event Storming für Domain-Driven Design",
     "url": "https://microservices-summit.de/ddd/event-storming-fuer-domain-driven-design/",
     "kind": "Workshop"
-  },
-    {
-      "name": "Digicomp, Zürich, 28.2.2019",
-      "title": "Kurs: Specification by Example",
-      "url": "https://www.digicomp.ch/weiterbildung/web-und-softwareentwicklungs-trainings/software-engineering/anforderungsanalyse/specification-by-example",
-      "kind": "ganztägiger Workshop"
-    },
-
+  }
 ]
