@@ -40,7 +40,7 @@
     "title": "Event Storming für Domain-Driven Design",
     "url": "https://microservices-summit.de/ddd/event-storming-fuer-domain-driven-design/",
     "kind": "Workshop"
-  }
+  },
   {
     "name": "OOP, München, 23.1.2019",
     "title": "Consumer Driven Contract Testing - und mehr!",
@@ -52,5 +52,5 @@
     "title": "End the Software Crisis!",
     "url": "https://www.oop-konferenz.de/oop2019/programm/konferenzprogramm/sessiondetails/action/detail/session/do-22-4/title/end-the-software-crisis.html?tx_dmconferences_session%5BshowRooms%5D=0&cHash=21827e5c3b88fd0448daad7faab7b7d0",
     "kind": "Vortrag mit Michael Sperber"
-  },
+  }
 ]
