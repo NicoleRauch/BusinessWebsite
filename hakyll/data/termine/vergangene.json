@@ -2,6 +2,18 @@
   {
     "year": "2018",
     "entries": [
+    {
+      "name": "KanDDDinsky, Berlin, 19.10.2018",
+      "title": "Beyond Consumer-Driven Contract Testing",
+      "url": "https://kandddinsky.de/index.html#schedule",
+      "kind": "Vortrag"
+    },
+  {
+    "name": "Architecture Gathering, München, 11.10.2018",
+    "title": "Funktionale Software-Architektur goes iSAQB",
+    "url": "http://www.the-architecture-gathering.de/indexDE.php",
+    "kind": "Vortrag mit Michael Sperber"
+  },
   {
     "name": "JUG Saxony Day, Dresden, 28.9.2018",
     "title": "Beyond Consumer-Driven Contract Testing",
