@@ -2,6 +2,30 @@
   {
     "year": "2018",
     "entries": [
+  {
+    "name": "XP Days Germany, Hamburg, 9.11.2018",
+    "title": "Beyond Consumer-Driven Contract Testing",
+    "url": "https://www.xpdays.de/2018/sessions/136-beyond-consumer-driven-contract-testing.html",
+    "kind": "Vortrag"
+  },
+  {
+    "name": "EKON 22, Düsseldorf, 7.11.2018",
+    "title": "Domain-Driven Design für Einsteiger",
+    "url": "https://entwickler-konferenz.de/software-architecture-and-design/domain-driven-design-fur-einsteiger-teil-1/",
+    "kind": "Workshop"
+  },
+  {
+    "name": "EKON 22, Düsseldorf, 7.11.2018",
+    "title": "Event Storming für Domain-Driven Design",
+    "url": "https://entwickler-konferenz.de/software-architecture-and-design/event-storming-fur-domain-driven-design-teil-1/",
+    "kind": "Workshop"
+  },
+    {
+      "name": "W-JAX, München, 6.11.2018",
+      "title": "Event-Storming für Domain-Driven Design",
+      "url": "https://jax.de/software-architecture/event-storming-fuer-domain-driven-design/",
+      "kind": "Vortrag"
+    },
     {
       "name": "KanDDDinsky, Berlin, 19.10.2018",
       "title": "Beyond Consumer-Driven Contract Testing",
