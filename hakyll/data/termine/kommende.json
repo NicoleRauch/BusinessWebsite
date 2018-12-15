@@ -5,6 +5,12 @@
     "kind": "Vortrag mit Michael Sperber"
   },  
   {
+    "name": "DDDEurope, Amsterdam, 1.2.2019",
+    "title": "Event-Storming for Domain-Driven Design",
+    "url": "https://dddeurope.com/2019/speakers/nicole-rauch/",
+    "kind": "Workshop"
+  },
+  {
     "name": "OOP, München, 23.1.2019",
     "title": "Consumer Driven Contract Testing - und mehr!",
     "url": "https://www.oop-konferenz.de/oop2019/programm/konferenzprogramm/sessiondetails/action/detail/session/mi-12-2/title/consumer-driven-contract-testing-und-mehr.html?tx_dmconferences_session%5BshowRooms%5D=0&cHash=3bc3b7ed7d9b0b44774741b1bad6e4cc",
