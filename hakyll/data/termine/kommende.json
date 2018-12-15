@@ -1,16 +1,9 @@
 [
   {
-    "name": "DDD Summit, Berlin, 3.12.2018",
-    "title": "Domain-Driven Design für Einsteiger",
-    "url": "https://microservices-summit.de/microservices/domain-driven-design-fuer-einsteiger/",
-    "kind": "Workshop"
-  },
-  {
-    "name": "DDD Summit, Berlin, 4.12.2018",
-    "title": "Event Storming für Domain-Driven Design",
-    "url": "https://microservices-summit.de/ddd/event-storming-fuer-domain-driven-design/",
-    "kind": "Workshop"
-  },
+    "name": "35. Chaos Communication Congress (35C3), Leipzig, 28.12.2018",
+    "title": "A farewell to soul-crushing code", 
+    "kind": "Vortrag mit Michael Sperber"
+  },  
   {
     "name": "OOP, München, 23.1.2019",
     "title": "Consumer Driven Contract Testing - und mehr!",
@@ -22,5 +15,12 @@
     "title": "End the Software Crisis!",
     "url": "https://www.oop-konferenz.de/oop2019/programm/konferenzprogramm/sessiondetails/action/detail/session/do-22-4/title/end-the-software-crisis.html?tx_dmconferences_session%5BshowRooms%5D=0&cHash=21827e5c3b88fd0448daad7faab7b7d0",
     "kind": "Vortrag mit Michael Sperber"
-  }
+  },  
+  {
+    "name": "Software Architecture Summit, München, 13.2.2019",
+    "title": "Funktionales Domain-driven Design",
+    "url": "https://software-architecture-summit.de/domain-driven-design/ddd-mit-funktionaler-programmierung/",
+    "kind": "Vortrag mit Michael Sperber"
+  },
+
 ]

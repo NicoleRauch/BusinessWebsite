@@ -3,6 +3,18 @@
     "year": "2018",
     "entries": [
   {
+    "name": "DDD Summit, Berlin, 4.12.2018",
+    "title": "Event Storming für Domain-Driven Design",
+    "url": "https://microservices-summit.de/ddd/event-storming-fuer-domain-driven-design/",
+    "kind": "Workshop"
+  },
+  {
+    "name": "DDD Summit, Berlin, 3.12.2018",
+    "title": "Domain-Driven Design für Einsteiger",
+    "url": "https://microservices-summit.de/microservices/domain-driven-design-fuer-einsteiger/",
+    "kind": "Workshop"
+  },
+  {
     "name": "XP Days Germany, Hamburg, 9.11.2018",
     "title": "Beyond Consumer-Driven Contract Testing",
     "url": "https://www.xpdays.de/2018/sessions/136-beyond-consumer-driven-contract-testing.html",
@@ -30,6 +42,7 @@
       "name": "KanDDDinsky, Berlin, 19.10.2018",
       "title": "Beyond Consumer-Driven Contract Testing",
       "url": "https://kandddinsky.de/index.html#schedule",
+        "videoUrl": "https://www.youtube.com/watch?v=n5QFe6uwWHI&feature=youtu.be",
       "kind": "Vortrag"
     },
   {
@@ -131,6 +144,12 @@
         "title": "Event Storming für Domain-Driven Design",
         "url": "https://programm.javaland.eu/2018/#/scheduledEvent/550325",
         "kind": "Vortrag"
+      },
+      {
+        "name": "Javaland, Brühl, 14.3.2018",
+        "title": "Interview auf der JavaLand Konferenz",
+        "videoUrl": "https://www.youtube.com/watch?v=9PY8lTipAtY",
+        "kind": "Interview"
       },
       {
         "name": "Software Architecture Summit, München, 12.3.2018",
