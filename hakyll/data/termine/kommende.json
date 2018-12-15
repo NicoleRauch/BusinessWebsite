@@ -27,6 +27,12 @@
     "title": "Funktionales Domain-driven Design",
     "url": "https://software-architecture-summit.de/domain-driven-design/ddd-mit-funktionaler-programmierung/",
     "kind": "Vortrag mit Michael Sperber"
+  },
+  {
+    "name": "BOBKonf, Berlin, 22.3.2019",
+    "title": "EventSourcing All Over The Place",
+    "url": "https://bobkonf.de/2019/de/",
+    "kind": "Vortrag"
   }
 
 ]
