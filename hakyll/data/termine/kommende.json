@@ -1,7 +1,8 @@
 [
   {
     "name": "35. Chaos Communication Congress (35C3), Leipzig, 28.12.2018",
-    "title": "A farewell to soul-crushing code", 
+    "title": "A farewell to soul-crushing code",
+    "url": "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/events/9812.html",  
     "kind": "Vortrag mit Michael Sperber"
   },  
   {
@@ -31,7 +32,7 @@
   {
     "name": "BOBKonf, Berlin, 22.3.2019",
     "title": "EventSourcing All Over The Place",
-    "url": "https://bobkonf.de/2019/de/",
+    "url": "https://bobkonf.de/2019/rauch.html",
     "kind": "Vortrag"
   }
 
