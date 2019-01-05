@@ -1,36 +1,36 @@
 [
   {
-    "name": "35. Chaos Communication Congress (35C3), Leipzig, 28.12.2018",
-    "title": "A farewell to soul-crushing code",
-    "url": "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/events/9812.html",  
-    "kind": "Vortrag mit Michael Sperber"
-  },  
-  {
-    "name": "OOP, München, 23.1.2019",
+    "name": "OOP, München, 23.01.2019",
     "title": "Consumer Driven Contract Testing - und mehr!",
     "url": "https://www.oop-konferenz.de/oop2019/programm/konferenzprogramm/sessiondetails/action/detail/session/mi-12-2/title/consumer-driven-contract-testing-und-mehr.html?tx_dmconferences_session%5BshowRooms%5D=0&cHash=3bc3b7ed7d9b0b44774741b1bad6e4cc",
     "kind": "Vortrag"
   },
   {
-    "name": "OOP, München, 24.1.2019",
+    "name": "OOP, München, 24.01.2019",
     "title": "End the Software Crisis!",
     "url": "https://www.oop-konferenz.de/oop2019/programm/konferenzprogramm/sessiondetails/action/detail/session/do-22-4/title/end-the-software-crisis.html?tx_dmconferences_session%5BshowRooms%5D=0&cHash=21827e5c3b88fd0448daad7faab7b7d0",
     "kind": "Vortrag mit Michael Sperber"
   },  
   {
-    "name": "DDDEurope, Amsterdam, 1.2.2019",
+    "name": "DDDEurope, Amsterdam, 01.02.2019",
     "title": "Event-Storming for Domain-Driven Design",
     "url": "https://dddeurope.com/2019/speakers/nicole-rauch/",
     "kind": "Workshop"
   },
   {
-    "name": "Software Architecture Summit, München, 13.3.2019",
+    "name": "Digicomp, Zürich, 05. - 07.02.2019",
+    "title": "Kurs: Domain-Driven Design",
+    "url": "https://www.digicomp.ch/weiterbildung/development-trainings/software-engineering-trainings/it-architektur/softwarearchitektur/design-organisation/kurs-domain-driven-design",
+    "kind": "zweitägiger Workshop"
+  },
+  {
+    "name": "Software Architecture Summit, München, 13.03.2019",
     "title": "Funktionales Domain-Driven Design",
     "url": "https://software-architecture-summit.de/domain-driven-design/ddd-mit-funktionaler-programmierung/",
     "kind": "Workshop mit Michael Sperber"
   },
   {
-    "name": "BOBKonf, Berlin, 22.3.2019",
+    "name": "BOBKonf, Berlin, 22.03.2019",
     "title": "EventSourcing All Over The Place",
     "url": "https://bobkonf.de/2019/rauch.html",
     "kind": "Vortrag"
