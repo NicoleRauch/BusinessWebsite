@@ -1,15 +1,3 @@
 [
-  {
-    "name": "Software Architecture Summit, München, 13.03.2019",
-    "title": "Funktionales Domain-Driven Design",
-    "url": "https://software-architecture-summit.de/domain-driven-design/ddd-mit-funktionaler-programmierung/",
-    "kind": "Workshop mit Michael Sperber"
-  },
-  {
-    "name": "BOBKonf, Berlin, 22.03.2019",
-    "title": "EventSourcing All Over The Place",
-    "url": "https://bobkonf.de/2019/rauch.html",
-    "kind": "Vortrag"
-  }
 
 ]

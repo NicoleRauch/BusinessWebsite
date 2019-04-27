@@ -2,12 +2,24 @@
     {
     "year": "2019",
     "entries": [
-  {
-    "name": "Digicomp, Zürich, 06. - 07.02.2019",
-    "title": "Kurs: Domain-Driven Design",
-    "url": "https://www.digicomp.ch/weiterbildung/development-trainings/software-engineering-trainings/it-architektur/softwarearchitektur/design-organisation/kurs-domain-driven-design",
-    "kind": "zweitägiger Workshop"
-  },
+        {
+            "name": "BOBKonf, Berlin, 22.03.2019",
+            "title": "EventSourcing All Over The Place",
+            "url": "https://bobkonf.de/2019/rauch.html",
+            "kind": "Vortrag"
+        },
+        {
+            "name": "Software Architecture Summit, München, 13.03.2019",
+            "title": "Funktionales Domain-Driven Design",
+            "url": "https://software-architecture-summit.de/domain-driven-design/ddd-mit-funktionaler-programmierung/",
+            "kind": "Workshop mit Michael Sperber"
+        },
+        {
+            "name": "Digicomp, Zürich, 06. - 07.02.2019",
+            "title": "Kurs: Domain-Driven Design",
+            "url": "https://www.digicomp.ch/weiterbildung/development-trainings/software-engineering-trainings/it-architektur/softwarearchitektur/design-organisation/kurs-domain-driven-design",
+            "kind": "zweitägiger Workshop"
+        },
         {
         "name": "DDDEurope, Amsterdam, 01.02.2019",
         "title": "Event-Storming for Domain-Driven Design",
