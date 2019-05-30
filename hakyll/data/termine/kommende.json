@@ -1,3 +1,57 @@
 [
+    {
+        "name": "Digicomp, Basel, Bern, Zürich, 28.06.2019",
+        "title": "Workshop: Einführung in die funktionale Programmierung",
+        "url": "https://www.digicomp.ch/weiterbildung/development-trainings/software-engineering-trainings/software-engineering-basics/programming-coding/kurs-einfuehrung-in-die-funktionale-programmierung",
+        "kind": "ganztägiger Workshop"
+    },
+    {
+        "name": "Berlin, 01.07.2019",
+        "title": "Einführung in die funktionale Programmierung (Vorkurs FUNAR)",
+        "url": "https://software-architecture-camp.de/termine/modul-funar-1-4-juli-2019-ellington-hotel-berlin/?go=ok",
+        "kind": "ganztägige Schulung"
+    },
+    {
+        "name": "Berlin, 02. - 04.07.2019",
+        "title": "iSAQB-Modul (CPSA-Advanced): Funktionale Software-Architektur (FUNAR)",
+        "url": "https://software-architecture-camp.de/termine/modul-funar-1-4-juli-2019-ellington-hotel-berlin/?go=ok",
+        "kind": "dreitägige Schulung"
+    },
+    {
+        "name": "Hamburg, 08.07.2019",
+        "title": "Einführung in die funktionale Programmierung (Vorkurs FUNAR)",
+        "url": "https://www.oose.de/seminar/vorkurs-funar/",
+        "kind": "ganztägige Schulung"
+    },
+    {
+        "name": "Hamburg, 09. - 11.07.2019",
+        "title": "iSAQB-Modul (CPSA-Advanced): Funktionale Software-Architektur (FUNAR)",
+        "url": "https://www.oose.de/seminar/funktionale-softwarearchitektur/",
+        "kind": "dreitägige Schulung"
+    },
+    {
+        "name": "München, 15.07.2019",
+        "title": "Einführung in die funktionale Programmierung (Vorkurs FUNAR)",
+        "url": "https://software-architecture-camp.de/termine/modul-funar-15-18-juli-2019-holiday-inn-muenchen-unterhaching/?go=ok",
+        "kind": "ganztägige Schulung"
+    },
+    {
+        "name": "München, 16. - 18.07.2019",
+        "title": "iSAQB-Modul (CPSA-Advanced): Funktionale Software-Architektur (FUNAR)",
+        "url": "https://software-architecture-camp.de/termine/modul-funar-15-18-juli-2019-holiday-inn-muenchen-unterhaching/?go=ok",
+        "kind": "dreitägige Schulung"
+    },
+    {
+        "name": "Stuttgart, 22.07.2019",
+        "title": "Einführung in die funktionale Programmierung (Vorkurs FUNAR)",
+        "url": "https://www.active-group.de/schulung/funar.html",
+        "kind": "ganztägige Schulung"
+    },
+    {
+        "name": "Stuttgart, 23. - 25.07.2019",
+        "title": "iSAQB-Modul (CPSA-Advanced): Funktionale Software-Architektur (FUNAR)",
+        "url": "https://www.active-group.de/schulung/funar.html",
+        "kind": "dreitägige Schulung"
+    }
 
 ]
