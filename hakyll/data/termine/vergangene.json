@@ -6,6 +6,7 @@
             "name": "BOBKonf, Berlin, 22.03.2019",
             "title": "EventSourcing All Over The Place",
             "url": "https://bobkonf.de/2019/rauch.html",
+            "videoUrl": "https://www.youtube.com/watch?v=928_OFDTxgs&feature=youtu.be",
             "kind": "Vortrag"
         },
         {
@@ -90,6 +91,7 @@
       "name": "W-JAX, München, 06.11.2018",
       "title": "Event-Storming für Domain-Driven Design",
       "url": "https://jax.de/software-architecture/event-storming-fuer-domain-driven-design/",
+      "videoUrl": "https://www.youtube.com/watch?v=D3ycbgH5xsw",
       "kind": "Vortrag"
     },
     {
@@ -269,6 +271,7 @@
         "name": "W-JAX, München, 07.11.2017",
         "title": "Programmierpraxis übermorgen: Mensch spezifiziert, Maschine programmiert",
         "url": "https://jax.de/agile-culture/programmierpraxis-uebermorgen-mensch-spezifiziert-maschine-programmiert/",
+        "videoUrl": "https://jaxenter.de/agda-idris-program-by-design-73173",
         "kind": "Vortrag mit Michael Sperber"
       },
       {
