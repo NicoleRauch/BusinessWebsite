@@ -82,7 +82,7 @@ main = hakyllWith siteConfig $ do
                 >>= relativizeUrls
 
 
-    match (fromList ["index.html", "impressum.html", "referenzen.html", "schwerpunkte.html", "themen.html"]) $ do
+    match (fromList ["index.html", "impressum.html", "referenzen.html", "schwerpunkte.html", "themen.html", "validation.html"]) $ do
         route idRoute
         compile $ do
             let indexCtx =
