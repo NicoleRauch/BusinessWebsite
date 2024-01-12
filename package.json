@@ -15,7 +15,7 @@
     "node": ">0.10"
   },
   "dependencies": {
-    "bootstrap": "3.3.5",
+    "bootstrap": "3.4.1",
     "font-awesome": "4.5.0",
     "fullpage.js": "2.7.6",
     "grunt-contrib-concat": "^1.0.1",
